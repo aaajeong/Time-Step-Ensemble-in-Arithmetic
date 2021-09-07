@@ -1,0 +1,1202 @@
+
+--------------------------------------------------
+Iteration 1
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 7s 155us/sample - loss: 1.4323 - accuracy: 0.2412 - val_loss: 1.2982 - val_accuracy: 0.2474
+검증 정확도 0.720%
+
+--------------------------------------------------
+Iteration 2
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 1.2629 - accuracy: 0.2471 - val_loss: 1.2551 - val_accuracy: 0.2549
+검증 정확도 1.420%
+
+--------------------------------------------------
+Iteration 3
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 1.2222 - accuracy: 0.2561 - val_loss: 1.2151 - val_accuracy: 0.2693
+검증 정확도 1.540%
+
+--------------------------------------------------
+Iteration 4
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 69us/sample - loss: 1.1942 - accuracy: 0.2648 - val_loss: 1.1895 - val_accuracy: 0.2793
+검증 정확도 2.080%
+
+--------------------------------------------------
+Iteration 5
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 73us/sample - loss: 1.1674 - accuracy: 0.2749 - val_loss: 1.1640 - val_accuracy: 0.2837
+검증 정확도 2.140%
+
+--------------------------------------------------
+Iteration 6
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 1.1407 - accuracy: 0.2856 - val_loss: 1.1349 - val_accuracy: 0.2991
+검증 정확도 3.040%
+
+--------------------------------------------------
+Iteration 7
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 69us/sample - loss: 1.1089 - accuracy: 0.2974 - val_loss: 1.1018 - val_accuracy: 0.3074
+검증 정확도 2.920%
+
+--------------------------------------------------
+Iteration 8
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 1.0757 - accuracy: 0.3090 - val_loss: 1.0657 - val_accuracy: 0.3220
+검증 정확도 3.760%
+
+--------------------------------------------------
+Iteration 9
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 72us/sample - loss: 1.0351 - accuracy: 0.3221 - val_loss: 1.0096 - val_accuracy: 0.3338
+검증 정확도 3.620%
+
+--------------------------------------------------
+Iteration 10
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - ETA: 0s - loss: 0.9835 - accuracy: 0.33 - 3s 72us/sample - loss: 0.9837 - accuracy: 0.3373 - val_loss: 0.9672 - val_accuracy: 0.3471
+검증 정확도 3.960%
+
+--------------------------------------------------
+Iteration 11
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 69us/sample - loss: 0.9469 - accuracy: 0.3484 - val_loss: 0.9364 - val_accuracy: 0.3554
+검증 정확도 4.500%
+
+--------------------------------------------------
+Iteration 12
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.9177 - accuracy: 0.3586 - val_loss: 0.9161 - val_accuracy: 0.3644
+검증 정확도 4.780%
+
+--------------------------------------------------
+Iteration 13
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 68us/sample - loss: 0.8932 - accuracy: 0.3672 - val_loss: 0.8967 - val_accuracy: 0.3720
+검증 정확도 4.880%
+
+--------------------------------------------------
+Iteration 14
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 73us/sample - loss: 0.8718 - accuracy: 0.3738 - val_loss: 0.8751 - val_accuracy: 0.3759
+검증 정확도 4.560%
+
+--------------------------------------------------
+Iteration 15
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.8512 - accuracy: 0.3819 - val_loss: 0.8590 - val_accuracy: 0.3786
+검증 정확도 5.000%
+
+--------------------------------------------------
+Iteration 16
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 68us/sample - loss: 0.8336 - accuracy: 0.3878 - val_loss: 0.8443 - val_accuracy: 0.3904
+검증 정확도 5.500%
+
+--------------------------------------------------
+Iteration 17
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 68us/sample - loss: 0.8151 - accuracy: 0.3964 - val_loss: 0.8276 - val_accuracy: 0.3969
+검증 정확도 6.200%
+
+--------------------------------------------------
+Iteration 18
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 69us/sample - loss: 0.7986 - accuracy: 0.4017 - val_loss: 0.8128 - val_accuracy: 0.3999
+검증 정확도 5.340%
+
+--------------------------------------------------
+Iteration 19
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.7814 - accuracy: 0.4085 - val_loss: 0.7955 - val_accuracy: 0.4052
+검증 정확도 5.740%
+
+--------------------------------------------------
+Iteration 20
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.7685 - accuracy: 0.4141 - val_loss: 0.7829 - val_accuracy: 0.4096
+검증 정확도 5.440%
+
+--------------------------------------------------
+Iteration 21
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 69us/sample - loss: 0.7531 - accuracy: 0.4193 - val_loss: 0.7680 - val_accuracy: 0.4167
+검증 정확도 5.700%
+
+--------------------------------------------------
+Iteration 22
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 69us/sample - loss: 0.7382 - accuracy: 0.4264 - val_loss: 0.7597 - val_accuracy: 0.4211
+검증 정확도 6.120%
+
+--------------------------------------------------
+Iteration 23
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.7253 - accuracy: 0.4316 - val_loss: 0.7462 - val_accuracy: 0.4246
+검증 정확도 5.940%
+
+--------------------------------------------------
+Iteration 24
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 69us/sample - loss: 0.7127 - accuracy: 0.4363 - val_loss: 0.7391 - val_accuracy: 0.4287
+검증 정확도 6.220%
+
+--------------------------------------------------
+Iteration 25
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.6998 - accuracy: 0.4424 - val_loss: 0.7362 - val_accuracy: 0.4260
+검증 정확도 5.600%
+
+--------------------------------------------------
+Iteration 26
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.6869 - accuracy: 0.4482 - val_loss: 0.7236 - val_accuracy: 0.4334
+검증 정확도 6.340%
+
+--------------------------------------------------
+Iteration 27
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 73us/sample - loss: 0.6765 - accuracy: 0.4529 - val_loss: 0.7137 - val_accuracy: 0.4418
+검증 정확도 6.560%
+
+--------------------------------------------------
+Iteration 28
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.6646 - accuracy: 0.4582 - val_loss: 0.6970 - val_accuracy: 0.4453
+검증 정확도 6.220%
+
+--------------------------------------------------
+Iteration 29
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.6527 - accuracy: 0.4640 - val_loss: 0.6879 - val_accuracy: 0.4493
+검증 정확도 6.700%
+
+--------------------------------------------------
+Iteration 30
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 69us/sample - loss: 0.6385 - accuracy: 0.4705 - val_loss: 0.6786 - val_accuracy: 0.4584
+검증 정확도 6.580%
+
+--------------------------------------------------
+Iteration 31
+Train on 45000 samples, validate on 5000 samples
+
+45000/45000 [==============================] - 3s 69us/sample - loss: 0.6254 - accuracy: 0.4771 - val_loss: 0.6707 - val_accuracy: 0.4586
+검증 정확도 6.500%
+
+--------------------------------------------------
+Iteration 32
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.6129 - accuracy: 0.4826 - val_loss: 0.6613 - val_accuracy: 0.4651
+검증 정확도 6.120%
+
+--------------------------------------------------
+Iteration 33
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 69us/sample - loss: 0.6015 - accuracy: 0.4876 - val_loss: 0.6579 - val_accuracy: 0.4657
+검증 정확도 6.700%
+
+--------------------------------------------------
+Iteration 34
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 69us/sample - loss: 0.5890 - accuracy: 0.4930 - val_loss: 0.6384 - val_accuracy: 0.4740
+검증 정확도 6.840%
+
+--------------------------------------------------
+Iteration 35
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.5749 - accuracy: 0.5000 - val_loss: 0.6332 - val_accuracy: 0.4760
+검증 정확도 6.820%
+
+--------------------------------------------------
+Iteration 36
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 69us/sample - loss: 0.5633 - accuracy: 0.5054 - val_loss: 0.6123 - val_accuracy: 0.4897
+검증 정확도 6.900%
+
+--------------------------------------------------
+Iteration 37
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 69us/sample - loss: 0.5502 - accuracy: 0.5119 - val_loss: 0.6023 - val_accuracy: 0.4940
+검증 정확도 7.080%
+
+--------------------------------------------------
+Iteration 38
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 69us/sample - loss: 0.5362 - accuracy: 0.5187 - val_loss: 0.5969 - val_accuracy: 0.4960
+검증 정확도 7.300%
+
+--------------------------------------------------
+Iteration 39
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.5235 - accuracy: 0.5232 - val_loss: 0.5806 - val_accuracy: 0.5032
+검증 정확도 6.920%
+
+--------------------------------------------------
+Iteration 40
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 72us/sample - loss: 0.5137 - accuracy: 0.5269 - val_loss: 0.5792 - val_accuracy: 0.5022
+검증 정확도 6.960%
+
+--------------------------------------------------
+Iteration 41
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 69us/sample - loss: 0.5017 - accuracy: 0.5322 - val_loss: 0.5681 - val_accuracy: 0.5071
+검증 정확도 7.100%
+
+--------------------------------------------------
+Iteration 42
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 69us/sample - loss: 0.4924 - accuracy: 0.5358 - val_loss: 0.5660 - val_accuracy: 0.5096
+검증 정확도 7.120%
+
+--------------------------------------------------
+Iteration 43
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.4818 - accuracy: 0.5397 - val_loss: 0.5582 - val_accuracy: 0.5129
+검증 정확도 7.260%
+
+--------------------------------------------------
+Iteration 44
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.4738 - accuracy: 0.5429 - val_loss: 0.5471 - val_accuracy: 0.5182
+검증 정확도 7.140%
+
+--------------------------------------------------
+Iteration 45
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 69us/sample - loss: 0.4659 - accuracy: 0.5457 - val_loss: 0.5502 - val_accuracy: 0.5151
+검증 정확도 7.080%
+
+--------------------------------------------------
+Iteration 46
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 72us/sample - loss: 0.4573 - accuracy: 0.5488 - val_loss: 0.5328 - val_accuracy: 0.5218
+검증 정확도 7.240%
+
+--------------------------------------------------
+Iteration 47
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.4487 - accuracy: 0.5516 - val_loss: 0.5309 - val_accuracy: 0.5233
+검증 정확도 6.940%
+
+--------------------------------------------------
+Iteration 48
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 72us/sample - loss: 0.4423 - accuracy: 0.5546 - val_loss: 0.5285 - val_accuracy: 0.5246
+검증 정확도 7.020%
+
+--------------------------------------------------
+Iteration 49
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.4353 - accuracy: 0.5569 - val_loss: 0.5304 - val_accuracy: 0.5240
+검증 정확도 7.020%
+
+--------------------------------------------------
+Iteration 50
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.4299 - accuracy: 0.5593 - val_loss: 0.5251 - val_accuracy: 0.5240
+검증 정확도 7.380%
+
+--------------------------------------------------
+Iteration 51
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 69us/sample - loss: 0.4259 - accuracy: 0.5608 - val_loss: 0.5134 - val_accuracy: 0.5298
+검증 정확도 6.940%
+
+--------------------------------------------------
+Iteration 52
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 69us/sample - loss: 0.4182 - accuracy: 0.5641 - val_loss: 0.5178 - val_accuracy: 0.5278
+검증 정확도 7.260%
+
+--------------------------------------------------
+Iteration 53
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.4117 - accuracy: 0.5657 - val_loss: 0.5103 - val_accuracy: 0.5327
+검증 정확도 7.700%
+
+--------------------------------------------------
+Iteration 54
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.4050 - accuracy: 0.5686 - val_loss: 0.5105 - val_accuracy: 0.5311
+검증 정확도 7.240%
+
+--------------------------------------------------
+Iteration 55
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.4013 - accuracy: 0.5696 - val_loss: 0.5054 - val_accuracy: 0.5330
+검증 정확도 7.280%
+
+--------------------------------------------------
+Iteration 56
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.3958 - accuracy: 0.5719 - val_loss: 0.5170 - val_accuracy: 0.5296
+검증 정확도 7.100%
+
+--------------------------------------------------
+Iteration 57
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.3938 - accuracy: 0.5722 - val_loss: 0.5043 - val_accuracy: 0.5348
+검증 정확도 7.220%
+
+--------------------------------------------------
+Iteration 58
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.3856 - accuracy: 0.5761 - val_loss: 0.4983 - val_accuracy: 0.5373
+검증 정확도 7.620%
+
+--------------------------------------------------
+Iteration 59
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.3817 - accuracy: 0.5778 - val_loss: 0.5006 - val_accuracy: 0.5355
+검증 정확도 6.780%
+
+--------------------------------------------------
+Iteration 60
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.3781 - accuracy: 0.5785 - val_loss: 0.4955 - val_accuracy: 0.5375
+검증 정확도 7.300%
+
+--------------------------------------------------
+Iteration 61
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.3720 - accuracy: 0.5812 - val_loss: 0.4975 - val_accuracy: 0.5382
+검증 정확도 7.120%
+
+--------------------------------------------------
+Iteration 62
+Train on 45000 samples, validate on 5000 samples
+
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.3692 - accuracy: 0.5821 - val_loss: 0.4905 - val_accuracy: 0.5407
+검증 정확도 7.600%
+
+--------------------------------------------------
+Iteration 63
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 72us/sample - loss: 0.3676 - accuracy: 0.5823 - val_loss: 0.4923 - val_accuracy: 0.5402
+검증 정확도 7.540%
+
+--------------------------------------------------
+Iteration 64
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.3624 - accuracy: 0.5844 - val_loss: 0.4933 - val_accuracy: 0.5395
+검증 정확도 7.340%
+
+--------------------------------------------------
+Iteration 65
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.3581 - accuracy: 0.5860 - val_loss: 0.4983 - val_accuracy: 0.5378
+검증 정확도 7.440%
+
+--------------------------------------------------
+Iteration 66
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.3531 - accuracy: 0.5880 - val_loss: 0.4922 - val_accuracy: 0.5421
+검증 정확도 7.640%
+
+--------------------------------------------------
+Iteration 67
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 69us/sample - loss: 0.3505 - accuracy: 0.5891 - val_loss: 0.4877 - val_accuracy: 0.5411
+검증 정확도 7.420%
+
+--------------------------------------------------
+Iteration 68
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.3478 - accuracy: 0.5895 - val_loss: 0.4911 - val_accuracy: 0.5407
+검증 정확도 7.520%
+
+--------------------------------------------------
+Iteration 69
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.3479 - accuracy: 0.5895 - val_loss: 0.4860 - val_accuracy: 0.5455
+검증 정확도 7.720%
+
+--------------------------------------------------
+Iteration 70
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.3429 - accuracy: 0.5915 - val_loss: 0.4951 - val_accuracy: 0.5410
+검증 정확도 7.400%
+
+--------------------------------------------------
+Iteration 71
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.3362 - accuracy: 0.5939 - val_loss: 0.4842 - val_accuracy: 0.5442
+검증 정확도 7.240%
+
+--------------------------------------------------
+Iteration 72
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.3328 - accuracy: 0.5950 - val_loss: 0.4870 - val_accuracy: 0.5432
+검증 정확도 7.640%
+
+--------------------------------------------------
+Iteration 73
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.3299 - accuracy: 0.5969 - val_loss: 0.4978 - val_accuracy: 0.5431
+검증 정확도 7.580%
+
+--------------------------------------------------
+Iteration 74
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.3281 - accuracy: 0.5974 - val_loss: 0.4844 - val_accuracy: 0.5466
+검증 정확도 7.480%
+
+--------------------------------------------------
+Iteration 75
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.3247 - accuracy: 0.5985 - val_loss: 0.4902 - val_accuracy: 0.5428
+검증 정확도 7.420%
+
+--------------------------------------------------
+Iteration 76
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.3213 - accuracy: 0.5997 - val_loss: 0.5012 - val_accuracy: 0.5408
+검증 정확도 7.220%
+
+--------------------------------------------------
+Iteration 77
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.3188 - accuracy: 0.6005 - val_loss: 0.4838 - val_accuracy: 0.5466
+검증 정확도 7.480%
+
+--------------------------------------------------
+Iteration 78
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.3147 - accuracy: 0.6023 - val_loss: 0.4878 - val_accuracy: 0.5455
+검증 정확도 7.760%
+
+--------------------------------------------------
+Iteration 79
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.3125 - accuracy: 0.6033 - val_loss: 0.4816 - val_accuracy: 0.5469
+검증 정확도 7.500%
+
+--------------------------------------------------
+Iteration 80
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.3115 - accuracy: 0.6031 - val_loss: 0.4925 - val_accuracy: 0.5455
+검증 정확도 7.460%
+
+--------------------------------------------------
+Iteration 81
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 72us/sample - loss: 0.3081 - accuracy: 0.6049 - val_loss: 0.4889 - val_accuracy: 0.5468
+검증 정확도 7.480%
+
+--------------------------------------------------
+Iteration 82
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.3050 - accuracy: 0.6062 - val_loss: 0.4875 - val_accuracy: 0.5466
+검증 정확도 7.740%
+
+--------------------------------------------------
+Iteration 83
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.3018 - accuracy: 0.6070 - val_loss: 0.4950 - val_accuracy: 0.5457
+검증 정확도 7.880%
+
+--------------------------------------------------
+Iteration 84
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 69us/sample - loss: 0.2990 - accuracy: 0.6079 - val_loss: 0.4925 - val_accuracy: 0.5468
+검증 정확도 7.560%
+
+--------------------------------------------------
+Iteration 85
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.2971 - accuracy: 0.6092 - val_loss: 0.4931 - val_accuracy: 0.5472
+검증 정확도 7.680%
+
+--------------------------------------------------
+Iteration 86
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 72us/sample - loss: 0.2944 - accuracy: 0.6102 - val_loss: 0.4979 - val_accuracy: 0.5454
+검증 정확도 7.360%
+
+--------------------------------------------------
+Iteration 87
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.2932 - accuracy: 0.6107 - val_loss: 0.4977 - val_accuracy: 0.5459
+검증 정확도 7.580%
+
+--------------------------------------------------
+Iteration 88
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.2872 - accuracy: 0.6128 - val_loss: 0.5008 - val_accuracy: 0.5429
+검증 정확도 7.320%
+
+--------------------------------------------------
+Iteration 89
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.2887 - accuracy: 0.6122 - val_loss: 0.5072 - val_accuracy: 0.5435
+검증 정확도 7.360%
+
+--------------------------------------------------
+Iteration 90
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.2842 - accuracy: 0.6141 - val_loss: 0.5012 - val_accuracy: 0.5455
+검증 정확도 7.420%
+
+--------------------------------------------------
+Iteration 91
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.2824 - accuracy: 0.6148 - val_loss: 0.4994 - val_accuracy: 0.5468
+검증 정확도 7.740%
+
+--------------------------------------------------
+Iteration 92
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.2765 - accuracy: 0.6170 - val_loss: 0.5046 - val_accuracy: 0.5464
+검증 정확도 7.460%
+
+--------------------------------------------------
+Iteration 93
+Train on 45000 samples, validate on 5000 samples
+
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.2782 - accuracy: 0.6161 - val_loss: 0.5008 - val_accuracy: 0.5477
+검증 정확도 7.620%
+
+--------------------------------------------------
+Iteration 94
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.2738 - accuracy: 0.6176 - val_loss: 0.5142 - val_accuracy: 0.5440
+검증 정확도 7.360%
+
+--------------------------------------------------
+Iteration 95
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.2719 - accuracy: 0.6185 - val_loss: 0.5207 - val_accuracy: 0.5432
+검증 정확도 7.420%
+
+--------------------------------------------------
+Iteration 96
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.2694 - accuracy: 0.6198 - val_loss: 0.5117 - val_accuracy: 0.5463
+검증 정확도 7.480%
+
+--------------------------------------------------
+Iteration 97
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.2659 - accuracy: 0.6211 - val_loss: 0.5103 - val_accuracy: 0.5471
+검증 정확도 7.580%
+
+--------------------------------------------------
+Iteration 98
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.2643 - accuracy: 0.6221 - val_loss: 0.5164 - val_accuracy: 0.5455
+검증 정확도 7.760%
+
+--------------------------------------------------
+Iteration 99
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.2637 - accuracy: 0.6216 - val_loss: 0.5257 - val_accuracy: 0.5440
+검증 정확도 7.720%
+
+--------------------------------------------------
+Iteration 100
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 72us/sample - loss: 0.2602 - accuracy: 0.6234 - val_loss: 0.5284 - val_accuracy: 0.5460
+검증 정확도 7.700%
+100번째 정확도 :  0.077
+
+--------------------------------------------------
+Iteration 101
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.2573 - accuracy: 0.6245 - val_loss: 0.5254 - val_accuracy: 0.5455
+검증 정확도 7.680%
+
+--------------------------------------------------
+Iteration 102
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.2549 - accuracy: 0.6257 - val_loss: 0.5186 - val_accuracy: 0.5450
+검증 정확도 7.560%
+
+--------------------------------------------------
+Iteration 103
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.2536 - accuracy: 0.6254 - val_loss: 0.5275 - val_accuracy: 0.5457
+검증 정확도 7.820%
+
+--------------------------------------------------
+Iteration 104
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.2515 - accuracy: 0.6262 - val_loss: 0.5300 - val_accuracy: 0.5442
+검증 정확도 7.480%
+
+--------------------------------------------------
+Iteration 105
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.2535 - accuracy: 0.6253 - val_loss: 0.5241 - val_accuracy: 0.5461
+검증 정확도 7.920%
+
+--------------------------------------------------
+Iteration 106
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.2487 - accuracy: 0.6276 - val_loss: 0.5322 - val_accuracy: 0.5436
+검증 정확도 7.600%
+
+--------------------------------------------------
+Iteration 107
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.2442 - accuracy: 0.6299 - val_loss: 0.5262 - val_accuracy: 0.5473
+검증 정확도 7.720%
+
+--------------------------------------------------
+Iteration 108
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.2409 - accuracy: 0.6311 - val_loss: 0.5338 - val_accuracy: 0.5473
+검증 정확도 7.680%
+
+--------------------------------------------------
+Iteration 109
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.2411 - accuracy: 0.6307 - val_loss: 0.5386 - val_accuracy: 0.5445
+검증 정확도 7.680%
+
+--------------------------------------------------
+Iteration 110
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.2383 - accuracy: 0.6319 - val_loss: 0.5515 - val_accuracy: 0.5421
+검증 정확도 7.440%
+
+--------------------------------------------------
+Iteration 111
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.2374 - accuracy: 0.6314 - val_loss: 0.5462 - val_accuracy: 0.5458
+검증 정확도 7.420%
+
+--------------------------------------------------
+Iteration 112
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.2350 - accuracy: 0.6334 - val_loss: 0.5528 - val_accuracy: 0.5419
+검증 정확도 7.740%
+
+--------------------------------------------------
+Iteration 113
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.2325 - accuracy: 0.6340 - val_loss: 0.5517 - val_accuracy: 0.5448
+검증 정확도 7.320%
+
+--------------------------------------------------
+Iteration 114
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.2315 - accuracy: 0.6344 - val_loss: 0.5476 - val_accuracy: 0.5451
+검증 정확도 7.780%
+
+--------------------------------------------------
+Iteration 115
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.2278 - accuracy: 0.6361 - val_loss: 0.5584 - val_accuracy: 0.5423
+검증 정확도 7.360%
+
+--------------------------------------------------
+Iteration 116
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.2255 - accuracy: 0.6363 - val_loss: 0.5640 - val_accuracy: 0.5446
+검증 정확도 7.540%
+
+--------------------------------------------------
+Iteration 117
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.2271 - accuracy: 0.6357 - val_loss: 0.5619 - val_accuracy: 0.5436
+검증 정확도 7.080%
+
+--------------------------------------------------
+Iteration 118
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.2232 - accuracy: 0.6376 - val_loss: 0.5619 - val_accuracy: 0.5431
+검증 정확도 7.780%
+
+--------------------------------------------------
+Iteration 119
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.2206 - accuracy: 0.6386 - val_loss: 0.5703 - val_accuracy: 0.5438
+검증 정확도 7.500%
+
+--------------------------------------------------
+Iteration 120
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.2168 - accuracy: 0.6402 - val_loss: 0.5741 - val_accuracy: 0.5453
+검증 정확도 7.280%
+
+--------------------------------------------------
+Iteration 121
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 72us/sample - loss: 0.2155 - accuracy: 0.6406 - val_loss: 0.5861 - val_accuracy: 0.5401
+검증 정확도 7.720%
+
+--------------------------------------------------
+Iteration 122
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.2211 - accuracy: 0.6375 - val_loss: 0.5687 - val_accuracy: 0.5421
+검증 정확도 7.480%
+
+--------------------------------------------------
+Iteration 123
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 72us/sample - loss: 0.2110 - accuracy: 0.6421 - val_loss: 0.5714 - val_accuracy: 0.5436
+검증 정확도 7.460%
+
+--------------------------------------------------
+Iteration 124
+Train on 45000 samples, validate on 5000 samples
+
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.2101 - accuracy: 0.6424 - val_loss: 0.5806 - val_accuracy: 0.5440
+검증 정확도 7.660%
+
+--------------------------------------------------
+Iteration 125
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.2092 - accuracy: 0.6426 - val_loss: 0.5806 - val_accuracy: 0.5437
+검증 정확도 7.660%
+
+--------------------------------------------------
+Iteration 126
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.2077 - accuracy: 0.6431 - val_loss: 0.5875 - val_accuracy: 0.5435
+검증 정확도 7.640%
+
+--------------------------------------------------
+Iteration 127
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.2063 - accuracy: 0.6436 - val_loss: 0.5879 - val_accuracy: 0.5435
+검증 정확도 7.320%
+
+--------------------------------------------------
+Iteration 128
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.2082 - accuracy: 0.6431 - val_loss: 0.5923 - val_accuracy: 0.5426
+검증 정확도 7.320%
+
+--------------------------------------------------
+Iteration 129
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.2012 - accuracy: 0.6458 - val_loss: 0.5983 - val_accuracy: 0.5428
+검증 정확도 7.560%
+
+--------------------------------------------------
+Iteration 130
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 69us/sample - loss: 0.1987 - accuracy: 0.6470 - val_loss: 0.5997 - val_accuracy: 0.5408
+검증 정확도 7.360%
+
+--------------------------------------------------
+Iteration 131
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.1966 - accuracy: 0.6480 - val_loss: 0.6067 - val_accuracy: 0.5416
+검증 정확도 7.400%
+
+--------------------------------------------------
+Iteration 132
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.1968 - accuracy: 0.6478 - val_loss: 0.6041 - val_accuracy: 0.5413
+검증 정확도 7.380%
+
+--------------------------------------------------
+Iteration 133
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.1966 - accuracy: 0.6472 - val_loss: 0.6141 - val_accuracy: 0.5445
+검증 정확도 7.900%
+
+--------------------------------------------------
+Iteration 134
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.1960 - accuracy: 0.6476 - val_loss: 0.6185 - val_accuracy: 0.5425
+검증 정확도 7.520%
+
+--------------------------------------------------
+Iteration 135
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.1887 - accuracy: 0.6508 - val_loss: 0.6127 - val_accuracy: 0.5432
+검증 정확도 7.440%
+
+--------------------------------------------------
+Iteration 136
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.1926 - accuracy: 0.6490 - val_loss: 0.6158 - val_accuracy: 0.5436
+검증 정확도 7.480%
+
+--------------------------------------------------
+Iteration 137
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.1857 - accuracy: 0.6522 - val_loss: 0.6236 - val_accuracy: 0.5423
+검증 정확도 7.580%
+
+--------------------------------------------------
+Iteration 138
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 72us/sample - loss: 0.1831 - accuracy: 0.6532 - val_loss: 0.6185 - val_accuracy: 0.5409
+검증 정확도 7.520%
+
+--------------------------------------------------
+Iteration 139
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.1896 - accuracy: 0.6501 - val_loss: 0.6315 - val_accuracy: 0.5426
+검증 정확도 7.540%
+
+--------------------------------------------------
+Iteration 140
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.1822 - accuracy: 0.6530 - val_loss: 0.6427 - val_accuracy: 0.5418
+검증 정확도 7.280%
+
+--------------------------------------------------
+Iteration 141
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.1821 - accuracy: 0.6534 - val_loss: 0.6415 - val_accuracy: 0.5424
+검증 정확도 7.440%
+
+--------------------------------------------------
+Iteration 142
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.1810 - accuracy: 0.6535 - val_loss: 0.6443 - val_accuracy: 0.5393
+검증 정확도 7.300%
+
+--------------------------------------------------
+Iteration 143
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.1794 - accuracy: 0.6543 - val_loss: 0.6345 - val_accuracy: 0.5404
+검증 정확도 7.440%
+
+--------------------------------------------------
+Iteration 144
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.1757 - accuracy: 0.6557 - val_loss: 0.6432 - val_accuracy: 0.5402
+검증 정확도 7.380%
+
+--------------------------------------------------
+Iteration 145
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.1761 - accuracy: 0.6554 - val_loss: 0.6578 - val_accuracy: 0.5382
+검증 정확도 7.380%
+
+--------------------------------------------------
+Iteration 146
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.1784 - accuracy: 0.6543 - val_loss: 0.6532 - val_accuracy: 0.5410
+검증 정확도 7.660%
+
+--------------------------------------------------
+Iteration 147
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.1692 - accuracy: 0.6584 - val_loss: 0.6520 - val_accuracy: 0.5422
+검증 정확도 7.540%
+
+--------------------------------------------------
+Iteration 148
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.1678 - accuracy: 0.6588 - val_loss: 0.6614 - val_accuracy: 0.5424
+검증 정확도 7.460%
+
+--------------------------------------------------
+Iteration 149
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.1655 - accuracy: 0.6597 - val_loss: 0.6601 - val_accuracy: 0.5408
+검증 정확도 7.560%
+
+--------------------------------------------------
+Iteration 150
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 72us/sample - loss: 0.1721 - accuracy: 0.6570 - val_loss: 0.6755 - val_accuracy: 0.5367
+검증 정확도 7.420%
+
+--------------------------------------------------
+Iteration 151
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.1716 - accuracy: 0.6572 - val_loss: 0.6640 - val_accuracy: 0.5397
+검증 정확도 7.260%
+
+--------------------------------------------------
+Iteration 152
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 69us/sample - loss: 0.1596 - accuracy: 0.6623 - val_loss: 0.6695 - val_accuracy: 0.5417
+검증 정확도 7.660%
+
+--------------------------------------------------
+Iteration 153
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.1573 - accuracy: 0.6631 - val_loss: 0.6795 - val_accuracy: 0.5403
+검증 정확도 7.340%
+
+--------------------------------------------------
+Iteration 154
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.1626 - accuracy: 0.6609 - val_loss: 0.6896 - val_accuracy: 0.5367
+검증 정확도 7.180%
+
+--------------------------------------------------
+Iteration 155
+Train on 45000 samples, validate on 5000 samples
+
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.1605 - accuracy: 0.6615 - val_loss: 0.6955 - val_accuracy: 0.5390
+검증 정확도 7.540%
+
+--------------------------------------------------
+Iteration 156
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.1588 - accuracy: 0.6626 - val_loss: 0.6861 - val_accuracy: 0.5387
+검증 정확도 7.560%
+
+--------------------------------------------------
+Iteration 157
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.1543 - accuracy: 0.6640 - val_loss: 0.6925 - val_accuracy: 0.5406
+검증 정확도 7.360%
+
+--------------------------------------------------
+Iteration 158
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.1523 - accuracy: 0.6653 - val_loss: 0.7028 - val_accuracy: 0.5367
+검증 정확도 7.080%
+
+--------------------------------------------------
+Iteration 159
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.1606 - accuracy: 0.6616 - val_loss: 0.6986 - val_accuracy: 0.5405
+검증 정확도 7.640%
+
+--------------------------------------------------
+Iteration 160
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.1478 - accuracy: 0.6668 - val_loss: 0.6986 - val_accuracy: 0.5407
+검증 정확도 7.700%
+
+--------------------------------------------------
+Iteration 161
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.1484 - accuracy: 0.6668 - val_loss: 0.7117 - val_accuracy: 0.5375
+검증 정확도 7.660%
+
+--------------------------------------------------
+Iteration 162
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.1516 - accuracy: 0.6651 - val_loss: 0.7225 - val_accuracy: 0.5384
+검증 정확도 7.000%
+
+--------------------------------------------------
+Iteration 163
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.1456 - accuracy: 0.6673 - val_loss: 0.7218 - val_accuracy: 0.5390
+검증 정확도 7.660%
+
+--------------------------------------------------
+Iteration 164
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.1498 - accuracy: 0.6653 - val_loss: 0.7245 - val_accuracy: 0.5380
+검증 정확도 7.400%
+
+--------------------------------------------------
+Iteration 165
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.1469 - accuracy: 0.6666 - val_loss: 0.7264 - val_accuracy: 0.5392
+검증 정확도 7.620%
+
+--------------------------------------------------
+Iteration 166
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.1393 - accuracy: 0.6703 - val_loss: 0.7336 - val_accuracy: 0.5388
+검증 정확도 7.380%
+
+--------------------------------------------------
+Iteration 167
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.1388 - accuracy: 0.6704 - val_loss: 0.7413 - val_accuracy: 0.5375
+검증 정확도 7.540%
+
+--------------------------------------------------
+Iteration 168
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 72us/sample - loss: 0.1423 - accuracy: 0.6683 - val_loss: 0.7490 - val_accuracy: 0.5382
+검증 정확도 7.460%
+
+--------------------------------------------------
+Iteration 169
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.1427 - accuracy: 0.6682 - val_loss: 0.7478 - val_accuracy: 0.5364
+검증 정확도 7.160%
+
+--------------------------------------------------
+Iteration 170
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.1408 - accuracy: 0.6696 - val_loss: 0.7652 - val_accuracy: 0.5353
+검증 정확도 7.380%
+
+--------------------------------------------------
+Iteration 171
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.1347 - accuracy: 0.6724 - val_loss: 0.7473 - val_accuracy: 0.5386
+검증 정확도 7.640%
+
+--------------------------------------------------
+Iteration 172
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.1338 - accuracy: 0.6724 - val_loss: 0.7657 - val_accuracy: 0.5369
+검증 정확도 7.120%
+
+--------------------------------------------------
+Iteration 173
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.1393 - accuracy: 0.6698 - val_loss: 0.7771 - val_accuracy: 0.5331
+검증 정확도 7.340%
+
+--------------------------------------------------
+Iteration 174
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 72us/sample - loss: 0.1373 - accuracy: 0.6700 - val_loss: 0.7709 - val_accuracy: 0.5353
+검증 정확도 7.300%
+
+--------------------------------------------------
+Iteration 175
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.1267 - accuracy: 0.6749 - val_loss: 0.7655 - val_accuracy: 0.5377
+검증 정확도 7.400%
+
+--------------------------------------------------
+Iteration 176
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.1285 - accuracy: 0.6741 - val_loss: 0.7858 - val_accuracy: 0.5361
+검증 정확도 7.380%
+
+--------------------------------------------------
+Iteration 177
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.1280 - accuracy: 0.6741 - val_loss: 0.7915 - val_accuracy: 0.5352
+검증 정확도 6.960%
+
+--------------------------------------------------
+Iteration 178
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.1272 - accuracy: 0.6745 - val_loss: 0.7948 - val_accuracy: 0.5359
+검증 정확도 7.420%
+
+--------------------------------------------------
+Iteration 179
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.1312 - accuracy: 0.6726 - val_loss: 0.7789 - val_accuracy: 0.5358
+검증 정확도 7.460%
+
+--------------------------------------------------
+Iteration 180
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 72us/sample - loss: 0.1210 - accuracy: 0.6768 - val_loss: 0.7744 - val_accuracy: 0.5370
+검증 정확도 7.640%
+
+--------------------------------------------------
+Iteration 181
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.1195 - accuracy: 0.6778 - val_loss: 0.7957 - val_accuracy: 0.5337
+검증 정확도 7.400%
+
+--------------------------------------------------
+Iteration 182
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.1259 - accuracy: 0.6747 - val_loss: 0.8034 - val_accuracy: 0.5344
+검증 정확도 7.440%
+
+--------------------------------------------------
+Iteration 183
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.1277 - accuracy: 0.6737 - val_loss: 0.8051 - val_accuracy: 0.5348
+검증 정확도 7.460%
+
+--------------------------------------------------
+Iteration 184
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.1191 - accuracy: 0.6777 - val_loss: 0.8108 - val_accuracy: 0.5345
+검증 정확도 7.160%
+
+--------------------------------------------------
+Iteration 185
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.1175 - accuracy: 0.6785 - val_loss: 0.8145 - val_accuracy: 0.5352
+검증 정확도 6.960%
+
+--------------------------------------------------
+Iteration 186
+Train on 45000 samples, validate on 5000 samples
+
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.1200 - accuracy: 0.6775 - val_loss: 0.8373 - val_accuracy: 0.5340
+검증 정확도 7.100%
+
+--------------------------------------------------
+Iteration 187
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.1183 - accuracy: 0.6781 - val_loss: 0.8221 - val_accuracy: 0.5348
+검증 정확도 7.100%
+
+--------------------------------------------------
+Iteration 188
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.1156 - accuracy: 0.6789 - val_loss: 0.8287 - val_accuracy: 0.5356
+검증 정확도 7.140%
+
+--------------------------------------------------
+Iteration 189
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.1140 - accuracy: 0.6800 - val_loss: 0.8326 - val_accuracy: 0.5351
+검증 정확도 7.080%
+
+--------------------------------------------------
+Iteration 190
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.1106 - accuracy: 0.6812 - val_loss: 0.8346 - val_accuracy: 0.5346
+검증 정확도 6.960%
+
+--------------------------------------------------
+Iteration 191
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.1155 - accuracy: 0.6790 - val_loss: 0.8394 - val_accuracy: 0.5362
+검증 정확도 7.360%
+
+--------------------------------------------------
+Iteration 192
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.1083 - accuracy: 0.6820 - val_loss: 0.8400 - val_accuracy: 0.5354
+검증 정확도 6.960%
+
+--------------------------------------------------
+Iteration 193
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.1086 - accuracy: 0.6816 - val_loss: 0.8533 - val_accuracy: 0.5328
+검증 정확도 7.060%
+
+--------------------------------------------------
+Iteration 194
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.1270 - accuracy: 0.6735 - val_loss: 0.8494 - val_accuracy: 0.5346
+검증 정확도 7.240%
+
+--------------------------------------------------
+Iteration 195
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.1067 - accuracy: 0.6827 - val_loss: 0.8462 - val_accuracy: 0.5362
+검증 정확도 7.200%
+
+--------------------------------------------------
+Iteration 196
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.1014 - accuracy: 0.6848 - val_loss: 0.8647 - val_accuracy: 0.5352
+검증 정확도 7.340%
+
+--------------------------------------------------
+Iteration 197
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 71us/sample - loss: 0.1037 - accuracy: 0.6833 - val_loss: 0.8525 - val_accuracy: 0.5335
+검증 정확도 7.240%
+
+--------------------------------------------------
+Iteration 198
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.0998 - accuracy: 0.6853 - val_loss: 0.8825 - val_accuracy: 0.5324
+검증 정확도 7.200%
+
+--------------------------------------------------
+Iteration 199
+Train on 45000 samples, validate on 5000 samples
+45000/45000 [==============================] - 3s 70us/sample - loss: 0.1046 - accuracy: 0.6833 - val_loss: 0.9325 - val_accuracy: 0.5276
+검증 정확도 6.200%
+
