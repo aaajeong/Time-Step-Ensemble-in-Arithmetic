@@ -9,6 +9,8 @@ from common.trainer import Trainer
 from common.util import eval_seq2seq
 from seq2seq import Seq2seq
 from peeky_seq2seq import PeekySeq2seq
+from tensorflow.python.client import device_lib
+print(device_lib.list_local_devices())
 
 
 # 데이터셋 읽기
@@ -20,7 +22,6 @@ print(x_train)
 is_reverse = True  # True
 if is_reverse:
     x_train, x_test = x_train[:, ::-1], x_test[:, ::-1]
-print(x_train)
 # ================================================================
 
 # 하이퍼파라미터 설정
@@ -28,7 +29,7 @@ vocab_size = len(char_to_id)
 wordvec_size = 16
 hideen_size = 128
 batch_size = 128
-max_epoch = 25
+max_epoch = 200
 max_grad = 5.0
 
 # 일반 혹은 엿보기(Peeky) 설정 =====================================
@@ -54,7 +55,7 @@ for epoch in range(max_epoch):
     acc_list.append(acc)
     print('검증 정확도 %.3f%%' % (acc * 100))
 
-# model.save_params('../savedmodelReverseSeq.pkl')
+model.save_params('model.pkl')
 # 그래프 그리기
 x = np.arange(len(acc_list))
 plt.plot(x, acc_list, marker='o')
