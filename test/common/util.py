@@ -322,7 +322,10 @@ def eval_seq2seq_esb(model_list, question, correct, id_to_char,
         # print('id_list: ', id_list)
 
         # Soft Voting
-        score_sum = score_list[0] + score_list[1]
+        # score_sum = np.empty(()) --> 나중에 수정
+        # for i in range(len(model_list)):
+        #     score_sum += score_list[i]
+        score_sum = score_list[0] + score_list[1] + score_list[2] + score_list[3] + score_list[4]
         # print('score_sum : ', score_sum)
 
         voting_id = np.argmax(score_sum.flatten())
