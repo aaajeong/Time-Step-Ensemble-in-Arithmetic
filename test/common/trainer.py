@@ -56,14 +56,14 @@ class Trainer:
 
             self.current_epoch += 1
 
-    def plot_loss(self, ylim=None):
+    def plot_loss(self, num, ylim=None):
         x = numpy.arange(len(self.loss_list))
         if ylim is not None:
             plt.ylim(*ylim)
         plt.plot(x, self.loss_list, label='train')
         plt.xlabel('Epoch (x' + str(self.eval_interval) + ')')
-        plt.ylabel('train_loss')
-        plt.savefig('train_loss.png')
+        plt.ylabel('train_loss' + ' ' + num)
+        plt.savefig('train_loss'+ num + '.png')
         plt.show()
 
 class RnnlmTrainer:
