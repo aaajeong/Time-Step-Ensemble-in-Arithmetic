@@ -18,7 +18,8 @@ print(device_lib.list_local_devices())
 # config.GPU = True
 
 # 데이터셋 읽기
-(x_train, t_train), (x_test, t_test) = sequence.load_data('addition.txt')
+# (x_train, t_train), (x_test, t_test) = sequence.load_data('addition.txt')
+(x_train, t_train), (x_test, t_test) = sequence.load_data('arithmetic.txt')
 char_to_id, id_to_char = sequence.get_vocab()
 print(x_train)
 
@@ -37,8 +38,8 @@ max_epoch = 200
 max_grad = 5.0
 
 # 일반 혹은 엿보기(Peeky) 설정 =====================================
-model = Seq2seq(vocab_size, wordvec_size, hideen_size)
-# model = PeekySeq2seq(vocab_size, wordvec_size, hideen_size)
+# model = Seq2seq(vocab_size, wordvec_size, hideen_size)
+model = PeekySeq2seq(vocab_size, wordvec_size, hideen_size)
 # ================================================================
 optimizer = Adam()
 trainer = Trainer(model, optimizer)
@@ -49,11 +50,11 @@ acc_list = []
 if config.GPU:
     x_train, t_train = to_gpu(x_train), to_gpu(t_train)
 
-# max_epoch = 2
+# max_epoch = 5
 for epoch in range(max_epoch):
     trainer.fit(x_train, t_train, max_epoch=1,
                 batch_size=batch_size, max_grad=max_grad)
-
+    
     correct_num = 0
     for i in range(len(x_test)):
         question, correct = x_test[[i]], t_test[[i]]
@@ -65,15 +66,19 @@ for epoch in range(max_epoch):
     acc_list.append(acc)
     print('검증 정확도 %.3f%%' % (acc * 100))
 
-model.save_params('addition_sc.pkl')
+trainer.plot_loss()
+model.save_params('arithmetic_sc.pkl')
+
 
 # 그래프 그리기
 x = np.arange(len(acc_list))
 plt.plot(x, acc_list, marker='o')
-plt.title('Addition Accuracy')
+plt.title('Arithmetic Accuracy')
 plt.xlabel('Epoch')
 plt.ylabel('Accuracy')
 plt.ylim(0, 1.0)
-plt.savefig('addition_Accuracy.png')
+plt.savefig('arithmetic_Accuracy.png')
 plt.show()
+
+
 

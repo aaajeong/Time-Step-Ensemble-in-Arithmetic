@@ -19,8 +19,11 @@ def _update_vocab(txt):
             id_to_char[tmp_id] = char
 
 
-def load_data(file_name='addition.txt', seed=1984):
+def load_data(file_name, seed=1984):
     file_path = os.path.dirname(os.path.abspath(__file__)) + '/' + file_name
+    # DIGITS = 3
+    # MAxLEN = DIGITS + 1 + DIGITS
+    # chars = '0123456789+*/-. '
 
     if not os.path.exists(file_path):
         print('No file: %s' % file_name)
@@ -43,11 +46,14 @@ def load_data(file_name='addition.txt', seed=1984):
     x = numpy.zeros((len(questions), len(questions[0])), dtype=numpy.int)
     t = numpy.zeros((len(questions), len(answers[0])), dtype=numpy.int)
 
+    print(x.shape)
+    print(t.shape)
+    print('char_to_id: ', char_to_id)
+    print('id_to_char: ', id_to_char)
     for i, sentence in enumerate(questions):
         x[i] = [char_to_id[c] for c in list(sentence)]
     for i, sentence in enumerate(answers):
         t[i] = [char_to_id[c] for c in list(sentence)]
-
     # # 뒤섞기
     # indices = numpy.arange(len(x))
     # if seed is not None:
