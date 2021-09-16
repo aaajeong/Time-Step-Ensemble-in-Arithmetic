@@ -18,7 +18,8 @@ print(device_lib.list_local_devices())
 # config.GPU = True
 
 # 데이터셋 읽기
-(x_train, t_train), (x_test, t_test) = sequence.load_data('arithmetic.txt')
+# (x_train, t_train), (x_test, t_test) = sequence.load_data('arithmetic.txt')
+(x_train, t_train), (x_test, t_test) = sequence.load_data('addition.txt')
 char_to_id, id_to_char = sequence.get_vocab()
 
 # 입력 반전 여부 설정 =============================================
