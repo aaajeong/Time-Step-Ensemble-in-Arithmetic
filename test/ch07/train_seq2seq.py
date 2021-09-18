@@ -66,7 +66,7 @@ for epoch in range(max_epoch):
     acc_list.append(acc)
     print('검증 정확도 %.3f%%' % (acc * 100))
 
-trainer.plot_loss()
+trainer.plot_loss(1)
 model.save_params('arithmetic_sc.pkl')
 
 
