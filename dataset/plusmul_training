@@ -1,0 +1,1401 @@
+
+--------------------------------------------------
+Iteration 1
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 9s 200us/step - loss: 1.6191 - accuracy: 0.4264 - val_loss: 1.5980 - val_accuracy: 0.4150
+검증 정확도 0.000%
+
+--------------------------------------------------
+Iteration 2
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 7s 166us/step - loss: 1.4893 - accuracy: 0.4542 - val_loss: 1.5582 - val_accuracy: 0.4212
+검증 정확도 0.000%
+
+--------------------------------------------------
+Iteration 3
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 169us/step - loss: 1.4532 - accuracy: 0.4610 - val_loss: 1.5365 - val_accuracy: 0.4267
+검증 정확도 0.040%
+
+--------------------------------------------------
+Iteration 4
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 7s 164us/step - loss: 1.4214 - accuracy: 0.4678 - val_loss: 1.5018 - val_accuracy: 0.4361
+검증 정확도 0.160%
+
+--------------------------------------------------
+Iteration 5
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 167us/step - loss: 1.3741 - accuracy: 0.4838 - val_loss: 1.4487 - val_accuracy: 0.4563
+검증 정확도 0.340%
+
+--------------------------------------------------
+Iteration 6
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 7s 162us/step - loss: 1.3004 - accuracy: 0.5087 - val_loss: 1.3438 - val_accuracy: 0.4855
+검증 정확도 0.500%
+
+--------------------------------------------------
+Iteration 7
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 7s 165us/step - loss: 1.2189 - accuracy: 0.5313 - val_loss: 1.2936 - val_accuracy: 0.4929
+검증 정확도 0.520%
+
+--------------------------------------------------
+Iteration 8
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 170us/step - loss: 1.1546 - accuracy: 0.5499 - val_loss: 1.2194 - val_accuracy: 0.5131
+검증 정확도 0.980%
+
+--------------------------------------------------
+Iteration 9
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 174us/step - loss: 1.0916 - accuracy: 0.5700 - val_loss: 1.1718 - val_accuracy: 0.5379
+검증 정확도 1.220%
+
+--------------------------------------------------
+Iteration 10
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 169us/step - loss: 1.0439 - accuracy: 0.5880 - val_loss: 1.1374 - val_accuracy: 0.5417
+검증 정확도 1.560%
+
+--------------------------------------------------
+Iteration 11
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 7s 165us/step - loss: 1.0088 - accuracy: 0.6006 - val_loss: 1.1005 - val_accuracy: 0.5630
+검증 정확도 1.980%
+
+--------------------------------------------------
+Iteration 12
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 170us/step - loss: 0.9751 - accuracy: 0.6149 - val_loss: 1.0727 - val_accuracy: 0.5737
+검증 정확도 2.680%
+
+--------------------------------------------------
+Iteration 13
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 168us/step - loss: 0.9469 - accuracy: 0.6273 - val_loss: 1.0360 - val_accuracy: 0.5922
+검증 정확도 4.420%
+
+--------------------------------------------------
+Iteration 14
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 167us/step - loss: 0.9122 - accuracy: 0.6447 - val_loss: 1.0092 - val_accuracy: 0.6069
+검증 정확도 5.340%
+
+--------------------------------------------------
+Iteration 15
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 170us/step - loss: 0.8671 - accuracy: 0.6688 - val_loss: 0.9581 - val_accuracy: 0.6319
+검증 정확도 8.300%
+
+--------------------------------------------------
+Iteration 16
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 169us/step - loss: 0.8181 - accuracy: 0.6916 - val_loss: 0.9010 - val_accuracy: 0.6575
+검증 정확도 13.940%
+
+--------------------------------------------------
+Iteration 17
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 180us/step - loss: 0.7614 - accuracy: 0.7183 - val_loss: 0.8479 - val_accuracy: 0.6854
+검증 정확도 17.700%
+
+--------------------------------------------------
+Iteration 18
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 174us/step - loss: 0.7104 - accuracy: 0.7417 - val_loss: 0.7969 - val_accuracy: 0.7066
+검증 정확도 20.480%
+
+--------------------------------------------------
+Iteration 19
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 175us/step - loss: 0.6715 - accuracy: 0.7559 - val_loss: 0.7650 - val_accuracy: 0.7177
+검증 정확도 24.040%
+
+--------------------------------------------------
+Iteration 20
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 169us/step - loss: 0.6395 - accuracy: 0.7678 - val_loss: 0.7311 - val_accuracy: 0.7300
+검증 정확도 27.500%
+
+--------------------------------------------------
+Iteration 21
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 167us/step - loss: 0.6163 - accuracy: 0.7760 - val_loss: 0.7152 - val_accuracy: 0.7350
+검증 정확도 28.780%
+
+--------------------------------------------------
+Iteration 22
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 172us/step - loss: 0.5941 - accuracy: 0.7840 - val_loss: 0.6953 - val_accuracy: 0.7425
+검증 정확도 32.100%
+
+--------------------------------------------------
+Iteration 23
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 169us/step - loss: 0.5802 - accuracy: 0.7892 - val_loss: 0.6808 - val_accuracy: 0.7497
+검증 정확도 34.800%
+
+--------------------------------------------------
+Iteration 24
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 169us/step - loss: 0.5630 - accuracy: 0.7962 - val_loss: 0.6830 - val_accuracy: 0.7430
+검증 정확도 32.280%
+
+--------------------------------------------------
+Iteration 25
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 170us/step - loss: 0.5521 - accuracy: 0.7990 - val_loss: 0.6586 - val_accuracy: 0.7558
+검증 정확도 35.940%
+
+--------------------------------------------------
+Iteration 26
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 178us/step - loss: 0.5374 - accuracy: 0.8052 - val_loss: 0.6550 - val_accuracy: 0.7552
+검증 정확도 36.980%
+
+--------------------------------------------------
+Iteration 27
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 172us/step - loss: 0.5283 - accuracy: 0.8084 - val_loss: 0.6374 - val_accuracy: 0.7659
+검증 정확도 39.200%
+
+--------------------------------------------------
+Iteration 28
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 169us/step - loss: 0.5169 - accuracy: 0.8126 - val_loss: 0.6512 - val_accuracy: 0.7576
+검증 정확도 37.440%
+
+--------------------------------------------------
+Iteration 29
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 169us/step - loss: 0.5071 - accuracy: 0.8163 - val_loss: 0.6129 - val_accuracy: 0.7737
+검증 정확도 41.960%
+
+--------------------------------------------------
+Iteration 30
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+
+45000/45000 [==============================] - 8s 167us/step - loss: 0.4944 - accuracy: 0.8214 - val_loss: 0.6248 - val_accuracy: 0.7670
+검증 정확도 38.640%
+
+--------------------------------------------------
+Iteration 31
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 7s 165us/step - loss: 0.4862 - accuracy: 0.8242 - val_loss: 0.6140 - val_accuracy: 0.7669
+검증 정확도 39.060%
+
+--------------------------------------------------
+Iteration 32
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 171us/step - loss: 0.4815 - accuracy: 0.8246 - val_loss: 0.5970 - val_accuracy: 0.7792
+검증 정확도 44.960%
+
+--------------------------------------------------
+Iteration 33
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 168us/step - loss: 0.4669 - accuracy: 0.8312 - val_loss: 0.5849 - val_accuracy: 0.7836
+검증 정확도 44.920%
+
+--------------------------------------------------
+Iteration 34
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 172us/step - loss: 0.4707 - accuracy: 0.8279 - val_loss: 0.5809 - val_accuracy: 0.7834
+검증 정확도 45.640%
+
+--------------------------------------------------
+Iteration 35
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 7s 167us/step - loss: 0.4514 - accuracy: 0.8365 - val_loss: 0.5738 - val_accuracy: 0.7876
+검증 정확도 46.420%
+
+--------------------------------------------------
+Iteration 36
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 167us/step - loss: 0.4492 - accuracy: 0.8363 - val_loss: 0.5735 - val_accuracy: 0.7861
+검증 정확도 45.980%
+
+--------------------------------------------------
+Iteration 37
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 169us/step - loss: 0.4416 - accuracy: 0.8389 - val_loss: 0.5716 - val_accuracy: 0.7851
+검증 정확도 45.140%
+
+--------------------------------------------------
+Iteration 38
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 171us/step - loss: 0.4339 - accuracy: 0.8416 - val_loss: 0.5713 - val_accuracy: 0.7844
+검증 정확도 44.680%
+
+--------------------------------------------------
+Iteration 39
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 170us/step - loss: 0.4291 - accuracy: 0.8433 - val_loss: 0.5764 - val_accuracy: 0.7821
+검증 정확도 46.160%
+
+--------------------------------------------------
+Iteration 40
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 169us/step - loss: 0.4226 - accuracy: 0.8456 - val_loss: 0.5477 - val_accuracy: 0.7933
+검증 정확도 47.360%
+
+--------------------------------------------------
+Iteration 41
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 171us/step - loss: 0.4176 - accuracy: 0.8472 - val_loss: 0.5593 - val_accuracy: 0.7889
+검증 정확도 45.840%
+
+--------------------------------------------------
+Iteration 42
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 7s 166us/step - loss: 0.4126 - accuracy: 0.8486 - val_loss: 0.5542 - val_accuracy: 0.7908
+검증 정확도 46.560%
+
+--------------------------------------------------
+Iteration 43
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 171us/step - loss: 0.4063 - accuracy: 0.8508 - val_loss: 0.5442 - val_accuracy: 0.7954
+검증 정확도 47.660%
+
+--------------------------------------------------
+Iteration 44
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 169us/step - loss: 0.4022 - accuracy: 0.8527 - val_loss: 0.5466 - val_accuracy: 0.7933
+검증 정확도 46.200%
+
+--------------------------------------------------
+Iteration 45
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 169us/step - loss: 0.3937 - accuracy: 0.8556 - val_loss: 0.5368 - val_accuracy: 0.8004
+검증 정확도 48.400%
+
+--------------------------------------------------
+Iteration 46
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 7s 166us/step - loss: 0.3924 - accuracy: 0.8558 - val_loss: 0.5627 - val_accuracy: 0.7893
+검증 정확도 46.080%
+
+--------------------------------------------------
+Iteration 47
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 168us/step - loss: 0.3904 - accuracy: 0.8569 - val_loss: 0.5377 - val_accuracy: 0.7982
+검증 정확도 47.740%
+
+--------------------------------------------------
+Iteration 48
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 169us/step - loss: 0.3821 - accuracy: 0.8601 - val_loss: 0.5365 - val_accuracy: 0.7994
+검증 정확도 48.840%
+
+--------------------------------------------------
+Iteration 49
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 167us/step - loss: 0.3828 - accuracy: 0.8594 - val_loss: 0.5421 - val_accuracy: 0.7965
+검증 정확도 45.920%
+
+--------------------------------------------------
+Iteration 50
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 169us/step - loss: 0.3718 - accuracy: 0.8638 - val_loss: 0.5318 - val_accuracy: 0.8003
+검증 정확도 48.960%
+
+--------------------------------------------------
+Iteration 51
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 7s 166us/step - loss: 0.3735 - accuracy: 0.8626 - val_loss: 0.5323 - val_accuracy: 0.7992
+검증 정확도 47.660%
+
+--------------------------------------------------
+Iteration 52
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 168us/step - loss: 0.3682 - accuracy: 0.8647 - val_loss: 0.5228 - val_accuracy: 0.8026
+검증 정확도 47.980%
+
+--------------------------------------------------
+Iteration 53
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 167us/step - loss: 0.3618 - accuracy: 0.8676 - val_loss: 0.5294 - val_accuracy: 0.8016
+검증 정확도 48.400%
+
+--------------------------------------------------
+Iteration 54
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 168us/step - loss: 0.3586 - accuracy: 0.8685 - val_loss: 0.5191 - val_accuracy: 0.8041
+검증 정확도 48.620%
+
+--------------------------------------------------
+Iteration 55
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 172us/step - loss: 0.3522 - accuracy: 0.8712 - val_loss: 0.5242 - val_accuracy: 0.8035
+검증 정확도 49.700%
+
+--------------------------------------------------
+Iteration 56
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 173us/step - loss: 0.3507 - accuracy: 0.8718 - val_loss: 0.5369 - val_accuracy: 0.8006
+검증 정확도 48.600%
+
+--------------------------------------------------
+Iteration 57
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 175us/step - loss: 0.3551 - accuracy: 0.8691 - val_loss: 0.5165 - val_accuracy: 0.8068
+검증 정확도 48.760%
+
+--------------------------------------------------
+Iteration 58
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 179us/step - loss: 0.3388 - accuracy: 0.8763 - val_loss: 0.5150 - val_accuracy: 0.8064
+검증 정확도 49.680%
+
+--------------------------------------------------
+Iteration 59
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 174us/step - loss: 0.3362 - accuracy: 0.8773 - val_loss: 0.5091 - val_accuracy: 0.8100
+검증 정확도 50.140%
+
+--------------------------------------------------
+Iteration 60
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+
+45000/45000 [==============================] - 8s 173us/step - loss: 0.3433 - accuracy: 0.8747 - val_loss: 0.5262 - val_accuracy: 0.8068
+검증 정확도 49.440%
+
+--------------------------------------------------
+Iteration 61
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 172us/step - loss: 0.3310 - accuracy: 0.8795 - val_loss: 0.5056 - val_accuracy: 0.8109
+검증 정확도 50.060%
+
+--------------------------------------------------
+Iteration 62
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 169us/step - loss: 0.3279 - accuracy: 0.8801 - val_loss: 0.5402 - val_accuracy: 0.8002
+검증 정확도 47.600%
+
+--------------------------------------------------
+Iteration 63
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 175us/step - loss: 0.3291 - accuracy: 0.8795 - val_loss: 0.5102 - val_accuracy: 0.8095
+검증 정확도 49.920%
+
+--------------------------------------------------
+Iteration 64
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 170us/step - loss: 0.3216 - accuracy: 0.8829 - val_loss: 0.5161 - val_accuracy: 0.8089
+검증 정확도 50.060%
+
+--------------------------------------------------
+Iteration 65
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 168us/step - loss: 0.3227 - accuracy: 0.8825 - val_loss: 0.5340 - val_accuracy: 0.8038
+검증 정확도 47.240%
+
+--------------------------------------------------
+Iteration 66
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 7s 165us/step - loss: 0.3152 - accuracy: 0.8855 - val_loss: 0.5305 - val_accuracy: 0.8086
+검증 정확도 49.820%
+
+--------------------------------------------------
+Iteration 67
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 169us/step - loss: 0.3141 - accuracy: 0.8852 - val_loss: 0.5056 - val_accuracy: 0.8131
+검증 정확도 50.160%
+
+--------------------------------------------------
+Iteration 68
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 170us/step - loss: 0.3212 - accuracy: 0.8824 - val_loss: 0.5591 - val_accuracy: 0.7971
+검증 정확도 45.680%
+
+--------------------------------------------------
+Iteration 69
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 172us/step - loss: 0.3079 - accuracy: 0.8881 - val_loss: 0.5147 - val_accuracy: 0.8118
+검증 정확도 50.040%
+
+--------------------------------------------------
+Iteration 70
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 171us/step - loss: 0.3054 - accuracy: 0.8893 - val_loss: 0.5362 - val_accuracy: 0.8043
+검증 정확도 48.340%
+
+--------------------------------------------------
+Iteration 71
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 171us/step - loss: 0.3049 - accuracy: 0.8896 - val_loss: 0.5183 - val_accuracy: 0.8099
+검증 정확도 50.160%
+
+--------------------------------------------------
+Iteration 72
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 7s 165us/step - loss: 0.2939 - accuracy: 0.8939 - val_loss: 0.5191 - val_accuracy: 0.8119
+검증 정확도 50.100%
+
+--------------------------------------------------
+Iteration 73
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 170us/step - loss: 0.2930 - accuracy: 0.8936 - val_loss: 0.5216 - val_accuracy: 0.8113
+검증 정확도 50.280%
+
+--------------------------------------------------
+Iteration 74
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 177us/step - loss: 0.3017 - accuracy: 0.8903 - val_loss: 0.5286 - val_accuracy: 0.8076
+검증 정확도 48.640%
+
+--------------------------------------------------
+Iteration 75
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 173us/step - loss: 0.2979 - accuracy: 0.8919 - val_loss: 0.5292 - val_accuracy: 0.8072
+검증 정확도 48.080%
+
+--------------------------------------------------
+Iteration 76
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 171us/step - loss: 0.2824 - accuracy: 0.8986 - val_loss: 0.5195 - val_accuracy: 0.8129
+검증 정확도 50.280%
+
+--------------------------------------------------
+Iteration 77
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 171us/step - loss: 0.2801 - accuracy: 0.8995 - val_loss: 0.5228 - val_accuracy: 0.8122
+검증 정확도 50.360%
+
+--------------------------------------------------
+Iteration 78
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 168us/step - loss: 0.2881 - accuracy: 0.8960 - val_loss: 0.5564 - val_accuracy: 0.8014
+검증 정확도 44.220%
+
+--------------------------------------------------
+Iteration 79
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 168us/step - loss: 0.2807 - accuracy: 0.8991 - val_loss: 0.5404 - val_accuracy: 0.8082
+검증 정확도 48.740%
+
+--------------------------------------------------
+Iteration 80
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 170us/step - loss: 0.2798 - accuracy: 0.8992 - val_loss: 0.5304 - val_accuracy: 0.8113
+검증 정확도 50.260%
+
+--------------------------------------------------
+Iteration 81
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 169us/step - loss: 0.2734 - accuracy: 0.9018 - val_loss: 0.5301 - val_accuracy: 0.8130
+검증 정확도 50.200%
+
+--------------------------------------------------
+Iteration 82
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 169us/step - loss: 0.2713 - accuracy: 0.9029 - val_loss: 0.5845 - val_accuracy: 0.7983
+검증 정확도 47.160%
+
+--------------------------------------------------
+Iteration 83
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 168us/step - loss: 0.2815 - accuracy: 0.8984 - val_loss: 0.5384 - val_accuracy: 0.8108
+검증 정확도 50.560%
+
+--------------------------------------------------
+Iteration 84
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 169us/step - loss: 0.2691 - accuracy: 0.9034 - val_loss: 0.5469 - val_accuracy: 0.8107
+검증 정확도 49.500%
+
+--------------------------------------------------
+Iteration 85
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 169us/step - loss: 0.2636 - accuracy: 0.9062 - val_loss: 0.5339 - val_accuracy: 0.8115
+검증 정확도 50.440%
+
+--------------------------------------------------
+Iteration 86
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 7s 166us/step - loss: 0.2616 - accuracy: 0.9068 - val_loss: 0.5532 - val_accuracy: 0.8085
+검증 정확도 48.960%
+
+--------------------------------------------------
+Iteration 87
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 169us/step - loss: 0.2573 - accuracy: 0.9089 - val_loss: 0.5520 - val_accuracy: 0.8092
+검증 정확도 49.220%
+
+--------------------------------------------------
+Iteration 88
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 7s 166us/step - loss: 0.2549 - accuracy: 0.9090 - val_loss: 0.5490 - val_accuracy: 0.8113
+검증 정확도 50.240%
+
+--------------------------------------------------
+Iteration 89
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 7s 166us/step - loss: 0.2539 - accuracy: 0.9100 - val_loss: 0.5929 - val_accuracy: 0.7967
+검증 정확도 44.980%
+
+--------------------------------------------------
+Iteration 90
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+
+45000/45000 [==============================] - 8s 167us/step - loss: 0.2607 - accuracy: 0.9075 - val_loss: 0.5584 - val_accuracy: 0.8099
+검증 정확도 49.100%
+
+--------------------------------------------------
+Iteration 91
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 171us/step - loss: 0.2488 - accuracy: 0.9122 - val_loss: 0.5537 - val_accuracy: 0.8106
+검증 정확도 50.480%
+
+--------------------------------------------------
+Iteration 92
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 169us/step - loss: 0.2428 - accuracy: 0.9142 - val_loss: 0.5572 - val_accuracy: 0.8095
+검증 정확도 50.340%
+
+--------------------------------------------------
+Iteration 93
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 7s 167us/step - loss: 0.2456 - accuracy: 0.9129 - val_loss: 0.5635 - val_accuracy: 0.8107
+검증 정확도 50.360%
+
+--------------------------------------------------
+Iteration 94
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 167us/step - loss: 0.2377 - accuracy: 0.9168 - val_loss: 0.5603 - val_accuracy: 0.8122
+검증 정확도 50.680%
+
+--------------------------------------------------
+Iteration 95
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 168us/step - loss: 0.2375 - accuracy: 0.9164 - val_loss: 0.5721 - val_accuracy: 0.8104
+검증 정확도 49.380%
+
+--------------------------------------------------
+Iteration 96
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 168us/step - loss: 0.2324 - accuracy: 0.9185 - val_loss: 0.5762 - val_accuracy: 0.8089
+검증 정확도 50.000%
+
+--------------------------------------------------
+Iteration 97
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 168us/step - loss: 0.2367 - accuracy: 0.9169 - val_loss: 0.5859 - val_accuracy: 0.8053
+검증 정확도 49.000%
+
+--------------------------------------------------
+Iteration 98
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 169us/step - loss: 0.2393 - accuracy: 0.9159 - val_loss: 0.6001 - val_accuracy: 0.8017
+검증 정확도 47.880%
+
+--------------------------------------------------
+Iteration 99
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 167us/step - loss: 0.2404 - accuracy: 0.9148 - val_loss: 0.5998 - val_accuracy: 0.8047
+검증 정확도 48.260%
+
+--------------------------------------------------
+Iteration 100
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 171us/step - loss: 0.2212 - accuracy: 0.9237 - val_loss: 0.5777 - val_accuracy: 0.8121
+검증 정확도 50.660%
+100번째 정확도 :  0.5066
+
+--------------------------------------------------
+Iteration 101
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 171us/step - loss: 0.2175 - accuracy: 0.9248 - val_loss: 0.5925 - val_accuracy: 0.8099
+검증 정확도 50.240%
+
+--------------------------------------------------
+Iteration 102
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 173us/step - loss: 0.2239 - accuracy: 0.9220 - val_loss: 0.6079 - val_accuracy: 0.8043
+검증 정확도 48.120%
+
+--------------------------------------------------
+Iteration 103
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 170us/step - loss: 0.2209 - accuracy: 0.9230 - val_loss: 0.5902 - val_accuracy: 0.8094
+검증 정확도 50.220%
+
+--------------------------------------------------
+Iteration 104
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 170us/step - loss: 0.2165 - accuracy: 0.9252 - val_loss: 0.5938 - val_accuracy: 0.8093
+검증 정확도 50.120%
+
+--------------------------------------------------
+Iteration 105
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 173us/step - loss: 0.2137 - accuracy: 0.9266 - val_loss: 0.6216 - val_accuracy: 0.8023
+검증 정확도 47.220%
+
+--------------------------------------------------
+Iteration 106
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 171us/step - loss: 0.2214 - accuracy: 0.9228 - val_loss: 0.6118 - val_accuracy: 0.8078
+검증 정확도 49.520%
+
+--------------------------------------------------
+Iteration 107
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 176us/step - loss: 0.2065 - accuracy: 0.9292 - val_loss: 0.6155 - val_accuracy: 0.8068
+검증 정확도 49.120%
+
+--------------------------------------------------
+Iteration 108
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 7s 165us/step - loss: 0.2079 - accuracy: 0.9286 - val_loss: 0.6141 - val_accuracy: 0.8093
+검증 정확도 50.200%
+
+--------------------------------------------------
+Iteration 109
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 7s 166us/step - loss: 0.2093 - accuracy: 0.9289 - val_loss: 0.6829 - val_accuracy: 0.7932
+검증 정확도 46.680%
+
+--------------------------------------------------
+Iteration 110
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 7s 165us/step - loss: 0.2154 - accuracy: 0.9250 - val_loss: 0.6257 - val_accuracy: 0.8091
+검증 정확도 49.820%
+
+--------------------------------------------------
+Iteration 111
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 167us/step - loss: 0.1957 - accuracy: 0.9338 - val_loss: 0.6234 - val_accuracy: 0.8090
+검증 정확도 49.880%
+
+--------------------------------------------------
+Iteration 112
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 7s 167us/step - loss: 0.1932 - accuracy: 0.9341 - val_loss: 0.6562 - val_accuracy: 0.8034
+검증 정확도 49.100%
+
+--------------------------------------------------
+Iteration 113
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 169us/step - loss: 0.2125 - accuracy: 0.9271 - val_loss: 0.6338 - val_accuracy: 0.8102
+검증 정확도 49.760%
+
+--------------------------------------------------
+Iteration 114
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 171us/step - loss: 0.1980 - accuracy: 0.9327 - val_loss: 0.6497 - val_accuracy: 0.8068
+검증 정확도 49.820%
+
+--------------------------------------------------
+Iteration 115
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 170us/step - loss: 0.1847 - accuracy: 0.9381 - val_loss: 0.6423 - val_accuracy: 0.8087
+검증 정확도 49.980%
+
+--------------------------------------------------
+Iteration 116
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 170us/step - loss: 0.1829 - accuracy: 0.9386 - val_loss: 0.6559 - val_accuracy: 0.8069
+검증 정확도 50.360%
+
+--------------------------------------------------
+Iteration 117
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 167us/step - loss: 0.1827 - accuracy: 0.9389 - val_loss: 0.6474 - val_accuracy: 0.8084
+검증 정확도 50.040%
+
+--------------------------------------------------
+Iteration 118
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 168us/step - loss: 0.2027 - accuracy: 0.9311 - val_loss: 0.6751 - val_accuracy: 0.8037
+검증 정확도 48.260%
+
+--------------------------------------------------
+Iteration 119
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 171us/step - loss: 0.1895 - accuracy: 0.9357 - val_loss: 0.6820 - val_accuracy: 0.8030
+검증 정확도 49.640%
+
+--------------------------------------------------
+Iteration 120
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+
+45000/45000 [==============================] - 7s 166us/step - loss: 0.1787 - accuracy: 0.9400 - val_loss: 0.6653 - val_accuracy: 0.8085
+검증 정확도 50.320%
+
+--------------------------------------------------
+Iteration 121
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 169us/step - loss: 0.1737 - accuracy: 0.9426 - val_loss: 0.6775 - val_accuracy: 0.8069
+검증 정확도 49.700%
+
+--------------------------------------------------
+Iteration 122
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 167us/step - loss: 0.1753 - accuracy: 0.9411 - val_loss: 0.6985 - val_accuracy: 0.8042
+검증 정확도 48.700%
+
+--------------------------------------------------
+Iteration 123
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 176us/step - loss: 0.1737 - accuracy: 0.9427 - val_loss: 0.6902 - val_accuracy: 0.8043
+검증 정확도 49.420%
+
+--------------------------------------------------
+Iteration 124
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 170us/step - loss: 0.1710 - accuracy: 0.9432 - val_loss: 0.7215 - val_accuracy: 0.7993
+검증 정확도 46.040%
+
+--------------------------------------------------
+Iteration 125
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 169us/step - loss: 0.1737 - accuracy: 0.9419 - val_loss: 0.6969 - val_accuracy: 0.8046
+검증 정확도 49.200%
+
+--------------------------------------------------
+Iteration 126
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 169us/step - loss: 0.1848 - accuracy: 0.9383 - val_loss: 0.6968 - val_accuracy: 0.8038
+검증 정확도 48.560%
+
+--------------------------------------------------
+Iteration 127
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 169us/step - loss: 0.1662 - accuracy: 0.9449 - val_loss: 0.7020 - val_accuracy: 0.8079
+검증 정확도 50.400%
+
+--------------------------------------------------
+Iteration 128
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 167us/step - loss: 0.1564 - accuracy: 0.9495 - val_loss: 0.7084 - val_accuracy: 0.8064
+검증 정확도 50.360%
+
+--------------------------------------------------
+Iteration 129
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 170us/step - loss: 0.1558 - accuracy: 0.9495 - val_loss: 0.7083 - val_accuracy: 0.8066
+검증 정확도 50.080%
+
+--------------------------------------------------
+Iteration 130
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 168us/step - loss: 0.1682 - accuracy: 0.9438 - val_loss: 0.7398 - val_accuracy: 0.8001
+검증 정확도 47.400%
+
+--------------------------------------------------
+Iteration 131
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 173us/step - loss: 0.1761 - accuracy: 0.9407 - val_loss: 0.7115 - val_accuracy: 0.8079
+검증 정확도 49.960%
+
+--------------------------------------------------
+Iteration 132
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 168us/step - loss: 0.1513 - accuracy: 0.9517 - val_loss: 0.7325 - val_accuracy: 0.8061
+검증 정확도 49.820%
+
+--------------------------------------------------
+Iteration 133
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 170us/step - loss: 0.1461 - accuracy: 0.9538 - val_loss: 0.7256 - val_accuracy: 0.8057
+검증 정확도 49.840%
+
+--------------------------------------------------
+Iteration 134
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 171us/step - loss: 0.1445 - accuracy: 0.9540 - val_loss: 0.7508 - val_accuracy: 0.8032
+검증 정확도 49.220%
+
+--------------------------------------------------
+Iteration 135
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 172us/step - loss: 0.1531 - accuracy: 0.9498 - val_loss: 0.7590 - val_accuracy: 0.8033
+검증 정확도 49.400%
+
+--------------------------------------------------
+Iteration 136
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 7s 164us/step - loss: 0.1476 - accuracy: 0.9522 - val_loss: 0.7568 - val_accuracy: 0.8034
+검증 정확도 48.840%
+
+--------------------------------------------------
+Iteration 137
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 171us/step - loss: 0.1463 - accuracy: 0.9531 - val_loss: 0.7632 - val_accuracy: 0.8037
+검증 정확도 49.780%
+
+--------------------------------------------------
+Iteration 138
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 169us/step - loss: 0.1512 - accuracy: 0.9510 - val_loss: 0.7668 - val_accuracy: 0.8033
+검증 정확도 49.220%
+
+--------------------------------------------------
+Iteration 139
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 168us/step - loss: 0.1414 - accuracy: 0.9548 - val_loss: 0.7609 - val_accuracy: 0.8046
+검증 정확도 49.840%
+
+--------------------------------------------------
+Iteration 140
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 170us/step - loss: 0.1559 - accuracy: 0.9492 - val_loss: 0.7674 - val_accuracy: 0.8038
+검증 정확도 49.620%
+
+--------------------------------------------------
+Iteration 141
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 7s 165us/step - loss: 0.1326 - accuracy: 0.9585 - val_loss: 0.7873 - val_accuracy: 0.8036
+검증 정확도 49.420%
+
+--------------------------------------------------
+Iteration 142
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 171us/step - loss: 0.1300 - accuracy: 0.9597 - val_loss: 0.7778 - val_accuracy: 0.8039
+검증 정확도 49.860%
+
+--------------------------------------------------
+Iteration 143
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 167us/step - loss: 0.1271 - accuracy: 0.9608 - val_loss: 0.8009 - val_accuracy: 0.8012
+검증 정확도 49.320%
+
+--------------------------------------------------
+Iteration 144
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 171us/step - loss: 0.1655 - accuracy: 0.9454 - val_loss: 0.7986 - val_accuracy: 0.8020
+검증 정확도 48.920%
+
+--------------------------------------------------
+Iteration 145
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 168us/step - loss: 0.1286 - accuracy: 0.9600 - val_loss: 0.7964 - val_accuracy: 0.8022
+검증 정확도 49.340%
+
+--------------------------------------------------
+Iteration 146
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 170us/step - loss: 0.1208 - accuracy: 0.9634 - val_loss: 0.8007 - val_accuracy: 0.8039
+검증 정확도 49.420%
+
+--------------------------------------------------
+Iteration 147
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 170us/step - loss: 0.1202 - accuracy: 0.9635 - val_loss: 0.8033 - val_accuracy: 0.8007
+검증 정확도 48.260%
+
+--------------------------------------------------
+Iteration 148
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 169us/step - loss: 0.1327 - accuracy: 0.9581 - val_loss: 0.8101 - val_accuracy: 0.8026
+검증 정확도 49.500%
+
+--------------------------------------------------
+Iteration 149
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 7s 166us/step - loss: 0.1199 - accuracy: 0.9636 - val_loss: 0.8283 - val_accuracy: 0.8033
+검증 정확도 49.100%
+
+--------------------------------------------------
+Iteration 150
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+
+45000/45000 [==============================] - 8s 167us/step - loss: 0.1144 - accuracy: 0.9657 - val_loss: 0.8249 - val_accuracy: 0.8041
+검증 정확도 49.720%
+
+--------------------------------------------------
+Iteration 151
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 7s 167us/step - loss: 0.1461 - accuracy: 0.9535 - val_loss: 0.8507 - val_accuracy: 0.7985
+검증 정확도 47.560%
+
+--------------------------------------------------
+Iteration 152
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 167us/step - loss: 0.1170 - accuracy: 0.9642 - val_loss: 0.8464 - val_accuracy: 0.8022
+검증 정확도 49.520%
+
+--------------------------------------------------
+Iteration 153
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 167us/step - loss: 0.1069 - accuracy: 0.9691 - val_loss: 0.8412 - val_accuracy: 0.8048
+검증 정확도 49.700%
+
+--------------------------------------------------
+Iteration 154
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 171us/step - loss: 0.1066 - accuracy: 0.9689 - val_loss: 0.8598 - val_accuracy: 0.8019
+검증 정확도 49.640%
+
+--------------------------------------------------
+Iteration 155
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 171us/step - loss: 0.1144 - accuracy: 0.9648 - val_loss: 0.8646 - val_accuracy: 0.7998
+검증 정확도 49.320%
+
+--------------------------------------------------
+Iteration 156
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 170us/step - loss: 0.1125 - accuracy: 0.9659 - val_loss: 0.8676 - val_accuracy: 0.7998
+검증 정확도 48.420%
+
+--------------------------------------------------
+Iteration 157
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 171us/step - loss: 0.1201 - accuracy: 0.9622 - val_loss: 0.8998 - val_accuracy: 0.7928
+검증 정확도 46.160%
+
+--------------------------------------------------
+Iteration 158
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 169us/step - loss: 0.1230 - accuracy: 0.9614 - val_loss: 0.8666 - val_accuracy: 0.8015
+검증 정확도 49.380%
+
+--------------------------------------------------
+Iteration 159
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 168us/step - loss: 0.0980 - accuracy: 0.9721 - val_loss: 0.8731 - val_accuracy: 0.8029
+검증 정확도 49.860%
+
+--------------------------------------------------
+Iteration 160
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 167us/step - loss: 0.1227 - accuracy: 0.9631 - val_loss: 0.8852 - val_accuracy: 0.8016
+검증 정확도 48.960%
+
+--------------------------------------------------
+Iteration 161
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 169us/step - loss: 0.0975 - accuracy: 0.9723 - val_loss: 0.8914 - val_accuracy: 0.8012
+검증 정확도 49.220%
+
+--------------------------------------------------
+Iteration 162
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 173us/step - loss: 0.0931 - accuracy: 0.9741 - val_loss: 0.8987 - val_accuracy: 0.8019
+검증 정확도 49.780%
+
+--------------------------------------------------
+Iteration 163
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 171us/step - loss: 0.0956 - accuracy: 0.9726 - val_loss: 0.9181 - val_accuracy: 0.7992
+검증 정확도 48.800%
+
+--------------------------------------------------
+Iteration 164
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 167us/step - loss: 0.0992 - accuracy: 0.9710 - val_loss: 0.9456 - val_accuracy: 0.7942
+검증 정확도 46.000%
+
+--------------------------------------------------
+Iteration 165
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 172us/step - loss: 0.1156 - accuracy: 0.9641 - val_loss: 0.9146 - val_accuracy: 0.8006
+검증 정확도 48.780%
+
+--------------------------------------------------
+Iteration 166
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 169us/step - loss: 0.0935 - accuracy: 0.9731 - val_loss: 0.9239 - val_accuracy: 0.8007
+검증 정확도 49.480%
+
+--------------------------------------------------
+Iteration 167
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 7s 166us/step - loss: 0.1011 - accuracy: 0.9702 - val_loss: 0.9548 - val_accuracy: 0.7923
+검증 정확도 45.000%
+
+--------------------------------------------------
+Iteration 168
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 169us/step - loss: 0.0989 - accuracy: 0.9711 - val_loss: 0.9404 - val_accuracy: 0.7989
+검증 정확도 48.380%
+
+--------------------------------------------------
+Iteration 169
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 168us/step - loss: 0.0867 - accuracy: 0.9759 - val_loss: 0.9403 - val_accuracy: 0.8002
+검증 정확도 49.280%
+
+--------------------------------------------------
+Iteration 170
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 176us/step - loss: 0.0818 - accuracy: 0.9780 - val_loss: 0.9558 - val_accuracy: 0.7996
+검증 정확도 49.100%
+
+--------------------------------------------------
+Iteration 171
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 170us/step - loss: 0.0874 - accuracy: 0.9758 - val_loss: 0.9818 - val_accuracy: 0.7947
+검증 정확도 47.800%
+
+--------------------------------------------------
+Iteration 172
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 172us/step - loss: 0.0944 - accuracy: 0.9723 - val_loss: 0.9795 - val_accuracy: 0.7975
+검증 정확도 48.480%
+
+--------------------------------------------------
+Iteration 173
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 169us/step - loss: 0.0953 - accuracy: 0.9721 - val_loss: 0.9821 - val_accuracy: 0.7964
+검증 정확도 48.140%
+
+--------------------------------------------------
+Iteration 174
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 167us/step - loss: 0.0830 - accuracy: 0.9771 - val_loss: 0.9743 - val_accuracy: 0.7985
+검증 정확도 49.340%
+
+--------------------------------------------------
+Iteration 175
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 170us/step - loss: 0.0961 - accuracy: 0.9723 - val_loss: 1.0187 - val_accuracy: 0.7931
+검증 정확도 46.500%
+
+--------------------------------------------------
+Iteration 176
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 173us/step - loss: 0.1194 - accuracy: 0.9632 - val_loss: 0.9947 - val_accuracy: 0.7943
+검증 정확도 47.300%
+
+--------------------------------------------------
+Iteration 177
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 173us/step - loss: 0.0777 - accuracy: 0.9797 - val_loss: 0.9871 - val_accuracy: 0.7978
+검증 정확도 48.520%
+
+--------------------------------------------------
+Iteration 178
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 169us/step - loss: 0.0681 - accuracy: 0.9839 - val_loss: 0.9867 - val_accuracy: 0.8003
+검증 정확도 49.640%
+
+--------------------------------------------------
+Iteration 179
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 171us/step - loss: 0.0689 - accuracy: 0.9833 - val_loss: 1.0013 - val_accuracy: 0.7990
+검증 정확도 49.360%
+
+--------------------------------------------------
+Iteration 180
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+
+45000/45000 [==============================] - 8s 181us/step - loss: 0.0721 - accuracy: 0.9813 - val_loss: 1.0116 - val_accuracy: 0.7973
+검증 정확도 48.940%
+
+--------------------------------------------------
+Iteration 181
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 170us/step - loss: 0.0754 - accuracy: 0.9799 - val_loss: 1.0264 - val_accuracy: 0.7947
+검증 정확도 47.240%
+
+--------------------------------------------------
+Iteration 182
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 7s 166us/step - loss: 0.0809 - accuracy: 0.9771 - val_loss: 1.0464 - val_accuracy: 0.7965
+검증 정확도 48.920%
+
+--------------------------------------------------
+Iteration 183
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 7s 167us/step - loss: 0.1019 - accuracy: 0.9686 - val_loss: 1.0322 - val_accuracy: 0.7938
+검증 정확도 47.700%
+
+--------------------------------------------------
+Iteration 184
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 167us/step - loss: 0.0719 - accuracy: 0.9811 - val_loss: 1.0281 - val_accuracy: 0.7978
+검증 정확도 48.760%
+
+--------------------------------------------------
+Iteration 185
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 169us/step - loss: 0.0637 - accuracy: 0.9848 - val_loss: 1.0360 - val_accuracy: 0.7985
+검증 정확도 48.880%
+
+--------------------------------------------------
+Iteration 186
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 7s 167us/step - loss: 0.0733 - accuracy: 0.9816 - val_loss: 1.1064 - val_accuracy: 0.7866
+검증 정확도 45.040%
+
+--------------------------------------------------
+Iteration 187
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 170us/step - loss: 0.0962 - accuracy: 0.9715 - val_loss: 1.0656 - val_accuracy: 0.7940
+검증 정확도 47.380%
+
+--------------------------------------------------
+Iteration 188
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 172us/step - loss: 0.0705 - accuracy: 0.9816 - val_loss: 1.0541 - val_accuracy: 0.7968
+검증 정확도 48.860%
+
+--------------------------------------------------
+Iteration 189
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 170us/step - loss: 0.0628 - accuracy: 0.9853 - val_loss: 1.0529 - val_accuracy: 0.7979
+검증 정확도 49.420%
+
+--------------------------------------------------
+Iteration 190
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 7s 166us/step - loss: 0.0558 - accuracy: 0.9880 - val_loss: 1.0720 - val_accuracy: 0.7978
+검증 정확도 49.320%
+
+--------------------------------------------------
+Iteration 191
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 169us/step - loss: 0.0578 - accuracy: 0.9868 - val_loss: 1.0814 - val_accuracy: 0.7980
+검증 정확도 49.420%
+
+--------------------------------------------------
+Iteration 192
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 172us/step - loss: 0.0689 - accuracy: 0.9820 - val_loss: 1.1031 - val_accuracy: 0.7913
+검증 정확도 46.180%
+
+--------------------------------------------------
+Iteration 193
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 169us/step - loss: 0.1169 - accuracy: 0.9632 - val_loss: 1.1242 - val_accuracy: 0.7912
+검증 정확도 47.420%
+
+--------------------------------------------------
+Iteration 194
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 169us/step - loss: 0.0692 - accuracy: 0.9822 - val_loss: 1.0847 - val_accuracy: 0.7966
+검증 정확도 48.440%
+
+--------------------------------------------------
+Iteration 195
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 171us/step - loss: 0.0492 - accuracy: 0.9906 - val_loss: 1.0855 - val_accuracy: 0.7971
+검증 정확도 49.300%
+
+--------------------------------------------------
+Iteration 196
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 177us/step - loss: 0.0474 - accuracy: 0.9911 - val_loss: 1.1048 - val_accuracy: 0.7980
+검증 정확도 49.300%
+
+--------------------------------------------------
+Iteration 197
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 168us/step - loss: 0.0500 - accuracy: 0.9897 - val_loss: 1.1163 - val_accuracy: 0.7965
+검증 정확도 48.940%
+
+--------------------------------------------------
+Iteration 198
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 167us/step - loss: 0.0704 - accuracy: 0.9810 - val_loss: 1.1382 - val_accuracy: 0.7913
+검증 정확도 46.840%
+
+--------------------------------------------------
+Iteration 199
+Train on 45000 samples, validate on 5000 samples
+Epoch 1/1
+45000/45000 [==============================] - 8s 170us/step - loss: 0.0926 - accuracy: 0.9723 - val_loss: 1.1237 - val_accuracy: 0.7962
+검증 정확도 47.960%
+
