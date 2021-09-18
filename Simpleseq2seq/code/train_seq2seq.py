@@ -1,6 +1,8 @@
 # coding: utf-8
 import sys
-sys.path.append('./')  
+# sys.path.append('./')  
+sys.path.append('Simpleseq2seq')
+print(sys.path)
 import numpy as np
 import matplotlib.pyplot as plt
 from dataset import sequence
@@ -19,7 +21,8 @@ print(device_lib.list_local_devices())
 
 # 데이터셋 읽기
 # (x_train, t_train), (x_test, t_test) = sequence.load_data('addition.txt')
-(x_train, t_train), (x_test, t_test) = sequence.load_data('arithmetic.txt')
+# (x_train, t_train), (x_test, t_test) = sequence.load_data('arithmetic.txt')
+(x_train, t_train), (x_test, t_test) = sequence.load_data('plusmul.txt')
 char_to_id, id_to_char = sequence.get_vocab()
 print(x_train)
 
@@ -50,7 +53,7 @@ acc_list = []
 if config.GPU:
     x_train, t_train = to_gpu(x_train), to_gpu(t_train)
 
-# max_epoch = 5
+max_epoch = 2
 for epoch in range(max_epoch):
     trainer.fit(x_train, t_train, max_epoch=1,
                 batch_size=batch_size, max_grad=max_grad)
@@ -66,18 +69,20 @@ for epoch in range(max_epoch):
     acc_list.append(acc)
     print('검증 정확도 %.3f%%' % (acc * 100))
 
-trainer.plot_loss(1)
-model.save_params('arithmetic_sc.pkl')
+trainer.plot_loss('1')
+# model.save_params('arithmetic_sc.pkl')
+model.save_params('plusmul_sc.pkl')
+
 
 
 # 그래프 그리기
 x = np.arange(len(acc_list))
 plt.plot(x, acc_list, marker='o')
-plt.title('Arithmetic Accuracy')
+plt.title('Plus & Mul Accuracy')
 plt.xlabel('Epoch')
 plt.ylabel('Accuracy')
 plt.ylim(0, 1.0)
-plt.savefig('arithmetic_Accuracy.png')
+plt.savefig('plusmul_Accuracy.png')
 plt.show()
 
 

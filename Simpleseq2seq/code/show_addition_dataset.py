@@ -1,6 +1,6 @@
 # coding: utf-8
 import sys
-sys.path.append('/Users/ahjeong_park/Study/WegraLee/deep-learning-from-scratch-2')
+sys.path.append('Simpleseq2seq')
 from dataset import sequence
 
 
