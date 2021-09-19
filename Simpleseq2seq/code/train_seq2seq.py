@@ -1,7 +1,7 @@
 # coding: utf-8
 import sys
-# sys.path.append('./')  
-sys.path.append('Simpleseq2seq')
+sys.path.append('./')  
+#sys.path.append('Simpleseq2seq')
 print(sys.path)
 import numpy as np
 import matplotlib.pyplot as plt
@@ -53,7 +53,7 @@ acc_list = []
 if config.GPU:
     x_train, t_train = to_gpu(x_train), to_gpu(t_train)
 
-max_epoch = 2
+#max_epoch = 2
 for epoch in range(max_epoch):
     trainer.fit(x_train, t_train, max_epoch=1,
                 batch_size=batch_size, max_grad=max_grad)
