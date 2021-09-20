@@ -1,7 +1,7 @@
 # coding: utf-8
 import sys
-# sys.path.append('./')  
-sys.path.append('Simpleseq2seq')
+sys.path.append('./')  
+#sys.path.append('Simpleseq2seq')
 import numpy as np
 import matplotlib.pyplot as plt
 from dataset import sequence
@@ -19,9 +19,9 @@ print(device_lib.list_local_devices())
 # config.GPU = True
 
 # 데이터셋 읽기
-# (x_train, t_train), (x_test, t_test) = sequence.load_data('arithmetic.txt')
+(x_train, t_train), (x_test, t_test) = sequence.load_data('arithmetic.txt')
 # (x_train, t_train), (x_test, t_test) = sequence.load_data('addition.txt')
-(x_train, t_train), (x_test, t_test) = sequence.load_data('plusmul.txt')
+# (x_train, t_train), (x_test, t_test) = sequence.load_data('plusmul.txt')
 char_to_id, id_to_char = sequence.get_vocab()
 
 # 입력 반전 여부 설정 =============================================
@@ -102,20 +102,20 @@ trainer3.plot_loss(num[2])
 trainer4.plot_loss(num[3])
 trainer5.plot_loss(num[4])
 
-model.save_params('./savedmodel/plusmul_sc.pkl')
-model2.save_params('./savedmodel/plusmul_sc(2).pkl')
-model3.save_params('./savedmodel/plusmul_sc(3).pkl')
-model4.save_params('./savedmodel/plusmul_sc(4).pkl')
-model5.save_params('./savedmodel/plusmul_sc(5).pkl')
+model.save_params('./savedmodel/arithmetic(esb)_sc.pkl')
+model2.save_params('./savedmodel/arithmetic(esb)_sc(2).pkl')
+model3.save_params('./savedmodel/arithmetic(esb)_sc(3).pkl')
+model4.save_params('./savedmodel/arithmetic(esb)_sc(4).pkl')
+model5.save_params('./savedmodel/arithmetic(esb)_sc(5).pkl')
 
 # 그래프 그리기
 x = np.arange(len(acc_list))
 plt.plot(x, acc_list, marker='o')
-plt.title('Plus & Mul Ensemble Accuracy')
+plt.title('Arithmetic Ensemble Accuracy')
 plt.xlabel('Epoch')
 plt.ylabel('Accuracy')
 plt.ylim(0, 1.0)
-plt.savefig('plusmul_Ensemble_Acc.png')
+plt.savefig('Arithmetic_Ensemble_Acc.png')
 plt.show()
 
 
