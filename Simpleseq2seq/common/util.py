@@ -225,7 +225,7 @@ def eval_perplexity(model, corpus, batch_size=10, time_size=35):
     ppl = np.exp(total_loss / max_iters)
     return ppl
 
-
+# 모델 앙상블 (소프트 보팅)
 def eval_seq2seq(model, question, correct, id_to_char,
                  verbos=False, is_reverse=False):
     correct = correct.flatten()
@@ -318,7 +318,7 @@ def eval_seq2seq_esb(model_list, question, correct, id_to_char,
         # argmax id
         for i in range(len(model_list)):
             score_id = np.argmax(score_list[i].flatten())
-            id_list[i].append(score_id)
+            id_list.append(score_id)
         # print('id_list: ', id_list)
 
         # Soft Voting
@@ -371,6 +371,204 @@ def eval_seq2seq_esb(model_list, question, correct, id_to_char,
         print('---')
 
     return 1 if voting_guess == correct else 0
+
+# 모델 앙상블 - 서바이벌
+def eval_seq2seq_survival(model_list, question, correct, id_to_char, verbos=False, is_reverse=False):
+    correct = correct.flatten()
+    # 머릿글자
+    start_id = correct[0]
+    correct = correct[1:]
+
+    model_list = model_list
+    suvi_models = model_list.copy()
+
+    for model in suvi_models:
+        # h : hidden state?
+        h = model.encoder.forward(question)
+        model.decoder.lstm.set_state(h)
+
+    sample_size = len(correct)
+    survival_result = []
+    sample_id = start_id
+
+    model_num = len(model_list)
+    # id_list = [[] * model_num for i in range(model_num)]
+
+    # correct의 길이만큼 반복(prediction)
+    for _ in range(sample_size):
+        # id_list = [[] * model_num for i in range(model_num)]
+        id_list = []
+        x_list = []
+        out_list = []
+        out_list2 = []
+        score_list = []
+        max_list = []
+        
+        if model_num > 2:
+            # input x
+            for i in range(model_num):
+                x = np.array(sample_id).reshape(1, 1)
+                x_list.append(x)
+            
+            # 디코더의 forward (x)
+            for i in range(model_num):
+                out = suvi_models[i].decoder.embed.forward(x_list[i])
+                out_list.append(out)
+            
+            # 디코더의 lstm
+            for i in range(model_num):
+                out = suvi_models[i].decoder.lstm.forward(out_list[i])
+                out_list2.append(out)
+
+            # 디코더의 affine
+            for i in range(model_num):
+                score = suvi_models[i].decoder.affine.forward(out_list2[i])
+                score_list.append(score)
+
+            # argmax id, max value
+            for i in range(model_num):
+                score_id = np.argmax(score_list[i].flatten())
+                id_list.append(score_id)
+                max_list.append(score_list[i][0][0][score_id])
+        
+            # ========== Survival Ensemble =========== 
+            # 1. 모델에서 가장 많이 등장한 인덱스 번호 찾기 (다 다르게 나올 경우 제일 첫번째 값으로 됨)
+            semi_answer = max(id_list, key=id_list.count)
+
+            # 2. 세미정답을 출력한 살아남은 모델 --> winner
+            #    세미정답을 출력하지 않은 실패한 모델 --> loser
+            winner = list(np.where(np.array(id_list) == semi_answer)[0])
+            loser = list(np.where(np.array(id_list) != semi_answer)[0]) 
+
+            # 3. winner 모델만 다시 서바이벌 참여할 수 있도록 참여모델 업데이트
+            update_sm = [] # suvi_models 업데이트
+
+            for win in winner:
+                update_sm.append(suvi_models[win])
+
+            # 업데이트한 모델을 다시 서바이벌 모델 리스트에 대입
+            suvi_models = update_sm
+            
+            print('참가한 모델의 예측: ', id_list)
+            print('다수결 결과: ', semi_answer)
+            print('살아남은 모델: ', winner)
+            print('탈락한 모델: ', loser)
+            print('-------------------------------------------')
+
+            # 4. 다음 서바이벌 경쟁을 위해 탈락한 모델(loser) 개수 제외
+            model_num -= len(loser)
+
+            # 5. semi_answer 에 해당하는 결과 저장
+            survival_result.append(semi_answer)
+
+            # 6. 다음 id 넘겨주기
+            sample_id = semi_answer
+        elif model_num == 2:
+            # 살아있는 모델 수가 2개
+            # input x
+            for i in range(model_num):
+                x = np.array(sample_id).reshape(1, 1)
+                x_list.append(x)
+            
+            # 디코더의 forward (x)
+            for i in range(model_num):
+                out = suvi_models[i].decoder.embed.forward(x_list[i])
+                out_list.append(out)
+            
+            # 디코더의 lstm
+            for i in range(model_num):
+                out = suvi_models[i].decoder.lstm.forward(out_list[i])
+                out_list2.append(out)
+
+            # 디코더의 affine
+            for i in range(model_num):
+                score = suvi_models[i].decoder.affine.forward(out_list2[i])
+                score_list.append(score)
+
+            # argmax id, max value
+            for i in range(model_num):
+                score_id = np.argmax(score_list[i].flatten())
+                id_list.append(score_id)
+                max_list.append(score_list[i][0][0][score_id])
+            
+            # ========== Survival Ensemble =========== 
+            if id_list[0] == id_list[1]:
+                semi_answer = id_list[0]
+                survival_result.append(semi_answer)
+                print('참가한 모델의 예측: ', id_list)
+                print('다수결 결과: ', semi_answer)
+                print('-------------------------------------------')
+                sample_id = semi_answer
+            else:
+                semi_answer = id_list[max_list.index(max(max_list))]
+                survival_result.append(semi_answer)
+                print('참가한 모델의 예측: ', id_list)
+                print('다수결 결과: ', semi_answer)
+                print('-------------------------------------------')
+
+                # 이제 모델 1개로 진행(2개가 다른 답이 나왔으니깐)
+                loser = list(np.where(np.array(id_list) != semi_answer)[0])
+                for l in loser:
+                    del suvi_models[l]
+                model_num -= 1
+
+                print('탈락한 모델(2개중): ', loser)
+                sample_id = semi_answer
+        else:
+            # 살아남은 모델 1개
+            # input x
+            x = np.array(sample_id).reshape(1, 1)
+            x_list.append(x)
+            
+            # 디코더의 forward (x)
+            out = suvi_models[0].decoder.embed.forward(x_list[0])
+            out_list.append(out)
+            
+            # 디코더의 lstm
+            out = suvi_models[0].decoder.lstm.forward(out_list[0])
+            out_list2.append(out)
+
+            # 디코더의 affine
+            score = suvi_models[0].decoder.affine.forward(out_list2[0])
+            score_list.append(score)
+
+            # argmax id, max value
+            score_id = np.argmax(score_list[0].flatten())
+            survival_result.append(score_id)
+            print('최후 1개 모델의 예측: ', score_id)
+            print('-------------------------------------------')
+            sample_id = score_id
+
+    survival_guess = survival_result
+    print(survival_guess)
+    # 문자열로 변환
+    question = ''.join([id_to_char[int(c)] for c in question.flatten()])
+    correct = ''.join([id_to_char[int(c)] for c in correct])
+    survival_guess = ''.join([id_to_char[int(c)] for c in survival_guess])
+
+    if verbos:
+        if is_reverse:
+            question = question[::-1]
+
+        colors = {'ok': '\033[92m', 'fail': '\033[91m', 'close': '\033[0m'}
+        print('Q', question)
+        print('T', correct)
+
+        is_windows = os.name == 'nt'
+
+        if correct == survival_guess:
+            mark = colors['ok'] + '☑' + colors['close']
+            if is_windows:
+                mark = 'O'
+            print(mark + ' ' + survival_guess)
+        else:
+            mark = colors['fail'] + '☒' + colors['close']
+            if is_windows:
+                mark = 'X'
+            print(mark + ' ' + survival_guess)
+        print('---')
+
+    return 1 if survival_guess == correct else 0
 
 
 def analogy(a, b, c, word_to_id, id_to_word, word_matrix, top=5, answer=None):

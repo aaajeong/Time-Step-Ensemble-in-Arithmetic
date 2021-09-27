@@ -1,6 +1,5 @@
 # coding: utf-8
 import sys
-print(sys.path)
 sys.path.append('..')
 import os
 import numpy
