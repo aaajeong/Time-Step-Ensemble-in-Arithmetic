@@ -396,6 +396,7 @@ def eval_seq2seq_survival(model_list, question, correct, id_to_char, verbos=Fals
 
     # correct의 길이만큼 반복(prediction)
     for _ in range(sample_size):
+        print('===============', _, '번째 자리===============')
         # id_list = [[] * model_num for i in range(model_num)]
         id_list = []
         x_list = []
@@ -449,11 +450,11 @@ def eval_seq2seq_survival(model_list, question, correct, id_to_char, verbos=Fals
             # 업데이트한 모델을 다시 서바이벌 모델 리스트에 대입
             suvi_models = update_sm
             
-           # print('참가한 모델의 예측: ', id_list)
-           # print('다수결 결과: ', semi_answer)
-           # print('살아남은 모델: ', winner)
-           # print('탈락한 모델: ', loser)
-           # print('-------------------------------------------')
+            print('참가한 모델의 예측: ', id_list)
+            print('다수결 결과: ', semi_answer)
+            print('살아남은 모델: ', winner)
+            print('탈락한 모델: ', loser)
+            print('-------------------------------------------')
 
             # 4. 다음 서바이벌 경쟁을 위해 탈락한 모델(loser) 개수 제외
             model_num -= len(loser)
@@ -495,16 +496,16 @@ def eval_seq2seq_survival(model_list, question, correct, id_to_char, verbos=Fals
             if id_list[0] == id_list[1]:
                 semi_answer = id_list[0]
                 survival_result.append(semi_answer)
-               # print('참가한 모델의 예측: ', id_list)
-               # print('다수결 결과: ', semi_answer)
-               # print('-------------------------------------------')
+                print('참가한 모델의 예측: ', id_list)
+                print('다수결 결과: ', semi_answer)
+                print('-------------------------------------------')
                 sample_id = semi_answer
             else:
                 semi_answer = id_list[max_list.index(max(max_list))]
                 survival_result.append(semi_answer)
-                #print('참가한 모델의 예측: ', id_list)
-                #print('다수결 결과: ', semi_answer)
-                #print('-------------------------------------------')
+                print('참가한 모델의 예측: ', id_list)
+                print('다수결 결과: ', semi_answer)
+                print('-------------------------------------------')
 
                 # 이제 모델 1개로 진행(2개가 다른 답이 나왔으니깐)
                 loser = list(np.where(np.array(id_list) != semi_answer)[0])
@@ -535,16 +536,17 @@ def eval_seq2seq_survival(model_list, question, correct, id_to_char, verbos=Fals
             # argmax id, max value
             score_id = np.argmax(score_list[0].flatten())
             survival_result.append(score_id)
-            #print('최후 1개 모델의 예측: ', score_id)
-            #print('-------------------------------------------')
+            print('최후 1개 모델의 예측: ', score_id)
+            print('-------------------------------------------')
             sample_id = score_id
 
     survival_guess = survival_result
-    #print(survival_guess)
+    print('서바이벌 결과: ',survival_guess)
     # 문자열로 변환
     question = ''.join([id_to_char[int(c)] for c in question.flatten()])
     correct = ''.join([id_to_char[int(c)] for c in correct])
     survival_guess = ''.join([id_to_char[int(c)] for c in survival_guess])
+    print('문자열로 변환한 결과: ',survival_guess)
 
     if verbos:
         if is_reverse:

@@ -1,7 +1,7 @@
 # coding: utf-8
 import sys
-sys.path.append('./')  
-# sys.path.append('Simpleseq2seq')
+# sys.path.append('./')  
+sys.path.append('Simpleseq2seq')
 import numpy as np
 import matplotlib.pyplot as plt
 from dataset import sequence
@@ -72,7 +72,7 @@ acc_list = []
 if config.GPU:
     x_train, t_train = to_gpu(x_train), to_gpu(t_train)
 
-# max_epoch = 2
+max_epoch = 2
 for epoch in range(max_epoch):
     trainer.fit(x_train, t_train, max_epoch=1,
                 batch_size=batch_size, max_grad=max_grad)
@@ -86,7 +86,7 @@ for epoch in range(max_epoch):
                 batch_size=batch_size, max_grad=max_grad)
     
     correct_num = 0
-    for i in range(len(x_test)):    #len(x_test)
+    for i in range(10):    #len(x_test)
         question, correct = x_test[[i]], t_test[[i]]
         verbose = i < 10
         # correct_num += eval_seq2seq_esb(model_list, question, correct,
@@ -99,27 +99,27 @@ for epoch in range(max_epoch):
     print('검증 정확도 %.3f%%' % (acc * 100))
 
 num = ['1', '2', '3', '4', '5']
-trainer.plot_loss(num[0], 0)
-trainer2.plot_loss(num[1], 1)
-trainer3.plot_loss(num[2], 2)
-trainer4.plot_loss(num[3], 3)
-trainer5.plot_loss(num[4], 4)
+# trainer.plot_loss(num[0])
+# trainer2.plot_loss(num[1])
+# trainer3.plot_loss(num[2])
+# trainer4.plot_loss(num[3])
+# trainer5.plot_loss(num[4])
 
-model.save_params('./savedmodel/addition(survival)_sc.pkl')
-model2.save_params('./savedmodel/addition(survival)_sc(2).pkl')
-model3.save_params('./savedmodel/addition(survival)_sc(3).pkl')
-model4.save_params('./savedmodel/addition(survival)_sc(4).pkl')
-model5.save_params('./savedmodel/addition(survival)_sc(5).pkl')
+# model.save_params('addition(survival)_sc.pkl')
+# model2.save_params('addition(survival)_sc(2).pkl')
+# model3.save_params('addition(survival)_sc(3).pkl')
+# model4.save_params('addition(survival)_sc(4).pkl')
+# model5.save_params('addition(survival)_sc(5).pkl')
 
 # 그래프 그리기
-x = np.arange(len(acc_list))
-plt.plot(x, acc_list, marker='o')
-plt.title('Addition Survival Accuracy')
-plt.xlabel('Epoch')
-plt.ylabel('Accuracy')
-plt.ylim(0, 1.0)
-plt.savefig('Addition_Survival_Acc.png')
-plt.show()
+# x = np.arange(len(acc_list))
+# plt.plot(x, acc_list, marker='o')
+# plt.title('Addition Survival Accuracy')
+# plt.xlabel('Epoch')
+# plt.ylabel('Accuracy')
+# plt.ylim(0, 1.0)
+# plt.savefig('Addition_Survival_Acc.png')
+# plt.show()
 
 
 
