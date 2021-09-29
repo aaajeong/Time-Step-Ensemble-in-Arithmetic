@@ -1,7 +1,7 @@
 # coding: utf-8
 import sys
-# sys.path.append('./')  
-sys.path.append('Simpleseq2seq')
+sys.path.append('./')  
+# sys.path.append('Simpleseq2seq')
 import numpy as np
 import matplotlib.pyplot as plt
 from dataset import sequence
@@ -40,7 +40,8 @@ max_epoch = 200
 max_grad = 5.0
 
 # model 개수
-model_num = 5
+# model_num = 5
+model_num = 10
 model_list = []
 
 # 일반 혹은 엿보기(Peeky) 설정 =====================================
@@ -49,6 +50,11 @@ model2 = Seq2seq(vocab_size, wordvec_size, hideen_size)
 model3 = Seq2seq(vocab_size, wordvec_size, hideen_size)
 model4 = Seq2seq(vocab_size, wordvec_size, hideen_size)
 model5 = Seq2seq(vocab_size, wordvec_size, hideen_size)
+model6= Seq2seq(vocab_size, wordvec_size, hideen_size)
+model7 = Seq2seq(vocab_size, wordvec_size, hideen_size)
+model8 = Seq2seq(vocab_size, wordvec_size, hideen_size)
+model9 = Seq2seq(vocab_size, wordvec_size, hideen_size)
+model10 = Seq2seq(vocab_size, wordvec_size, hideen_size)
 # model = PeekySeq2seq(vocab_size, wordvec_size, hideen_size)
 # ================================================================
 
@@ -58,13 +64,24 @@ model_list.append(model2)
 model_list.append(model3)
 model_list.append(model4)
 model_list.append(model5)
+model_list.append(model6)
+model_list.append(model7)
+model_list.append(model8)
+model_list.append(model9)
+model_list.append(model10)
 
 optimizer = Adam()
 trainer = Trainer(model, optimizer)
-trainer2 = Trainer(model, optimizer)
-trainer3 = Trainer(model, optimizer)
-trainer4 = Trainer(model, optimizer)
-trainer5 = Trainer(model, optimizer)
+trainer2 = Trainer(model2, optimizer)
+trainer3 = Trainer(model3, optimizer)
+trainer4 = Trainer(model4, optimizer)
+trainer5 = Trainer(model5, optimizer)
+trainer6= Trainer(model6, optimizer)
+trainer7 = Trainer(model7, optimizer)
+trainer8 = Trainer(model8, optimizer)
+trainer9 = Trainer(model9, optimizer)
+trainer10 = Trainer(model10, optimizer)
+
 
 acc_list = []
 
@@ -72,7 +89,7 @@ acc_list = []
 if config.GPU:
     x_train, t_train = to_gpu(x_train), to_gpu(t_train)
 
-max_epoch = 2
+# max_epoch = 2
 for epoch in range(max_epoch):
     trainer.fit(x_train, t_train, max_epoch=1,
                 batch_size=batch_size, max_grad=max_grad)
@@ -83,6 +100,16 @@ for epoch in range(max_epoch):
     trainer4.fit(x_train, t_train, max_epoch=1,
                 batch_size=batch_size, max_grad=max_grad)
     trainer5.fit(x_train, t_train, max_epoch=1,
+                batch_size=batch_size, max_grad=max_grad)
+    trainer6.fit(x_train, t_train, max_epoch=1,
+                batch_size=batch_size, max_grad=max_grad)
+    trainer7.fit(x_train, t_train, max_epoch=1,
+                batch_size=batch_size, max_grad=max_grad)
+    trainer8.fit(x_train, t_train, max_epoch=1,
+                batch_size=batch_size, max_grad=max_grad)
+    trainer9.fit(x_train, t_train, max_epoch=1,
+                batch_size=batch_size, max_grad=max_grad)
+    trainer10.fit(x_train, t_train, max_epoch=1,
                 batch_size=batch_size, max_grad=max_grad)
     
     correct_num = 0
@@ -98,28 +125,39 @@ for epoch in range(max_epoch):
     acc_list.append(acc)
     print('검증 정확도 %.3f%%' % (acc * 100))
 
-num = ['1', '2', '3', '4', '5']
-# trainer.plot_loss(num[0])
-# trainer2.plot_loss(num[1])
-# trainer3.plot_loss(num[2])
-# trainer4.plot_loss(num[3])
-# trainer5.plot_loss(num[4])
+# num = ['1', '2', '3', '4', '5']
+num = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+trainer.plot_loss(num[0])
+trainer2.plot_loss(num[1])
+trainer3.plot_loss(num[2])
+trainer4.plot_loss(num[3])
+trainer5.plot_loss(num[4])
+trainer6.plot_loss(num[5])
+trainer7.plot_loss(num[6])
+trainer8.plot_loss(num[7])
+trainer9.plot_loss(num[8])
+trainer10.plot_loss(num[9])
 
-# model.save_params('addition(survival)_sc.pkl')
-# model2.save_params('addition(survival)_sc(2).pkl')
-# model3.save_params('addition(survival)_sc(3).pkl')
-# model4.save_params('addition(survival)_sc(4).pkl')
-# model5.save_params('addition(survival)_sc(5).pkl')
+model.save_params('addition(survival)_sc.pkl')
+model2.save_params('addition(survival)_sc(2).pkl')
+model3.save_params('addition(survival)_sc(3).pkl')
+model4.save_params('addition(survival)_sc(4).pkl')
+model5.save_params('addition(survival)_sc(5).pkl')
+model6.save_params('addition(survival)_sc(6).pkl')
+model7.save_params('addition(survival)_sc(7).pkl')
+model8.save_params('addition(survival)_sc(8).pkl')
+model9.save_params('addition(survival)_sc(9).pkl')
+model10.save_params('addition(survival)_sc(10).pkl')
 
 # 그래프 그리기
-# x = np.arange(len(acc_list))
-# plt.plot(x, acc_list, marker='o')
-# plt.title('Addition Survival Accuracy')
-# plt.xlabel('Epoch')
-# plt.ylabel('Accuracy')
-# plt.ylim(0, 1.0)
-# plt.savefig('Addition_Survival_Acc.png')
-# plt.show()
+x = np.arange(len(acc_list))
+plt.plot(x, acc_list, marker='o')
+plt.title('Addition Survival Accuracy')
+plt.xlabel('Epoch')
+plt.ylabel('Accuracy')
+plt.ylim(0, 1.0)
+plt.savefig('Addition_Survival_Acc.png')
+plt.show()
 
 
 
