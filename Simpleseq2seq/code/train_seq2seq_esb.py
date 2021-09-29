@@ -8,7 +8,7 @@ from dataset import sequence
 from common import config
 from common.optimizer import Adam
 from common.trainer import Trainer
-from common.util import eval_seq2seq, eval_seq2seq_esb, eval_seq2seq_survival, to_gpu
+from common.util import eval_seq2seq, eval_seq2seq_esb, eval_seq2seq_survival, eval_seq2seq_real, to_gpu
 from seq2seq import Seq2seq
 from peeky_seq2seq import PeekySeq2seq
 from tensorflow.python.client import device_lib
@@ -118,7 +118,9 @@ for epoch in range(max_epoch):
         verbose = i < 10
         # correct_num += eval_seq2seq_esb(model_list, question, correct,
         #                             id_to_char, verbose, is_reverse)
-        correct_num += eval_seq2seq_survival(model_list, question, correct,
+        # correct_num += eval_seq2seq_survival(model_list, question, correct,
+        #                             id_to_char, verbose, is_reverse)
+        correct_num += eval_seq2seq_real(model_list, question, correct,
                                     id_to_char, verbose, is_reverse)
 
     acc = float(correct_num) / len(x_test)
