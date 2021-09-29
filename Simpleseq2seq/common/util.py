@@ -570,6 +570,137 @@ def eval_seq2seq_survival(model_list, question, correct, id_to_char, verbos=Fals
 
     return 1 if survival_guess == correct else 0
 
+# 모델 앙상블 - 진짜 다수결
+def eval_seq2seq_real(model_list, question, correct, id_to_char, verbos=False, is_reverse=False):
+    correct = correct.flatten()
+    # 머릿글자
+    start_id = correct[0]
+    correct = correct[1:]
+
+    model_list = model_list
+    suvi_models = model_list.copy()
+
+    for model in suvi_models:
+        # h : hidden state?
+        h = model.encoder.forward(question)
+        model.decoder.lstm.set_state(h)
+
+    sample_size = len(correct)
+    # sample_id = start_id
+    sample_ids = []
+    model_num = len(model_list)
+    for i in range(model_num):
+        sample_ids.append(start_id)
+    candi_list = [[] * model_num for i in range(model_num)]
+    affine_list = [[] * model_num for i in range(model_num)]
+
+    # correct의 길이만큼 반복(prediction)
+    for _ in range(sample_size):
+        id_list = []
+        x_list = []
+        out_list = []
+        out_list2 = []
+        score_list = []
+        max_list = []
+        # input x
+        for i in range(model_num):
+            x = np.array(sample_ids[i]).reshape(1, 1)
+            x_list.append(x)
+
+        # 디코더의 forward (x)
+        for i in range(model_num):
+            out = model_list[i].decoder.embed.forward(x_list[i])
+            out_list.append(out)
+
+        # 디코더의 lstm
+        for i in range(model_num):
+            out = model_list[i].decoder.lstm.forward(out_list[i])
+            out_list2.append(out)
+
+        # 디코더의 affine
+        for i in range(model_num):
+            score = model_list[i].decoder.affine.forward(out_list2[i])
+            score_list.append(score)
+
+        # argmax id & max affine
+        for i in range(model_num):
+            score_id = np.argmax(score_list[i].flatten())
+            id_list.append(score_id)
+            affine = score_list[i][score_id]
+            affine_list[i].append(affine)
+
+        # 각 모델의 번역 결과 저장
+        for i in range(model_num):
+            candi_list[i].append(id_list[i])
+        
+        # 다음 단어 예측을 위한 id 넘겨주기
+        for i in range(model_num):
+            sample_ids[i] = id_list[i]
+    
+    # 문자열로 변환
+    for i in range(candi_list):
+        candi_list[i] = ''.join([id_to_char[int(c)] for c in candi_list[i]])
+
+    # =========== 진짜 다수결 시작 ============
+    # 각 모델 결과의 affine 평균 값
+    affine_list = np.array(affine_list)
+    affine_avg = []
+    for m in affine_list:
+        affine_avg.append(np.mean(m))
+    
+    # 각 모델 결과가 같은지/아닌지 그룹핑
+    group = {}
+    index = []
+    for m in range(model_num):
+        if candi_list[m] in group:
+            group[candi_list[m]].append(m)
+        else:
+            index = [m]
+            group[candi_list[m]] = index
+
+    # 그룹 별 어파인 평균값의 합
+    affine_sum = {}
+    for idx in group.values():
+        sum = 0
+        for m in idx:
+            sum += affine_avg[m]
+        affine_sum[tuple(idx)] = sum
+
+    # 가장 높은 어파인합 값을 가진 번역 결과 출력
+    real_maj = max(affine_sum, key = affine_sum.get)
+
+    for key, value in group.items():
+        if value == list(real_maj):
+            print(key)
+            majority_guess = key
+    
+    # 문제/정답 문자열로 변환
+    question = ''.join([id_to_char[int(c)] for c in question.flatten()])
+    correct = ''.join([id_to_char[int(c)] for c in correct])
+
+    if verbos:
+        if is_reverse:
+            question = question[::-1]
+
+        colors = {'ok': '\033[92m', 'fail': '\033[91m', 'close': '\033[0m'}
+        print('Q', question)
+        print('T', correct)
+
+        is_windows = os.name == 'nt'
+
+        if correct == majority_guess:
+            mark = colors['ok'] + '☑' + colors['close']
+            if is_windows:
+                mark = 'O'
+            print(mark + ' ' + majority_guess)
+        else:
+            mark = colors['fail'] + '☒' + colors['close']
+            if is_windows:
+                mark = 'X'
+            print(mark + ' ' + majority_guess)
+        print('---')
+
+    return 1 if majority_guess == correct else 0
 
 def analogy(a, b, c, word_to_id, id_to_word, word_matrix, top=5, answer=None):
     for word in (a, b, c):
