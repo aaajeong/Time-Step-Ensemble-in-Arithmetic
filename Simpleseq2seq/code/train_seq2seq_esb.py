@@ -13,6 +13,7 @@ from seq2seq import Seq2seq
 from peeky_seq2seq import PeekySeq2seq
 from tensorflow.python.client import device_lib
 print(device_lib.list_local_devices())
+# sys.stdout = open('addition_survival 학습.txt', 'w')
 
 # GPU에서 실행하려면 아래 주석을 해제하세요(CuPy 필요).
 # ===============================================
