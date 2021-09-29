@@ -225,7 +225,7 @@ def eval_perplexity(model, corpus, batch_size=10, time_size=35):
     ppl = np.exp(total_loss / max_iters)
     return ppl
 
-# 모델 앙상블 (소프트 보팅)
+
 def eval_seq2seq(model, question, correct, id_to_char,
                  verbos=False, is_reverse=False):
     correct = correct.flatten()
@@ -264,6 +264,7 @@ def eval_seq2seq(model, question, correct, id_to_char,
 
     return 1 if guess == correct else 0
 
+# 모델 앙상블 (소프트 보팅)
 def eval_seq2seq_esb(model_list, question, correct, id_to_char,
                  verbos=False, is_reverse=False):
 
@@ -628,7 +629,7 @@ def eval_seq2seq_real(model_list, question, correct, id_to_char, verbos=False, i
         for i in range(model_num):
             score_id = np.argmax(score_list[i].flatten())
             id_list.append(score_id)
-            affine = score_list[i][score_id]
+            affine = score_list[i][0][0][score_id]
             affine_list[i].append(affine)
 
         # 각 모델의 번역 결과 저장
@@ -639,17 +640,23 @@ def eval_seq2seq_real(model_list, question, correct, id_to_char, verbos=False, i
         for i in range(model_num):
             sample_ids[i] = id_list[i]
     
+    # print('candi_list: ', candi_list)
     # 문자열로 변환
-    for i in range(candi_list):
-        candi_list[i] = ''.join([id_to_char[int(c)] for c in candi_list[i]])
+    for i in range(len(candi_list)):
+        ans = ''.join([id_to_char[int(c)] for c in candi_list[i]])
+        candi_list[i] = ans
+        # candi_list[i] = ''.join([id_to_char[int(c)] for c in candi_list[i]])
 
+    # print('문자열 변환 candi_list: ', candi_list)
+    # print('affine_list: ', affine_list)
     # =========== 진짜 다수결 시작 ============
     # 각 모델 결과의 affine 평균 값
     affine_list = np.array(affine_list)
     affine_avg = []
     for m in affine_list:
         affine_avg.append(np.mean(m))
-    
+    # print('affine_avg: ', affine_avg)
+
     # 각 모델 결과가 같은지/아닌지 그룹핑
     group = {}
     index = []
@@ -659,6 +666,7 @@ def eval_seq2seq_real(model_list, question, correct, id_to_char, verbos=False, i
         else:
             index = [m]
             group[candi_list[m]] = index
+    # print('group: ', group)
 
     # 그룹 별 어파인 평균값의 합
     affine_sum = {}
@@ -667,15 +675,17 @@ def eval_seq2seq_real(model_list, question, correct, id_to_char, verbos=False, i
         for m in idx:
             sum += affine_avg[m]
         affine_sum[tuple(idx)] = sum
+    # print('affine_sum: ', affine_sum)
 
     # 가장 높은 어파인합 값을 가진 번역 결과 출력
     real_maj = max(affine_sum, key = affine_sum.get)
+    # print('real_maj: ', real_maj)
 
     for key, value in group.items():
         if value == list(real_maj):
             print(key)
             majority_guess = key
-    
+    # print('majority_guess = ', majority_guess)
     # 문제/정답 문자열로 변환
     question = ''.join([id_to_char[int(c)] for c in question.flatten()])
     correct = ''.join([id_to_char[int(c)] for c in correct])
