@@ -14,7 +14,7 @@ from peeky_seq2seq import PeekySeq2seq
 from tqdm import tqdm
 from tensorflow.python.client import device_lib
 print(device_lib.list_local_devices())
-sys.stdout = open('addition_survival 학습.txt', 'w')
+# sys.stdout = open('addition_survival(5) memo.txt', 'w')
 
 # GPU에서 실행하려면 아래 주석을 해제하세요(CuPy 필요).
 # ===============================================
@@ -135,22 +135,22 @@ trainer2.plot_loss(num[1])
 trainer3.plot_loss(num[2])
 trainer4.plot_loss(num[3])
 trainer5.plot_loss(num[4])
-trainer6.plot_loss(num[5])
-trainer7.plot_loss(num[6])
-trainer8.plot_loss(num[7])
-trainer9.plot_loss(num[8])
-trainer10.plot_loss(num[9])
+# trainer6.plot_loss(num[5])
+# trainer7.plot_loss(num[6])
+# trainer8.plot_loss(num[7])
+# trainer9.plot_loss(num[8])
+# trainer10.plot_loss(num[9])
 
 model.save_params('addition(5survival)_sc.pkl')
 model2.save_params('addition(5survival)_sc(2).pkl')
 model3.save_params('addition(5survival)_sc(3).pkl')
 model4.save_params('addition(5survival)_sc(4).pkl')
 model5.save_params('addition(5survival)_sc(5).pkl')
-model6.save_params('addition(5survival)_sc(6).pkl')
-model7.save_params('addition(5survival)_sc(7).pkl')
-model8.save_params('addition(5survival)_sc(8).pkl')
-model9.save_params('addition(5survival)_sc(9).pkl')
-model10.save_params('addition(5survival)_sc(10).pkl')
+# model6.save_params('addition(5survival)_sc(6).pkl')
+# model7.save_params('addition(5survival)_sc(7).pkl')
+# model8.save_params('addition(5survival)_sc(8).pkl')
+# model9.save_params('addition(5survival)_sc(9).pkl')
+# model10.save_params('addition(5survival)_sc(10).pkl')
 
 # 그래프 그리기
 x = np.arange(len(acc_list))

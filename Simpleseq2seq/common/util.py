@@ -554,8 +554,8 @@ def eval_seq2seq_survival(model_list, question, correct, id_to_char, verbos=Fals
             question = question[::-1]
 
         colors = {'ok': '\033[92m', 'fail': '\033[91m', 'close': '\033[0m'}
-        print('Q', question)
-        print('T', correct)
+#         print('Q', question)
+#         print('T', correct)
 
         is_windows = os.name == 'nt'
 
@@ -563,13 +563,13 @@ def eval_seq2seq_survival(model_list, question, correct, id_to_char, verbos=Fals
             mark = colors['ok'] + '☑' + colors['close']
             if is_windows:
                 mark = 'O'
-            print(mark + ' ' + survival_guess)
+#             print(mark + ' ' + survival_guess)
         else:
             mark = colors['fail'] + '☒' + colors['close']
             if is_windows:
                 mark = 'X'
-            print(mark + ' ' + survival_guess)
-        print('---')
+#             print(mark + ' ' + survival_guess)
+#         print('---')
 
     return 1 if survival_guess == correct else 0
 
