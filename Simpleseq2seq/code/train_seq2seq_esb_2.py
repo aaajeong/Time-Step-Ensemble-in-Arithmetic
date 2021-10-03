@@ -14,7 +14,7 @@ from peeky_seq2seq import PeekySeq2seq
 from tqdm import tqdm
 from tensorflow.python.client import device_lib
 print(device_lib.list_local_devices())
-sys.stdout = open('2-addition_esb memo.txt', 'w')
+sys.stdout = open('3-addition_esb memo.txt', 'w')
 
 # GPU에서 실행하려면 아래 주석을 해제하세요(CuPy 필요).
 # ===============================================
@@ -130,22 +130,22 @@ for epoch in tqdm(range(max_epoch)):
 
 num = ['1', '2', '3', '4', '5']
 # num = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
-trainer.plot_loss(num[0], '2')
-trainer2.plot_loss(num[1], '2')
-trainer3.plot_loss(num[2], '2')
-trainer4.plot_loss(num[3], '2')
-trainer5.plot_loss(num[4], '2')
+trainer.plot_loss(num[0], '3')
+trainer2.plot_loss(num[1], '3')
+trainer3.plot_loss(num[2], '3')
+trainer4.plot_loss(num[3], '3')
+trainer5.plot_loss(num[4], '3')
 # trainer6.plot_loss(num[5])
 # trainer7.plot_loss(num[6])
 # trainer8.plot_loss(num[7])
 # trainer9.plot_loss(num[8])
 # trainer10.plot_loss(num[9])
 
-model.save_params('2-addition(esb)_sc.pkl')
-model2.save_params('2-addition(esb)_sc(2).pkl')
-model3.save_params('2-addition(es)_sc(3).pkl')
-model4.save_params('2-addition(esb)_sc(4).pkl')
-model5.save_params('2-addition(esb)_sc(5).pkl')
+model.save_params('3-addition(esb)_sc.pkl')
+model2.save_params('3-addition(esb)_sc(2).pkl')
+model3.save_params('3-addition(es)_sc(3).pkl')
+model4.save_params('3-addition(esb)_sc(4).pkl')
+model5.save_params('3-addition(esb)_sc(5).pkl')
 # model6.save_params('addition(5survival)_sc(6).pkl')
 # model7.save_params('addition(5survival)_sc(7).pkl')
 # model8.save_params('addition(5survival)_sc(8).pkl')
@@ -155,11 +155,11 @@ model5.save_params('2-addition(esb)_sc(5).pkl')
 # 그래프 그리기
 x = np.arange(len(acc_list))
 plt.plot(x, acc_list, marker='o')
-plt.title('2-Addition Ensemble Accuracy')
+plt.title('3-Addition Ensemble Accuracy')
 plt.xlabel('Epoch')
 plt.ylabel('Accuracy')
 plt.ylim(0, 1.0)
-plt.savefig('2-Addition_Ensemble_Acc.png')
+plt.savefig('3-Addition_Ensemble_Acc.png')
 plt.show()
 
 
