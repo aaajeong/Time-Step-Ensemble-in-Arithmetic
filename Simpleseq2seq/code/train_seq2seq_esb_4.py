@@ -14,7 +14,7 @@ from peeky_seq2seq import PeekySeq2seq
 from tqdm import tqdm
 from tensorflow.python.client import device_lib
 print(device_lib.list_local_devices())
-sys.stdout = open('5-addition_survival memo.txt', 'w')
+sys.stdout = open('5-addition_real memo.txt', 'w')
 
 # GPU에서 실행하려면 아래 주석을 해제하세요(CuPy 필요).
 # ===============================================
@@ -119,10 +119,10 @@ for epoch in tqdm(range(max_epoch)):
         verbose = i < 10
 #         correct_num += eval_seq2seq_esb(model_list, question, correct,
 #                                     id_to_char, verbose, is_reverse)
-        correct_num += eval_seq2seq_survival(model_list, question, correct,
-                                    id_to_char, verbose, is_reverse)
-#         correct_num += eval_seq2seq_real(model_list, question, correct,
+#         correct_num += eval_seq2seq_survival(model_list, question, correct,
 #                                     id_to_char, verbose, is_reverse)
+        correct_num += eval_seq2seq_real(model_list, question, correct,
+                                    id_to_char, verbose, is_reverse)
 
     acc = float(correct_num) / len(x_test)
     acc_list.append(acc)
@@ -141,11 +141,11 @@ trainer5.plot_loss(num[4], '5')
 # trainer9.plot_loss(num[8])
 # trainer10.plot_loss(num[9])
 
-model.save_params('5-addition(survival)_sc.pkl')
-model2.save_params('5-addition(survival)_sc(2).pkl')
-model3.save_params('5-addition(survival)_sc(3).pkl')
-model4.save_params('5-addition(survival)_sc(4).pkl')
-model5.save_params('5-addition(survival)_sc(5).pkl')
+model.save_params('5-addition(real)_sc.pkl')
+model2.save_params('5-addition(real)_sc(2).pkl')
+model3.save_params('5-addition(real)_sc(3).pkl')
+model4.save_params('5-addition(real)_sc(4).pkl')
+model5.save_params('5-addition(real)_sc(5).pkl')
 # model6.save_params('addition(5survival)_sc(6).pkl')
 # model7.save_params('addition(5survival)_sc(7).pkl')
 # model8.save_params('addition(5survival)_sc(8).pkl')
@@ -155,11 +155,11 @@ model5.save_params('5-addition(survival)_sc(5).pkl')
 # 그래프 그리기
 x = np.arange(len(acc_list))
 plt.plot(x, acc_list, marker='o')
-plt.title('5-Addition survival Accuracy')
+plt.title('5-Addition real Accuracy')
 plt.xlabel('Epoch')
 plt.ylabel('Accuracy')
 plt.ylim(0, 1.0)
-plt.savefig('5-Addition_survival_Acc.png')
+plt.savefig('5-Addition_real_Acc.png')
 plt.show()
 
 
