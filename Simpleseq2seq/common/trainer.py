@@ -63,7 +63,7 @@ class Trainer:
         plt.plot(x, self.loss_list, label='train')
         plt.xlabel('Epoch (x' + str(self.eval_interval) + ')')
         plt.ylabel('train_loss' + ' ' + num)
-        plt.savefig('(svb)train_loss'+ num + '(v-' + version + ')' + '.png')
+        plt.savefig('(real)train_loss'+ num + '(v-' + version + ')' + '.png')
         plt.show()
 
 class RnnlmTrainer:
