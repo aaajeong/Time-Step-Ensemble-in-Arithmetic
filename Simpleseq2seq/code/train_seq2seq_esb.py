@@ -14,7 +14,7 @@ from peeky_seq2seq import PeekySeq2seq
 from tqdm import tqdm
 from tensorflow.python.client import device_lib
 print(device_lib.list_local_devices())
-sys.stdout = open('2-addition_real memo.txt', 'w')
+sys.stdout = open('test-addition_real memo.txt', 'w')
 
 # GPU에서 실행하려면 아래 주석을 해제하세요(CuPy 필요).
 # ===============================================
@@ -41,16 +41,16 @@ max_epoch = 200
 max_grad = 5.0
 
 # model 개수
-model_num = 5
-# model_num = 10
+#model_num = 5
+model_num = 1
 model_list = []
 
 # 일반 혹은 엿보기(Peeky) 설정 =====================================
 model = Seq2seq(vocab_size, wordvec_size, hideen_size)
-model2 = Seq2seq(vocab_size, wordvec_size, hideen_size)
-model3 = Seq2seq(vocab_size, wordvec_size, hideen_size)
-model4 = Seq2seq(vocab_size, wordvec_size, hideen_size)
-model5 = Seq2seq(vocab_size, wordvec_size, hideen_size)
+#model2 = Seq2seq(vocab_size, wordvec_size, hideen_size)
+#model3 = Seq2seq(vocab_size, wordvec_size, hideen_size)
+#model4 = Seq2seq(vocab_size, wordvec_size, hideen_size)
+#model5 = Seq2seq(vocab_size, wordvec_size, hideen_size)
 # model6= Seq2seq(vocab_size, wordvec_size, hideen_size)
 # model7 = Seq2seq(vocab_size, wordvec_size, hideen_size)
 # model8 = Seq2seq(vocab_size, wordvec_size, hideen_size)
@@ -61,10 +61,10 @@ model5 = Seq2seq(vocab_size, wordvec_size, hideen_size)
 
 # 모델 추가
 model_list.append(model)
-model_list.append(model2)
-model_list.append(model3)
-model_list.append(model4)
-model_list.append(model5)
+#model_list.append(model2)
+#model_list.append(model3)
+#model_list.append(model4)
+#model_list.append(model5)
 # model_list.append(model6)
 # model_list.append(model7)
 # model_list.append(model8)
@@ -73,10 +73,10 @@ model_list.append(model5)
 
 optimizer = Adam()
 trainer = Trainer(model, optimizer)
-trainer2 = Trainer(model2, optimizer)
-trainer3 = Trainer(model3, optimizer)
-trainer4 = Trainer(model4, optimizer)
-trainer5 = Trainer(model5, optimizer)
+#trainer2 = Trainer(model2, optimizer)
+#trainer3 = Trainer(model3, optimizer)
+#trainer4 = Trainer(model4, optimizer)
+#trainer5 = Trainer(model5, optimizer)
 # trainer6= Trainer(model6, optimizer)
 # trainer7 = Trainer(model7, optimizer)
 # trainer8 = Trainer(model8, optimizer)
@@ -94,14 +94,14 @@ if config.GPU:
 for epoch in tqdm(range(max_epoch)):
     trainer.fit(x_train, t_train, max_epoch=1,
                 batch_size=batch_size, max_grad=max_grad)
-    trainer2.fit(x_train, t_train, max_epoch=1,
-                batch_size=batch_size, max_grad=max_grad)
-    trainer3.fit(x_train, t_train, max_epoch=1,
-                batch_size=batch_size, max_grad=max_grad)
-    trainer4.fit(x_train, t_train, max_epoch=1,
-                batch_size=batch_size, max_grad=max_grad)
-    trainer5.fit(x_train, t_train, max_epoch=1,
-                batch_size=batch_size, max_grad=max_grad)
+#    trainer2.fit(x_train, t_train, max_epoch=1,
+#                batch_size=batch_size, max_grad=max_grad)
+#    trainer3.fit(x_train, t_train, max_epoch=1,
+#                batch_size=batch_size, max_grad=max_grad)
+#    trainer4.fit(x_train, t_train, max_epoch=1,
+#                batch_size=batch_size, max_grad=max_grad)
+#    trainer5.fit(x_train, t_train, max_epoch=1,
+#                batch_size=batch_size, max_grad=max_grad)
 #     trainer6.fit(x_train, t_train, max_epoch=1,
 #                 batch_size=batch_size, max_grad=max_grad)
 #     trainer7.fit(x_train, t_train, max_epoch=1,
@@ -128,13 +128,13 @@ for epoch in tqdm(range(max_epoch)):
     acc_list.append(acc)
     print('검증 정확도 %.3f%%' % (acc * 100))
 
-num = ['1', '2', '3', '4', '5']
-# num = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
-trainer.plot_loss(num[0], '2')
-trainer2.plot_loss(num[1], '2')
-trainer3.plot_loss(num[2], '2')
-trainer4.plot_loss(num[3], '2')
-trainer5.plot_loss(num[4], '2')
+#num = ['1', '2', '3', '4', '5']
+num = ['1']
+trainer.plot_loss(num[0], '1')
+#trainer2.plot_loss(num[1], '2')
+#trainer3.plot_loss(num[2], '2')
+#trainer4.plot_loss(num[3], '2')
+#trainer5.plot_loss(num[4], '2')
 # trainer6.plot_loss(num[5])
 # trainer7.plot_loss(num[6])
 # trainer8.plot_loss(num[7])
@@ -142,10 +142,10 @@ trainer5.plot_loss(num[4], '2')
 # trainer10.plot_loss(num[9])
 
 model.save_params('2-addition(real)_sc.pkl')
-model2.save_params('2-addition(real)_sc(2).pkl')
-model3.save_params('2-addition(real(3).pkl')
-model4.save_params('2-addition(real)_sc(4).pkl')
-model5.save_params('2-addition(real)_sc(5).pkl')
+#model2.save_params('2-addition(real)_sc(2).pkl')
+#model3.save_params('2-addition(real(3).pkl')
+#model4.save_params('2-addition(real)_sc(4).pkl')
+#model5.save_params('2-addition(real)_sc(5).pkl')
 # model6.save_params('addition(5survival)_sc(6).pkl')
 # model7.save_params('addition(5survival)_sc(7).pkl')
 # model8.save_params('addition(5survival)_sc(8).pkl')
@@ -155,11 +155,11 @@ model5.save_params('2-addition(real)_sc(5).pkl')
 # 그래프 그리기
 x = np.arange(len(acc_list))
 plt.plot(x, acc_list, marker='o')
-plt.title('2-Addition real Accuracy')
+plt.title('test-Addition Accuracy')
 plt.xlabel('Epoch')
 plt.ylabel('Accuracy')
 plt.ylim(0, 1.0)
-plt.savefig('2-Addition_real_Acc.png')
+plt.savefig('test-Addition_Acc.png')
 plt.show()
 
 

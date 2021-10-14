@@ -49,12 +49,12 @@ def load_data(file_name='addition.txt', seed=1984):
         t[i] = [char_to_id[c] for c in list(sentence)]
 
     # 뒤섞기
-    indices = numpy.arange(len(x))
-    if seed is not None:
-        numpy.random.seed(seed)
-    numpy.random.shuffle(indices)
-    x = x[indices]
-    t = t[indices]
+#    indices = numpy.arange(len(x))
+#    if seed is not None:
+#        numpy.random.seed(seed)
+#    numpy.random.shuffle(indices)
+#    x = x[indices]
+#    t = t[indices]
 
     # 검증 데이터셋으로 10% 할당
     split_at = len(x) - len(x) // 10

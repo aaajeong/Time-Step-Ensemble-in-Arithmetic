@@ -15,7 +15,7 @@ from peeky_seq2seq import PeekySeq2seq
 from tqdm import tqdm
 from tensorflow.python.client import device_lib
 print(device_lib.list_local_devices())
-sys.stdout = open('1-addition_single_memo.txt', 'w')
+sys.stdout = open('4-addition_single_memo.txt', 'w')
 
 
 # GPU에서 실행하려면 아래 주석을 해제하세요(CuPy 필요).
@@ -74,18 +74,18 @@ for epoch in tqdm(range(max_epoch)):
 
 trainer.plot_loss('1','1')
 # model.save_params('arithmetic_sc.pkl')
-model.save_params('1_addition_single.pkl')
+model.save_params('4_addition_single.pkl')
 
 
 
 # 그래프 그리기
 x = np.arange(len(acc_list))
 plt.plot(x, acc_list, marker='o')
-plt.title('1-Addition Single Accuracy')
+plt.title('4-Addition Single Accuracy')
 plt.xlabel('Epoch')
 plt.ylabel('Accuracy')
 plt.ylim(0, 1.0)
-plt.savefig('1-Addition Single Accuracy.png')
+plt.savefig('4-Addition Single Accuracy.png')
 plt.show()
 
 
