@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 acc_list = []
 
-f = open("Simpleseq2seq/training_memo/esb(real)_avg/1-addition_real memo.txt", 'r')
+f = open("Simpleseq2seq/training_memo/single_avg/1-addition_single_memo.txt", 'r')
 while True:
     line = f.readline()
     if line[:6] == '검증 정확도':
@@ -15,7 +15,7 @@ f.close()
 
 acc_list = []
 
-f = open("Simpleseq2seq/training_memo/esb(real)_avg/2-addition_real memo.txt", 'r')
+f = open("Simpleseq2seq/training_memo/single_avg/2-addition_single_memo.txt", 'r')
 while True:
     line = f.readline()
     if line[:6] == '검증 정확도':
@@ -26,7 +26,7 @@ f.close()
 
 acc_list = []
 
-f = open("Simpleseq2seq/training_memo/esb(real)_avg/3-addition_real memo.txt", 'r')
+f = open("Simpleseq2seq/training_memo/single_avg/3-addition_single_memo.txt", 'r')
 while True:
     line = f.readline()
     if line[:6] == '검증 정확도':
@@ -37,7 +37,7 @@ f.close()
 
 acc_list = []
 
-f = open("Simpleseq2seq/training_memo/esb(real)_avg/4-addition_real memo.txt", 'r')
+f = open("Simpleseq2seq/training_memo/single_avg/4-addition_single_memo.txt", 'r')
 while True:
     line = f.readline()
     if line[:6] == '검증 정확도':
@@ -48,7 +48,7 @@ f.close()
 
 acc_list = []
 
-f = open("Simpleseq2seq/training_memo/esb(real)_avg/5-addition_real memo.txt", 'r')
+f = open("Simpleseq2seq/training_memo/single_avg/5-addition_single_memo.txt", 'r')
 while True:
     line = f.readline()
     if line[:6] == '검증 정확도':
@@ -74,16 +74,16 @@ AVG = A.mean(axis = 0)
 AVG = np.around(AVG, 3)
 AVG = AVG.tolist()
 
-# x = np.arange(len(AVG))
-# plt.plot(x, AVG, marker='o')
-# plt.title('Addition Survival Avg Accuracy')
-# plt.xlabel('Epoch')
-# plt.ylabel('Accuracy')
-# plt.ylim(0, 100)
-# plt.savefig('Addition Survival Avg Accuracy.png')
-# plt.show()
+x = np.arange(len(AVG))
+plt.plot(x, AVG, marker='o')
+plt.title('Addition Single Avg Accuracy')
+plt.xlabel('Epoch')
+plt.ylabel('Accuracy')
+plt.ylim(0, 100)
+plt.savefig('Addition Single Avg Accuracy.png')
+plt.show()
 AVG = list(map(str, AVG))
-f = open('get_avg(real).txt', 'a')
+f = open('get_avg(single).txt', 'a')
 for i in AVG:
     f.write(i + '\n')
 f.close()
