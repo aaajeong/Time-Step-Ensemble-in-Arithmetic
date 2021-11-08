@@ -21,12 +21,12 @@ sur_list = list(map(float, sur_lines))
 real_list = list(map(float, real_lines))
 single_list = list(map(float, single_lines))
 
-plt.plot(x_values, esb_list)
+# plt.plot(x_values, esb_list)
 plt.plot(x_values, sur_list)
 plt.plot(x_values, real_list)
 plt.plot(x_values, single_list)
 
-plt.legend(['Soft Voting', 'Survival', 'Majority', 'Single'])
+plt.legend(['Survival', 'Majority', 'Single'])
 
 plt.xlabel('Epoch')
 plt.ylabel('Accuracy')
