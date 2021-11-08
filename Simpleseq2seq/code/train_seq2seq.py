@@ -15,7 +15,7 @@ from peeky_seq2seq import PeekySeq2seq
 from tqdm import tqdm
 from tensorflow.python.client import device_lib
 print(device_lib.list_local_devices())
-sys.stdout = open('4-addition_single_memo.txt', 'w')
+sys.stdout = open('plusmal_single_gpu_test.txt', 'w')
 
 
 # GPU에서 실행하려면 아래 주석을 해제하세요(CuPy 필요).
@@ -23,11 +23,10 @@ sys.stdout = open('4-addition_single_memo.txt', 'w')
 # config.GPU = True
 
 # 데이터셋 읽기
-(x_train, t_train), (x_test, t_test) = sequence.load_data('addition.txt')
+# (x_train, t_train), (x_test, t_test) = sequence.load_data('addition.txt')
 # (x_train, t_train), (x_test, t_test) = sequence.load_data('arithmetic.txt')
-#(x_train, t_train), (x_test, t_test) = sequence.load_data('plusmul.txt')
+(x_train, t_train), (x_test, t_test) = sequence.load_data('plusmul.txt')
 char_to_id, id_to_char = sequence.get_vocab()
-print(x_train)
 
 # 입력 반전 여부 설정 =============================================
 is_reverse = True  # True
@@ -73,19 +72,18 @@ for epoch in tqdm(range(max_epoch)):
     print('검증 정확도 %.3f%%' % (acc * 100))
 
 trainer.plot_loss('1','1')
-# model.save_params('arithmetic_sc.pkl')
-model.save_params('4_addition_single.pkl')
+model.save_params('plusmul_single_gpu.pkl')
 
 
 
 # 그래프 그리기
 x = np.arange(len(acc_list))
 plt.plot(x, acc_list, marker='o')
-plt.title('4-Addition Single Accuracy')
+plt.title('plusmul_single_gpu_test')
 plt.xlabel('Epoch')
 plt.ylabel('Accuracy')
 plt.ylim(0, 1.0)
-plt.savefig('4-Addition Single Accuracy.png')
+plt.savefig('plusmul_single_gpu_test.png')
 plt.show()
 
 
