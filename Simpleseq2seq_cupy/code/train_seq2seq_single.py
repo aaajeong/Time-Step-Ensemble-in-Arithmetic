@@ -23,7 +23,7 @@ import cupy as cp
 
 # GPU에서 실행하려면 아래 주석을 해제하세요(CuPy 필요).
 # ===============================================
-# config.GPU = True
+config.GPU = True
 
 # 데이터셋 읽기
 # (x_train, t_train), (x_test, t_test) = sequence.load_data('addition.txt')

@@ -11,9 +11,13 @@ from common.trainer import Trainer
 from common.util import eval_seq2seq_esb, to_gpu
 from seq2seq import Seq2seq
 from tqdm import tqdm
-from tensorflow.python.client import device_lib
-print(device_lib.list_local_devices())
-sys.stdout = open('plusmal_esb_test(1).txt', 'w')
+import time
+import cupy as cp
+# cp.cuda.Device(3).use()
+
+# from tensorflow.python.client import device_lib
+# print(device_lib.list_local_devices())
+# sys.stdout = open('plusmal_esb_test(1).txt', 'w')
 
 # GPU에서 실행하려면 아래 주석을 해제하세요(CuPy 필요).
 # ===============================================
@@ -72,7 +76,8 @@ acc_list = []
 if config.GPU:
     x_train, t_train = to_gpu(x_train), to_gpu(t_train)
 
-# max_epoch = 2
+max_epoch = 1
+start = time.time()  # 시작 시간 저장
 for epoch in tqdm(range(max_epoch)):
     
     trainer.fit(x_train, t_train, max_epoch=1,
@@ -96,6 +101,7 @@ for epoch in tqdm(range(max_epoch)):
     acc = float(correct_num) / len(x_test)
     acc_list.append(acc)
     print('검증 정확도 %.3f%%' % (acc * 100))
+print("time :", time.time() - start)  # 현재시각 - 시작시간 = 실행 시간
 
 num = ['1', '2', '3', '4', '5']
 
