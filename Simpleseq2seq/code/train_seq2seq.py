@@ -15,7 +15,7 @@ from peeky_seq2seq import PeekySeq2seq
 from tqdm import tqdm
 from tensorflow.python.client import device_lib
 print(device_lib.list_local_devices())
-sys.stdout = open('plusmal_single_gpu_test.txt', 'w')
+sys.stdout = open('plusmal_single_test.txt', 'w')
 
 
 # GPU에서 실행하려면 아래 주석을 해제하세요(CuPy 필요).
@@ -71,7 +71,7 @@ for epoch in tqdm(range(max_epoch)):
     acc_list.append(acc)
     print('검증 정확도 %.3f%%' % (acc * 100))
 
-trainer.plot_loss('1','1')
+trainer.plot_loss('1','1','single')
 model.save_params('plusmul_single_gpu.pkl')
 
 
@@ -79,11 +79,11 @@ model.save_params('plusmul_single_gpu.pkl')
 # 그래프 그리기
 x = np.arange(len(acc_list))
 plt.plot(x, acc_list, marker='o')
-plt.title('plusmul_single_gpu_test')
+plt.title('plusmul_single_test')
 plt.xlabel('Epoch')
 plt.ylabel('Accuracy')
 plt.ylim(0, 1.0)
-plt.savefig('plusmul_single_gpu_test.png')
+plt.savefig('plusmul_single_test.png')
 plt.show()
 
 

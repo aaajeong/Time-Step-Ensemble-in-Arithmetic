@@ -14,7 +14,7 @@ from peeky_seq2seq import PeekySeq2seq
 from tqdm import tqdm
 from tensorflow.python.client import device_lib
 print(device_lib.list_local_devices())
-sys.stdout = open('plusmal_single_gpu_test.txt', 'w')
+sys.stdout = open('plusmal_esb_test(1).txt', 'w')
 
 # GPU에서 실행하려면 아래 주석을 해제하세요(CuPy 필요).
 # ===============================================
@@ -117,35 +117,35 @@ for epoch in tqdm(range(max_epoch)):
     for i in range(len(x_test)):    #len(x_test)
         question, correct = x_test[[i]], t_test[[i]]
         verbose = i < 10
-#         correct_num += eval_seq2seq_esb(model_list, question, correct,
-#                                     id_to_char, verbose, is_reverse)
+        correct_num += eval_seq2seq_esb(model_list, question, correct,
+                                     id_to_char, verbose, is_reverse)
 #         correct_num += eval_seq2seq_survival(model_list, question, correct,
 #                                     id_to_char, verbose, is_reverse)
-        correct_num += eval_seq2seq_real(model_list, question, correct,
-                                    id_to_char, verbose, is_reverse)
+#        correct_num += eval_seq2seq_real(model_list, question, correct,
+#                                    id_to_char, verbose, is_reverse)
 
     acc = float(correct_num) / len(x_test)
     acc_list.append(acc)
     print('검증 정확도 %.3f%%' % (acc * 100))
 
 num = ['1', '2', '3', '4', '5']
-num = ['1']
-trainer.plot_loss(num[0], '1')
-trainer2.plot_loss(num[1], '2')
-trainer3.plot_loss(num[2], '2')
-trainer4.plot_loss(num[3], '2')
-trainer5.plot_loss(num[4], '2')
+
+trainer.plot_loss(num[0], '1', 'esb')
+trainer2.plot_loss(num[1], '1', 'esb')
+trainer3.plot_loss(num[2], '1', 'esb')
+trainer4.plot_loss(num[3], '1', 'esb')
+trainer5.plot_loss(num[4], '1', 'esb')
 # trainer6.plot_loss(num[5])
 # trainer7.plot_loss(num[6])
 # trainer8.plot_loss(num[7])
 # trainer9.plot_loss(num[8])
 # trainer10.plot_loss(num[9])
 
-model.save_params('plusmul_single_gpu(1).pkl')
-model2.save_params('plusmul_single_gpu(2).pkl')
-model3.save_params('plusmul_single_gpu(3).pkl')
-model4.save_params('plusmul_single_gpu(4).pkl')
-model5.save_params('plusmul_single_gpu(5).pkl')
+model.save_params('plusmul_esb(1).pkl')
+model2.save_params('plusmul_esb(2).pkl')
+model3.save_params('plusmul_esb(3).pkl')
+model4.save_params('plusmul_esb(4).pkl')
+model5.save_params('plusmul_esb(5).pkl')
 # model6.save_params('addition(5survival)_sc(6).pkl')
 # model7.save_params('addition(5survival)_sc(7).pkl')
 # model8.save_params('addition(5survival)_sc(8).pkl')
@@ -155,11 +155,11 @@ model5.save_params('plusmul_single_gpu(5).pkl')
 # 그래프 그리기
 x = np.arange(len(acc_list))
 plt.plot(x, acc_list, marker='o')
-plt.title('plusmul_single_gpu_test')
+plt.title('plusmul_esb(soft voting)')
 plt.xlabel('Epoch')
 plt.ylabel('Accuracy')
 plt.ylim(0, 1.0)
-plt.savefig('plusmul_single_gpu_test.png')
+plt.savefig('plusmul_esb(soft voting).png')
 plt.show()
 
 
