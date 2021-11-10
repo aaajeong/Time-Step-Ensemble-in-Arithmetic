@@ -1,7 +1,7 @@
 # coding: utf-8
 import sys
-sys.path.append('./')  
-# sys.path.append('Simpleseq2seq')
+# sys.path.append('./')  
+sys.path.append('Arithmetic-with-Seq2Seq/Simpleseq2seq_cupy')
 import numpy as np
 import matplotlib.pyplot as plt
 from dataset import sequence
@@ -13,7 +13,7 @@ from seq2seq import Seq2seq
 from tqdm import tqdm
 import time
 import cupy as cp
-# cp.cuda.Device(3).use()
+cp.cuda.Device(3).use()
 
 # from tensorflow.python.client import device_lib
 # print(device_lib.list_local_devices())
