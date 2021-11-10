@@ -3,6 +3,7 @@ import sys
 sys.path.append('..')
 import os
 from common.np import *
+from common.util import get_semi_answer
 
 
 def preprocess(text):
@@ -293,8 +294,8 @@ def eval_seq2seq_esb(model_list, question, correct, id_to_char,
 
     for _ in range(sample_size):
         x_list = []
-        out_list = []
-        out_list2 = []
+        forward_out = []
+        lstm_out = []
         score_list = []
         # input x
         for i in range(len(model_list)):
@@ -304,16 +305,16 @@ def eval_seq2seq_esb(model_list, question, correct, id_to_char,
         # 디코더의 forward (x)
         for i in range(len(model_list)):
             out = model_list[i].decoder.embed.forward(x_list[i])
-            out_list.append(out)
+            forward_out.append(out)
 
         # 디코더의 lstm
         for i in range(len(model_list)):
-            out = model_list[i].decoder.lstm.forward(out_list[i])
-            out_list2.append(out)
+            out = model_list[i].decoder.lstm.forward(forward_out[i])
+            lstm_out.append(out)
 
         # 디코더의 affine
         for i in range(len(model_list)):
-            score = model_list[i].decoder.affine.forward(out_list2[i])
+            score = model_list[i].decoder.affine.forward(lstm_out[i])
             score_list.append(score)
 
         # argmax id
@@ -401,8 +402,8 @@ def eval_seq2seq_survival(model_list, question, correct, id_to_char, verbos=Fals
         # id_list = [[] * model_num for i in range(model_num)]
         id_list = []
         x_list = []
-        out_list = []
-        out_list2 = []
+        forward_out = []
+        lstm_out = []
         score_list = []
         max_list = []
         
@@ -415,16 +416,16 @@ def eval_seq2seq_survival(model_list, question, correct, id_to_char, verbos=Fals
             # 디코더의 forward (x)
             for i in range(model_num):
                 out = suvi_models[i].decoder.embed.forward(x_list[i])
-                out_list.append(out)
+                forward_out.append(out)
             
             # 디코더의 lstm
             for i in range(model_num):
-                out = suvi_models[i].decoder.lstm.forward(out_list[i])
-                out_list2.append(out)
+                out = suvi_models[i].decoder.lstm.forward(forward_out[i])
+                lstm_out.append(out)
 
             # 디코더의 affine
             for i in range(model_num):
-                score = suvi_models[i].decoder.affine.forward(out_list2[i])
+                score = suvi_models[i].decoder.affine.forward(lstm_out[i])
                 score_list.append(score)
 
             # argmax id, max value
@@ -435,7 +436,8 @@ def eval_seq2seq_survival(model_list, question, correct, id_to_char, verbos=Fals
         
             # ========== Survival Ensemble =========== 
             # 1. 모델에서 가장 많이 등장한 인덱스 번호 찾기 (다 다르게 나올 경우 제일 첫번째 값으로 됨)
-            semi_answer = max(id_list, key=id_list.count)
+            # semi_answer = max(id_list, key=id_list.count)
+            semi_answer = get_semi_answer(id_list, max_list)
 
             # 2. 세미정답을 출력한 살아남은 모델 --> winner
             #    세미정답을 출력하지 않은 실패한 모델 --> loser
@@ -475,16 +477,16 @@ def eval_seq2seq_survival(model_list, question, correct, id_to_char, verbos=Fals
             # 디코더의 forward (x)
             for i in range(model_num):
                 out = suvi_models[i].decoder.embed.forward(x_list[i])
-                out_list.append(out)
+                forward_out.append(out)
             
             # 디코더의 lstm
             for i in range(model_num):
-                out = suvi_models[i].decoder.lstm.forward(out_list[i])
-                out_list2.append(out)
+                out = suvi_models[i].decoder.lstm.forward(forward_out[i])
+                lstm_out.append(out)
 
             # 디코더의 affine
             for i in range(model_num):
-                score = suvi_models[i].decoder.affine.forward(out_list2[i])
+                score = suvi_models[i].decoder.affine.forward(lstm_out[i])
                 score_list.append(score)
 
             # argmax id, max value
@@ -524,14 +526,14 @@ def eval_seq2seq_survival(model_list, question, correct, id_to_char, verbos=Fals
             
             # 디코더의 forward (x)
             out = suvi_models[0].decoder.embed.forward(x_list[0])
-            out_list.append(out)
+            forward_out.append(out)
             
             # 디코더의 lstm
-            out = suvi_models[0].decoder.lstm.forward(out_list[0])
-            out_list2.append(out)
+            out = suvi_models[0].decoder.lstm.forward(forward_out[0])
+            lstm_out.append(out)
 
             # 디코더의 affine
-            score = suvi_models[0].decoder.affine.forward(out_list2[0])
+            score = suvi_models[0].decoder.affine.forward(lstm_out[0])
             score_list.append(score)
 
             # argmax id, max value
@@ -601,8 +603,8 @@ def eval_seq2seq_real(model_list, question, correct, id_to_char, verbos=False, i
     for _ in range(sample_size):
         id_list = []
         x_list = []
-        out_list = []
-        out_list2 = []
+        forward_out = []
+        lstm_out = []
         score_list = []
         max_list = []
         # input x
@@ -613,16 +615,16 @@ def eval_seq2seq_real(model_list, question, correct, id_to_char, verbos=False, i
         # 디코더의 forward (x)
         for i in range(model_num):
             out = model_list[i].decoder.embed.forward(x_list[i])
-            out_list.append(out)
+            forward_out.append(out)
 
         # 디코더의 lstm
         for i in range(model_num):
-            out = model_list[i].decoder.lstm.forward(out_list[i])
-            out_list2.append(out)
+            out = model_list[i].decoder.lstm.forward(forward_out[i])
+            lstm_out.append(out)
 
         # 디코더의 affine
         for i in range(model_num):
-            score = model_list[i].decoder.affine.forward(out_list2[i])
+            score = model_list[i].decoder.affine.forward(lstm_out[i])
             score_list.append(score)
 
         # argmax id & max affine
@@ -678,6 +680,7 @@ def eval_seq2seq_real(model_list, question, correct, id_to_char, verbos=False, i
     # print('affine_sum: ', affine_sum)
 
     # 가장 높은 어파인합 값을 가진 번역 결과 출력
+    # 어파인 값은 중복이 될 가능성이 낮다고 생각
     real_maj = max(affine_sum, key = affine_sum.get)
     # print('real_maj: ', real_maj)
 
