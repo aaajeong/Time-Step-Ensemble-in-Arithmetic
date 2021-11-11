@@ -58,7 +58,7 @@ acc_list = []
 if config.GPU:
     x_train, t_train = to_gpu(x_train), to_gpu(t_train)
 
-max_epoch = 1
+# max_epoch = 1
 start = time.time()  # 시작 시간 저장
 for epoch in tqdm(range(max_epoch)):
     trainer.fit(x_train, t_train, max_epoch=1,
