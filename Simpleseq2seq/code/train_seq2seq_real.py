@@ -8,7 +8,7 @@ from dataset import sequence
 from common import config
 from common.optimizer import Adam
 from common.trainer import Trainer
-from common.util import eval_seq2seq, eval_seq2seq_esb, eval_seq2seq_survival, eval_seq2seq_real, to_gpu
+from common.util import eval_seq2seq_real, to_gpu
 from seq2seq import Seq2seq
 from peeky_seq2seq import PeekySeq2seq
 from tqdm import tqdm

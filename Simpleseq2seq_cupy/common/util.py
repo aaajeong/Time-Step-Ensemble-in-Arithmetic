@@ -3,7 +3,7 @@ import sys
 sys.path.append('..')
 import os
 from common.np import *
-from common.util import get_semi_answer
+from common.functions import get_semi_answer
 
 
 def preprocess(text):
@@ -446,9 +446,9 @@ def eval_seq2seq_survival(model_list, question, correct, id_to_char, verbos=Fals
 
             # 3. winner 모델만 다시 서바이벌 참여할 수 있도록 참여모델 업데이트
             update_sm = [] # suvi_models 업데이트
-
+         
             for win in winner:
-                update_sm.append(suvi_models[win])
+                update_sm.append(suvi_models[win.item()])
 
             # 업데이트한 모델을 다시 서바이벌 모델 리스트에 대입
             suvi_models = update_sm
@@ -513,7 +513,7 @@ def eval_seq2seq_survival(model_list, question, correct, id_to_char, verbos=Fals
                 # 이제 모델 1개로 진행(2개가 다른 답이 나왔으니깐)
                 loser = list(np.where(np.array(id_list) != semi_answer)[0])
                 for l in loser:
-                    del suvi_models[l]
+                    del suvi_models[l.item()]
                 model_num -= 1
 
                 #print('탈락한 모델(2개중): ', loser)
@@ -584,7 +584,10 @@ def eval_seq2seq_real(model_list, question, correct, id_to_char, verbos=False, i
 
     model_list = model_list
     suvi_models = model_list.copy()
-
+    if GPU:
+        import cupy
+        suvi_models = cupy.asnumpy(suvi_models)
+        
     for model in suvi_models:
         # h : hidden state?
         h = model.encoder.forward(question)
@@ -686,7 +689,6 @@ def eval_seq2seq_real(model_list, question, correct, id_to_char, verbos=False, i
 
     for key, value in group.items():
         if value == list(real_maj):
-            print(key)
             majority_guess = key
     # print('majority_guess = ', majority_guess)
     # 문제/정답 문자열로 변환

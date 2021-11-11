@@ -436,7 +436,7 @@ def eval_seq2seq_survival(model_list, question, correct, id_to_char, verbos=Fals
         
             # ========== Survival Ensemble =========== 
             # 1. 모델에서 가장 많이 등장한 인덱스 번호 찾기 (다 다르게 나올 경우 제일 첫번째 값으로 됨)
-            semi_answer = max(id_list, key=id_list.count)
+            # semi_answer = max(id_list, key=id_list.count)
             semi_answer = get_semi_answer(id_list, max_list)
 
             # 2. 세미정답을 출력한 살아남은 모델 --> winner

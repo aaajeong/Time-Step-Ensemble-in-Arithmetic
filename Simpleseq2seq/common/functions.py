@@ -49,12 +49,21 @@ def get_semi_answer(id_list, max_list):
             id_score[id_list[i]].append(max_list[i])
 
     # 세미정답 결정
+    scores = []
     if len(occurences[0]) != 1:
-        scores = []
         for i in range(len(occurences[0])):
             scores.append(np.mean(np.array(id_score[vals[occurences[0][i]]])))
     
         scores = np.array(scores)
-        semi_answer = vals[occurences[0][np.argmax(scores)]]
-        
-    return semi_answer
+        # print('scores: ', scores)
+        # print('np.argmax(scores): ', np.argmax(scores))
+        # print('vals:', vals)
+        # print('occurences[0]:', occurences[0])
+        # print('occurences[0][np.argmax(scores)]: ', occurences[0][np.argmax(scores)])
+        # print('vals[occurences[0][np.argmax(scores)]]: ', vals[occurences[0][np.argmax(scores)]])
+
+        result = vals[occurences[0][np.argmax(scores)]]
+        return result
+    else:
+        result = vals[occurences[0][0]]
+        return result

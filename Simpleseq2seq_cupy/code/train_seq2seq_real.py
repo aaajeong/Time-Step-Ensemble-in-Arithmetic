@@ -92,12 +92,14 @@ for epoch in tqdm(range(max_epoch)):
                 batch_size=batch_size, max_grad=max_grad)
     
     correct_num = 0
+    start2 = time.time()  # 시작 시간 저장
     for i in range(len(x_test)):    #len(x_test)
         question, correct = x_test[[i]], t_test[[i]]
         verbose = i < 10
         correct_num += eval_seq2seq_real(model_list, question, correct,
                                      id_to_char, verbose, is_reverse)
 
+    print("evaluate time :", time.time() - start2)
     acc = float(correct_num) / len(x_test)
     acc_list.append(acc)
     print('검증 정확도 %.3f%%' % (acc * 100))

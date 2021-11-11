@@ -1,20 +1,20 @@
 # coding: utf-8
 import sys
 sys.path.append('./')  
-# sys.path.append('Simpleseq2seq')
+# sys.path.append('Arithmetic-with-Seq2Seq/Simpleseq2seq')
 import numpy as np
 import matplotlib.pyplot as plt
 from dataset import sequence
 from common import config
 from common.optimizer import Adam
 from common.trainer import Trainer
-from common.util import eval_seq2seq, eval_seq2seq_esb, eval_seq2seq_survival, eval_seq2seq_real, to_gpu
+from common.util import eval_seq2seq_survival, to_gpu
 from seq2seq import Seq2seq
 from peeky_seq2seq import PeekySeq2seq
 from tqdm import tqdm
 from tensorflow.python.client import device_lib
 print(device_lib.list_local_devices())
-sys.stdout = open('plusmal_survival_test(1).txt', 'w')
+sys.stdout = open('plusmal_survival_test(1)-modify.txt', 'w')
 
 # GPU에서 실행하려면 아래 주석을 해제하세요(CuPy 필요).
 # ===============================================
@@ -89,7 +89,7 @@ acc_list = []
 if config.GPU:
     x_train, t_train = to_gpu(x_train), to_gpu(t_train)
 
-# max_epoch = 2
+# max_epoch = 1
 for epoch in tqdm(range(max_epoch)):
     trainer.fit(x_train, t_train, max_epoch=1,
                 batch_size=batch_size, max_grad=max_grad)

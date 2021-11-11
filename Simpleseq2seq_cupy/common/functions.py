@@ -42,19 +42,24 @@ def get_semi_answer(id_list, max_list):
 
     # id-score 딕셔너리 생성
     id_score = {}
-    for i in range(len(id_list)):
-        if id_list[i] not in id_score:
-            id_score[id_list[i]] = [max_list[i]]
-        else:
-            id_score[id_list[i]].append(max_list[i])
-
+    for i,id in enumerate(id_list):
+            if id.item() not in id_score:
+                id_score[id.item()] = [max_list[i]]
+            else:
+                id_score[id.item()].append(max_list[i])
+            
     # 세미정답 결정
+    scores = []
     if len(occurences[0]) != 1:
-        scores = []
         for i in range(len(occurences[0])):
-            scores.append(np.mean(np.array(id_score[vals[occurences[0][i]]])))
+            # print(type(occurences[0][i])) # cupy.core.core.ndarray
+            # print(type(vals[occurences[0][i]])) # cupy.core.core.ndarray
+            # print(type(id_score[vals[occurences[0][i]].item()])) # list
+            scores.append(np.mean(np.array(id_score[vals[occurences[0][i]].item()])))
     
         scores = np.array(scores)
-        semi_answer = vals[occurences[0][np.argmax(scores)]]
-        
-    return semi_answer
+        result = vals[occurences[0][np.argmax(scores)]]
+        return result
+    else:
+        result = vals[occurences[0][0]]
+        return result

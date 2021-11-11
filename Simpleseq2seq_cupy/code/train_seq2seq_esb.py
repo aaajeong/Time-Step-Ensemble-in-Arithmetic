@@ -1,7 +1,7 @@
 # coding: utf-8
 import sys
-# sys.path.append('./')  
-sys.path.append('Arithmetic-with-Seq2Seq/Simpleseq2seq_cupy')
+sys.path.append('./')  
+# sys.path.append('Arithmetic-with-Seq2Seq/Simpleseq2seq_cupy')
 print(sys.path)
 import numpy as np
 import matplotlib.pyplot as plt
@@ -14,15 +14,15 @@ from seq2seq import Seq2seq
 from tqdm import tqdm
 import time
 import cupy as cp
-# cp.cuda.Device(3).use()
+cp.cuda.Device(4).use()
 
 # from tensorflow.python.client import device_lib
 # print(device_lib.list_local_devices())
-# sys.stdout = open('plusmal_esb_test(1).txt', 'w')
+sys.stdout = open('plusmal_esb_test(1).txt', 'w')
 
 # GPU에서 실행하려면 아래 주석을 해제하세요(CuPy 필요).
 # ===============================================
-# config.GPU = True
+config.GPU = True
 
 # 데이터셋 읽기
 # (x_train, t_train), (x_test, t_test) = sequence.load_data('arithmetic.txt')
@@ -93,12 +93,14 @@ for epoch in tqdm(range(max_epoch)):
                 batch_size=batch_size, max_grad=max_grad)
     
     correct_num = 0
+    start2 = time.time()  # 시작 시간 저장
     for i in range(len(x_test)):    #len(x_test)
         question, correct = x_test[[i]], t_test[[i]]
         verbose = i < 10
         correct_num += eval_seq2seq_esb(model_list, question, correct,
                                      id_to_char, verbose, is_reverse)
 
+    print("evaluate time :", time.time() - start2)
     acc = float(correct_num) / len(x_test)
     acc_list.append(acc)
     print('검증 정확도 %.3f%%' % (acc * 100))
