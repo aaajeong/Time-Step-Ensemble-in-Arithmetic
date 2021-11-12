@@ -14,7 +14,7 @@ from seq2seq import Seq2seq
 from tqdm import tqdm
 import time
 import cupy as cp
-cp.cuda.Device(4).use()
+cp.cuda.Device(3).use()
 
 # from tensorflow.python.client import device_lib
 # print(device_lib.list_local_devices())

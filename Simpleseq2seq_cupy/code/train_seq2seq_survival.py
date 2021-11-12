@@ -1,7 +1,7 @@
 # coding: utf-8
 import sys
-# sys.path.append('./')  
-sys.path.append('Arithmetic-with-Seq2Seq/Simpleseq2seq_cupy')
+sys.path.append('./')  
+#sys.path.append('Arithmetic-with-Seq2Seq/Simpleseq2seq_cupy')
 import numpy as np
 import matplotlib.pyplot as plt
 from dataset import sequence
@@ -13,11 +13,11 @@ from seq2seq import Seq2seq
 from tqdm import tqdm
 import time
 import cupy as cp
-cp.cuda.Device(3).use()
+cp.cuda.Device(4).use()
 
 # from tensorflow.python.client import device_lib
 # print(device_lib.list_local_devices())
-# sys.stdout = open('plusmal_survival_test(1).txt', 'w')
+sys.stdout = open('plusmal_survival_test(1).txt', 'w')
 
 # GPU에서 실행하려면 아래 주석을 해제하세요(CuPy 필요).
 # ===============================================
