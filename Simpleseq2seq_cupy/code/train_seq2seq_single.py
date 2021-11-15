@@ -18,7 +18,7 @@ cp.cuda.Device(2).use()
 
 # from tensorflow.python.client import device_lib
 # print(device_lib.list_local_devices())
-sys.stdout = open('plusmal_single_test.txt', 'w')
+sys.stdout = open('plusmul_single_test.txt', 'w')
 
 
 # GPU에서 실행하려면 아래 주석을 해제하세요(CuPy 필요).
