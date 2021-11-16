@@ -1,7 +1,7 @@
 # coding: utf-8
 import sys
-sys.path.append('./')  
-# sys.path.append('Arithmetic-with-Seq2Seq/Simpleseq2seq_cupy')
+# sys.path.append('./')  
+sys.path.append('Arithmetic-with-Seq2Seq/Simpleseq2seq_cupy')
 print(sys.path)
 import numpy as np
 import matplotlib.pyplot as plt
@@ -18,7 +18,7 @@ cp.cuda.Device(3).use()
 
 # from tensorflow.python.client import device_lib
 # print(device_lib.list_local_devices())
-sys.stdout = open('plusmul_esb_test(1).txt', 'w')
+# sys.stdout = open('plusmul_esb_test(1).txt', 'w')
 
 # GPU에서 실행하려면 아래 주석을 해제하세요(CuPy 필요).
 # ===============================================
@@ -99,7 +99,7 @@ for epoch in tqdm(range(max_epoch)):
         verbose = i < 10
         correct_num += eval_seq2seq_esb(model_list, question, correct,
                                      id_to_char, verbose, is_reverse)
-
+        
     print("evaluate time :", time.time() - start2)
     acc = float(correct_num) / len(x_test)
     acc_list.append(acc)

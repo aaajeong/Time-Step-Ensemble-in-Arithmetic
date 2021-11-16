@@ -5,7 +5,6 @@ import os
 from common.np import *
 from common.functions import get_semi_answer
 
-
 def preprocess(text):
     text = text.lower()
     text = text.replace('.', ' .')
@@ -274,8 +273,6 @@ def eval_seq2seq_esb(model_list, question, correct, id_to_char,
     start_id = correct[0]
     correct = correct[1:]
 
-    model_list = model_list
-
     for model in model_list:
         # h : hidden state?
         h = model.encoder.forward(question)
@@ -286,11 +283,8 @@ def eval_seq2seq_esb(model_list, question, correct, id_to_char,
     sample_id = start_id
     
     # 이건 이중 for 돌릴때
-    result1 = []
-    result2 = []
     model_num = len(model_list)
     id_list = [[] * model_num for i in range(model_num)]
-    # print(id_list)
 
     for _ in range(sample_size):
         x_list = []
@@ -321,20 +315,13 @@ def eval_seq2seq_esb(model_list, question, correct, id_to_char,
         for i in range(len(model_list)):
             score_id = np.argmax(score_list[i].flatten())
             id_list.append(score_id)
-        # print('id_list: ', id_list)
 
         # Soft Voting
-        # score_sum = np.empty(()) --> 나중에 수정
-        # for i in range(len(model_list)):
-        #     score_sum += score_list[i]
         score_sum = score_list[0] + score_list[1] + score_list[2] + score_list[3] + score_list[4]
-        # print('score_sum : ', score_sum)
 
         voting_id = np.argmax(score_sum.flatten())
-        # print('voting_id: ', voting_id)
 
         voting_result.append(voting_id)
-        # print('voting_id가 추가된 voring_result: ', voting_result)
 
         sample_id = voting_id
 
@@ -345,10 +332,6 @@ def eval_seq2seq_esb(model_list, question, correct, id_to_char,
     question = ''.join([id_to_char[int(c)] for c in question.flatten()])
     correct = ''.join([id_to_char[int(c)] for c in correct])
     voting_guess = ''.join([id_to_char[int(c)] for c in voting_guess])
-
-    # results = []
-    # results.append(voting_guess)
-    # return voting_guess
 
     if verbos:
         if is_reverse:

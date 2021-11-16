@@ -147,12 +147,3 @@ class Seq2seq(BaseModel):
         h = self.encoder.forward(xs)
         sampled = self.decoder.generate(h, start_id, sample_size)
         return sampled
-    
-    # def generate_test(self, xs, start_id, sample_size):
-    #     h = self.encoder.forward(xs)
-    #     # print('encoder forward 에 들어간 h: ', h)
-    #     return h
-    
-    # def decoder_test(self, h):
-    #     dec = self.decoder.generate_t(h)
-    #     self.decoder.generate_t(h)
