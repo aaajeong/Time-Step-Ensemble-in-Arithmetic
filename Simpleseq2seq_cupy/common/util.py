@@ -609,7 +609,6 @@ def eval_seq2seq_real(model_list, question, correct, id_to_char, verbos=False, i
         forward_out = []
         lstm_out = []
         score_list = []
-        max_list = []
         # input x
         for i in range(model_num):
             x = np.array(sample_ids[i]).reshape(1, 1)
@@ -652,15 +651,12 @@ def eval_seq2seq_real(model_list, question, correct, id_to_char, verbos=False, i
         candi_list[i] = ans
         # candi_list[i] = ''.join([id_to_char[int(c)] for c in candi_list[i]])
 
-    # print('문자열 변환 candi_list: ', candi_list)
-    # print('affine_list: ', affine_list)
     # =========== 진짜 다수결 시작 ============
     # 각 모델 결과의 affine 평균 값
-    affine_list = np.array(affine_list)
     affine_avg = []
     for m in affine_list:
+        m = np.array(m)
         affine_avg.append(np.mean(m))
-    # print('affine_avg: ', affine_avg)
 
     # 각 모델 결과가 같은지/아닌지 그룹핑
     group = {}
