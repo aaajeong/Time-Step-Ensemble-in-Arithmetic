@@ -17,7 +17,7 @@ cp.cuda.Device(2).use()
 
 # from tensorflow.python.client import device_lib
 # print(device_lib.list_local_devices())
-sys.stdout = open('plusmul_real_test(1).txt', 'w')
+sys.stdout = open('multiply_real_test(1).txt', 'w')
 
 # GPU에서 실행하려면 아래 주석을 해제하세요(CuPy 필요).
 # ===============================================
@@ -26,7 +26,7 @@ config.GPU = True
 # 데이터셋 읽기
 # (x_train, t_train), (x_test, t_test) = sequence.load_data('arithmetic.txt')
 # (x_train, t_train), (x_test, t_test) = sequence.load_data('addition.txt')
-(x_train, t_train), (x_test, t_test) = sequence.load_data('plusmul.txt')
+(x_train, t_train), (x_test, t_test) = sequence.load_data('multiply.txt')
 char_to_id, id_to_char = sequence.get_vocab()
 
 # 입력 반전 여부 설정 =============================================
@@ -113,20 +113,20 @@ trainer3.plot_loss(num[2], '1', 'real')
 trainer4.plot_loss(num[3], '1', 'real')
 trainer5.plot_loss(num[4], '1', 'real')
 
-model.save_params('plusmul_real(1).pkl')
-model2.save_params('plusmul_real(2).pkl')
-model3.save_params('plusmul_real(3).pkl')
-model4.save_params('plusmul_real(4).pkl')
-model5.save_params('plusmul_real(5).pkl')
+model.save_params('multiply_real(1).pkl')
+model2.save_params('multiply_real(2).pkl')
+model3.save_params('multiply_real(3).pkl')
+model4.save_params('multiply_real(4).pkl')
+model5.save_params('multiply_real(5).pkl')
 
 # 그래프 그리기
 x = np.arange(len(acc_list))
 plt.plot(x, acc_list, marker='o')
-plt.title('plusmul_real')
+plt.title('multiply_real')
 plt.xlabel('Epoch')
 plt.ylabel('Accuracy')
 plt.ylim(0, 1.0)
-plt.savefig('plusmul_real.png')
+plt.savefig('multiply_real.png')
 plt.show()
 
 

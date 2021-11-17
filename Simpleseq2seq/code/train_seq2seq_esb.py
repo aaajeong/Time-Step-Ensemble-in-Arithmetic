@@ -14,7 +14,7 @@ from peeky_seq2seq import PeekySeq2seq
 from tqdm import tqdm
 from tensorflow.python.client import device_lib
 print(device_lib.list_local_devices())
-sys.stdout = open('plusmal_esb_test(1).txt', 'w')
+sys.stdout = open('multiply_esb_test(1).txt', 'w')
 
 # GPU에서 실행하려면 아래 주석을 해제하세요(CuPy 필요).
 # ===============================================
@@ -23,7 +23,7 @@ sys.stdout = open('plusmal_esb_test(1).txt', 'w')
 # 데이터셋 읽기
 # (x_train, t_train), (x_test, t_test) = sequence.load_data('arithmetic.txt')
 # (x_train, t_train), (x_test, t_test) = sequence.load_data('addition.txt')
-(x_train, t_train), (x_test, t_test) = sequence.load_data('plusmul.txt')
+(x_train, t_train), (x_test, t_test) = sequence.load_data('multiply.txt')
 char_to_id, id_to_char = sequence.get_vocab()
 
 # 입력 반전 여부 설정 =============================================
@@ -50,12 +50,6 @@ model2 = Seq2seq(vocab_size, wordvec_size, hideen_size)
 model3 = Seq2seq(vocab_size, wordvec_size, hideen_size)
 model4 = Seq2seq(vocab_size, wordvec_size, hideen_size)
 model5 = Seq2seq(vocab_size, wordvec_size, hideen_size)
-# model6= Seq2seq(vocab_size, wordvec_size, hideen_size)
-# model7 = Seq2seq(vocab_size, wordvec_size, hideen_size)
-# model8 = Seq2seq(vocab_size, wordvec_size, hideen_size)
-# model9 = Seq2seq(vocab_size, wordvec_size, hideen_size)
-# model10 = Seq2seq(vocab_size, wordvec_size, hideen_size)
-# model = PeekySeq2seq(vocab_size, wordvec_size, hideen_size)
 # ================================================================
 
 # 모델 추가
@@ -64,11 +58,6 @@ model_list.append(model2)
 model_list.append(model3)
 model_list.append(model4)
 model_list.append(model5)
-# model_list.append(model6)
-# model_list.append(model7)
-# model_list.append(model8)
-# model_list.append(model9)
-# model_list.append(model10)
 
 optimizer = Adam()
 trainer = Trainer(model, optimizer)
@@ -76,11 +65,6 @@ trainer2 = Trainer(model2, optimizer)
 trainer3 = Trainer(model3, optimizer)
 trainer4 = Trainer(model4, optimizer)
 trainer5 = Trainer(model5, optimizer)
-# trainer6= Trainer(model6, optimizer)
-# trainer7 = Trainer(model7, optimizer)
-# trainer8 = Trainer(model8, optimizer)
-# trainer9 = Trainer(model9, optimizer)
-# trainer10 = Trainer(model10, optimizer)
 
 
 acc_list = []
@@ -102,16 +86,6 @@ for epoch in tqdm(range(max_epoch)):
                 batch_size=batch_size, max_grad=max_grad)
     trainer5.fit(x_train, t_train, max_epoch=1,
                 batch_size=batch_size, max_grad=max_grad)
-    # trainer6.fit(x_train, t_train, max_epoch=1,
-    #             batch_size=batch_size, max_grad=max_grad)
-    # trainer7.fit(x_train, t_train, max_epoch=1,
-    #             batch_size=batch_size, max_grad=max_grad)
-    # trainer8.fit(x_train, t_train, max_epoch=1,
-    #             batch_size=batch_size, max_grad=max_grad)
-    # trainer9.fit(x_train, t_train, max_epoch=1,
-    #             batch_size=batch_size, max_grad=max_grad)
-    # trainer10.fit(x_train, t_train, max_epoch=1,
-    #             batch_size=batch_size, max_grad=max_grad)
     
     correct_num = 0
     for i in range(len(x_test)):    #len(x_test)
@@ -119,10 +93,6 @@ for epoch in tqdm(range(max_epoch)):
         verbose = i < 10
         correct_num += eval_seq2seq_esb(model_list, question, correct,
                                      id_to_char, verbose, is_reverse)
-#         correct_num += eval_seq2seq_survival(model_list, question, correct,
-#                                     id_to_char, verbose, is_reverse)
-#        correct_num += eval_seq2seq_real(model_list, question, correct,
-#                                    id_to_char, verbose, is_reverse)
 
     acc = float(correct_num) / len(x_test)
     acc_list.append(acc)
@@ -135,31 +105,21 @@ trainer2.plot_loss(num[1], '1', 'esb')
 trainer3.plot_loss(num[2], '1', 'esb')
 trainer4.plot_loss(num[3], '1', 'esb')
 trainer5.plot_loss(num[4], '1', 'esb')
-# trainer6.plot_loss(num[5])
-# trainer7.plot_loss(num[6])
-# trainer8.plot_loss(num[7])
-# trainer9.plot_loss(num[8])
-# trainer10.plot_loss(num[9])
 
-model.save_params('plusmul_esb(1).pkl')
-model2.save_params('plusmul_esb(2).pkl')
-model3.save_params('plusmul_esb(3).pkl')
-model4.save_params('plusmul_esb(4).pkl')
-model5.save_params('plusmul_esb(5).pkl')
-# model6.save_params('addition(5survival)_sc(6).pkl')
-# model7.save_params('addition(5survival)_sc(7).pkl')
-# model8.save_params('addition(5survival)_sc(8).pkl')
-# model9.save_params('addition(5survival)_sc(9).pkl')
-# model10.save_params('addition(5survival)_sc(10).pkl')
+model.save_params('multiply_esb(1).pkl')
+model2.save_params('multiply_esb(2).pkl')
+model3.save_params('multiply_esb(3).pkl')
+model4.save_params('multiply_esb(4).pkl')
+model5.save_params('multiply_esb(5).pkl')
 
 # 그래프 그리기
 x = np.arange(len(acc_list))
 plt.plot(x, acc_list, marker='o')
-plt.title('plusmul_esb(soft voting)')
+plt.title('multiply_esb(soft voting)')
 plt.xlabel('Epoch')
 plt.ylabel('Accuracy')
 plt.ylim(0, 1.0)
-plt.savefig('plusmul_esb(soft voting).png')
+plt.savefig('multiply_esb(soft voting).png')
 plt.show()
 
 
