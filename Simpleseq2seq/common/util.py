@@ -642,22 +642,18 @@ def eval_seq2seq_real(model_list, question, correct, id_to_char, verbos=False, i
         for i in range(model_num):
             sample_ids[i] = id_list[i]
     
-    # print('candi_list: ', candi_list)
     # 문자열로 변환
     for i in range(len(candi_list)):
         ans = ''.join([id_to_char[int(c)] for c in candi_list[i]])
         candi_list[i] = ans
         # candi_list[i] = ''.join([id_to_char[int(c)] for c in candi_list[i]])
 
-    # print('문자열 변환 candi_list: ', candi_list)
-    # print('affine_list: ', affine_list)
     # =========== 진짜 다수결 시작 ============
     # 각 모델 결과의 affine 평균 값
     affine_list = np.array(affine_list)
     affine_avg = []
     for m in affine_list:
         affine_avg.append(np.mean(m))
-    # print('affine_avg: ', affine_avg)
 
     # 각 모델 결과가 같은지/아닌지 그룹핑
     group = {}
@@ -668,7 +664,6 @@ def eval_seq2seq_real(model_list, question, correct, id_to_char, verbos=False, i
         else:
             index = [m]
             group[candi_list[m]] = index
-    # print('group: ', group)
 
     # 그룹 별 어파인 평균값의 합
     affine_sum = {}
@@ -677,17 +672,14 @@ def eval_seq2seq_real(model_list, question, correct, id_to_char, verbos=False, i
         for m in idx:
             sum += affine_avg[m]
         affine_sum[tuple(idx)] = sum
-    # print('affine_sum: ', affine_sum)
 
     # 가장 높은 어파인합 값을 가진 번역 결과 출력
     real_maj = max(affine_sum, key = affine_sum.get)
-    # print('real_maj: ', real_maj)
 
     for key, value in group.items():
         if value == list(real_maj):
-            print(key)
             majority_guess = key
-    # print('majority_guess = ', majority_guess)
+
     # 문제/정답 문자열로 변환
     question = ''.join([id_to_char[int(c)] for c in question.flatten()])
     correct = ''.join([id_to_char[int(c)] for c in correct])
