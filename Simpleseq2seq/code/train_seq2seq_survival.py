@@ -104,11 +104,11 @@ trainer3.plot_loss(num[2], '1', 'survival')
 trainer4.plot_loss(num[3], '1', 'survival')
 trainer5.plot_loss(num[4], '1', 'survival')
 
-model.save_params('minus_survival(1).pkl')
-model2.save_params('minus_survival(2).pkl')
-model3.save_params('minus_survival(3).pkl')
-model4.save_params('minus_survival(4).pkl')
-model5.save_params('minus_survival(5).pkl')
+# model.save_params('minus_survival(1).pkl')
+# model2.save_params('minus_survival(2).pkl')
+# model3.save_params('minus_survival(3).pkl')
+# model4.save_params('minus_survival(4).pkl')
+# model5.save_params('minus_survival(5).pkl')
 
 # 그래프 그리기
 x = np.arange(len(acc_list))
