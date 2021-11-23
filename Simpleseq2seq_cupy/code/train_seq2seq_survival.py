@@ -17,14 +17,14 @@ cp.cuda.Device(4).use()
 
 # from tensorflow.python.client import device_lib
 # print(device_lib.list_local_devices())
-sys.stdout = open('minus_survival_test(1).txt', 'w')
+sys.stdout = open('plusminus_survival_test(1).txt', 'w')
 
 # GPU에서 실행하려면 아래 주석을 해제하세요(CuPy 필요).
 # ===============================================
 config.GPU = True
 
 # 데이터셋 읽기
-(x_train, t_train), (x_test, t_test) = sequence.load_data('minus.txt')
+(x_train, t_train), (x_test, t_test) = sequence.load_data('plusminus.txt')
 char_to_id, id_to_char = sequence.get_vocab()
 
 # 입력 반전 여부 설정 =============================================
@@ -112,20 +112,20 @@ trainer3.plot_loss(num[2], '1', 'survival')
 trainer4.plot_loss(num[3], '1', 'survival')
 trainer5.plot_loss(num[4], '1', 'survival')
 
-model.save_params('minus_survival(1).pkl')
-model2.save_params('minus_survival(2).pkl')
-model3.save_params('minus_survival(3).pkl')
-model4.save_params('minus_survival(4).pkl')
-model5.save_params('minus_survival(5).pkl')
+# model.save_params('plusminus_survival(1).pkl')
+# model2.save_params('plusminus_survival(2).pkl')
+# model3.save_params('plusminus_survival(3).pkl')
+# model4.save_params('plusminus_survival(4).pkl')
+# model5.save_params('plusminus_survival(5).pkl')
 
 # 그래프 그리기
 x = np.arange(len(acc_list))
 plt.plot(x, acc_list, marker='o')
-plt.title('minus_survival')
+plt.title('plusminus_survival')
 plt.xlabel('Epoch')
 plt.ylabel('Accuracy')
 plt.ylim(0, 1.0)
-plt.savefig('minus_survival.png')
+plt.savefig('plusminus_survival.png')
 plt.show()
 
 

@@ -18,7 +18,7 @@ cp.cuda.Device(2).use()
 
 # from tensorflow.python.client import device_lib
 # print(device_lib.list_local_devices())
-sys.stdout = open('plusminus_single_test.txt', 'w')
+sys.stdout = open('plus_single_test.txt', 'w')
 
 
 # GPU에서 실행하려면 아래 주석을 해제하세요(CuPy 필요).
@@ -26,7 +26,7 @@ sys.stdout = open('plusminus_single_test.txt', 'w')
 config.GPU = True
 
 # 데이터셋 읽기
-(x_train, t_train), (x_test, t_test) = sequence.load_data('plusminus.txt')
+(x_train, t_train), (x_test, t_test) = sequence.load_data('addition.txt')
 char_to_id, id_to_char = sequence.get_vocab()
 
 # 입력 반전 여부 설정 =============================================
@@ -76,18 +76,18 @@ for epoch in tqdm(range(max_epoch)):
 print("time :", time.time() - start)  # 현재시각 - 시작시간 = 실행 시간
 
 trainer.plot_loss('1','1','single')
-model.save_params('plusminus_single_gpu.pkl')
+# model.save_params('plus_single_gpu.pkl')
 
 
 
 # 그래프 그리기
 x = np.arange(len(acc_list))
 plt.plot(x, acc_list, marker='o')
-plt.title('plusminus_single_test')
+plt.title('plus_single_test')
 plt.xlabel('Epoch')
 plt.ylabel('Accuracy')
 plt.ylim(0, 1.0)
-plt.savefig('plusminus_single_test.png')
+plt.savefig('plus_single_test.png')
 plt.show()
 
 
