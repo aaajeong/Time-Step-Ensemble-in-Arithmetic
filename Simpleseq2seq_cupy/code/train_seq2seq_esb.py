@@ -1,7 +1,7 @@
 # coding: utf-8
 import sys
-# sys.path.append('./')  
-sys.path.append('Arithmetic-with-Seq2Seq/Simpleseq2seq_cupy')
+sys.path.append('./')  
+#sys.path.append('Arithmetic-with-Seq2Seq/Simpleseq2seq_cupy')
 print(sys.path)
 import numpy as np
 import matplotlib.pyplot as plt
@@ -14,18 +14,18 @@ from seq2seq import Seq2seq
 from tqdm import tqdm
 import time
 import cupy as cp
-cp.cuda.Device(3).use()
+cp.cuda.Device(2).use()
 
 # from tensorflow.python.client import device_lib
 # print(device_lib.list_local_devices())
-sys.stdout = open('plusminus_esb_test(1).txt', 'w')
+sys.stdout = open('minus_esb_test(1).txt', 'w')
 
 # GPU에서 실행하려면 아래 주석을 해제하세요(CuPy 필요).
 # ===============================================
 config.GPU = True
 
 # 데이터셋 읽기
-(x_train, t_train), (x_test, t_test) = sequence.load_data('plusminus.txt')
+(x_train, t_train), (x_test, t_test) = sequence.load_data('minus.txt')
 char_to_id, id_to_char = sequence.get_vocab()
 
 # 입력 반전 여부 설정 =============================================
@@ -112,20 +112,20 @@ trainer3.plot_loss(num[2], '1', 'esb')
 trainer4.plot_loss(num[3], '1', 'esb')
 trainer5.plot_loss(num[4], '1', 'esb')
 
-# model.save_params('plusminus_esb(1).pkl')
-# model2.save_params('plusminus_esb(2).pkl')
-# model3.save_params('plusminus_esb(3).pkl')
-# model4.save_params('plusminus_esb(4).pkl')
-# model5.save_params('plusminus_esb(5).pkl')
+# model.save_params('minus_esb(1).pkl')
+# model2.save_params('minus_esb(2).pkl')
+# model3.save_params('minus_esb(3).pkl')
+# model4.save_params('minus_esb(4).pkl')
+# model5.save_params('minus_esb(5).pkl')
 
 # 그래프 그리기
 x = np.arange(len(acc_list))
 plt.plot(x, acc_list, marker='o')
-plt.title('plusminus_esb(soft voting)')
+plt.title('minus_esb(soft voting)')
 plt.xlabel('Epoch')
 plt.ylabel('Accuracy')
 plt.ylim(0, 1.0)
-plt.savefig('plusminus_esb(soft voting).png')
+plt.savefig('minus_esb(soft voting).png')
 plt.show()
 
 

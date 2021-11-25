@@ -13,18 +13,18 @@ from seq2seq import Seq2seq
 from tqdm import tqdm
 import time
 import cupy as cp
-cp.cuda.Device(2).use()
+cp.cuda.Device(4).use()
 
 # from tensorflow.python.client import device_lib
 # print(device_lib.list_local_devices())
-sys.stdout = open('plusminus_real_test(1).txt', 'w')
+sys.stdout = open('minus_real_test(1).txt', 'w')
 
 # GPU에서 실행하려면 아래 주석을 해제하세요(CuPy 필요).
 # ===============================================
 config.GPU = True
 
 # 데이터셋 읽기
-(x_train, t_train), (x_test, t_test) = sequence.load_data('plusminus.txt')
+(x_train, t_train), (x_test, t_test) = sequence.load_data('minus.txt')
 char_to_id, id_to_char = sequence.get_vocab()
 
 # 입력 반전 여부 설정 =============================================
@@ -111,20 +111,20 @@ trainer3.plot_loss(num[2], '1', 'real')
 trainer4.plot_loss(num[3], '1', 'real')
 trainer5.plot_loss(num[4], '1', 'real')
 
-# model.save_params('plusminus_real(1).pkl')
-# model2.save_params('plusminus_real(2).pkl')
-# model3.save_params('plusminus_real(3).pkl')
-# model4.save_params('plusminus_real(4).pkl')
-# model5.save_params('plusminus_real(5).pkl')
+# model.save_params('minus_real(1).pkl')
+# model2.save_params('minus_real(2).pkl')
+# model3.save_params('minus_real(3).pkl')
+# model4.save_params('minus_real(4).pkl')
+# model5.save_params('minus_real(5).pkl')
 
 # 그래프 그리기
 x = np.arange(len(acc_list))
 plt.plot(x, acc_list, marker='o')
-plt.title('plusminus_real')
+plt.title('minus_real')
 plt.xlabel('Epoch')
 plt.ylabel('Accuracy')
 plt.ylim(0, 1.0)
-plt.savefig('plusminus_real.png')
+plt.savefig('minus_real.png')
 plt.show()
 
 
