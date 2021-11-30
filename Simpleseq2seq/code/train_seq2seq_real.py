@@ -14,7 +14,7 @@ from peeky_seq2seq import PeekySeq2seq
 from tqdm import tqdm
 from tensorflow.python.client import device_lib
 print(device_lib.list_local_devices())
-sys.stdout = open('plusminus_real_test(1).txt', 'w')
+sys.stdout = open('2-plusminus_real_test(1).txt', 'w')
 
 # GPU에서 실행하려면 아래 주석을 해제하세요(CuPy 필요).
 # ===============================================
@@ -98,11 +98,11 @@ for epoch in tqdm(range(max_epoch)):
 
 num = ['1', '2', '3', '4', '5']
 
-trainer.plot_loss(num[0], '1', 'real')
-trainer2.plot_loss(num[1], '1', 'real')
-trainer3.plot_loss(num[2], '1', 'real')
-trainer4.plot_loss(num[3], '1', 'real')
-trainer5.plot_loss(num[4], '1', 'real')
+trainer.plot_loss(num[0], '2', 'real')
+trainer2.plot_loss(num[1], '2', 'real')
+trainer3.plot_loss(num[2], '2', 'real')
+trainer4.plot_loss(num[3], '2', 'real')
+trainer5.plot_loss(num[4], '2', 'real')
 
 # model.save_params('plusminus_real(1).pkl')
 # model2.save_params('plusminus_real(2).pkl')
@@ -117,7 +117,7 @@ plt.title('plusminus_real')
 plt.xlabel('Epoch')
 plt.ylabel('Accuracy')
 plt.ylim(0, 1.0)
-plt.savefig('plusminus_real.png')
+plt.savefig('2-plusminus_real.png')
 plt.show()
 
 
