@@ -14,7 +14,7 @@ from peeky_seq2seq import PeekySeq2seq
 from tqdm import tqdm
 from tensorflow.python.client import device_lib
 print(device_lib.list_local_devices())
-sys.stdout = open('2-plusminus_esb_test(1).txt', 'w')
+sys.stdout = open('4-plusminus_esb_test(1).txt', 'w')
 
 # GPU에서 실행하려면 아래 주석을 해제하세요(CuPy 필요).
 # ===============================================
@@ -98,11 +98,11 @@ for epoch in tqdm(range(max_epoch)):
 
 num = ['1', '2', '3', '4', '5']
 
-trainer.plot_loss(num[0], '2', 'esb')
-trainer2.plot_loss(num[1], '2', 'esb')
-trainer3.plot_loss(num[2], '2', 'esb')
-trainer4.plot_loss(num[3], '2', 'esb')
-trainer5.plot_loss(num[4], '2', 'esb')
+trainer.plot_loss(num[0], '4', 'esb')
+trainer2.plot_loss(num[1], '4', 'esb')
+trainer3.plot_loss(num[2], '4', 'esb')
+trainer4.plot_loss(num[3], '4', 'esb')
+trainer5.plot_loss(num[4], '4', 'esb')
 
 # model.save_params('plusminus_esb(1).pkl')
 # model2.save_params('plusminus_esb(2).pkl')
@@ -117,7 +117,7 @@ plt.title('plusminus_esb(soft voting)')
 plt.xlabel('Epoch')
 plt.ylabel('Accuracy')
 plt.ylim(0, 1.0)
-plt.savefig('2-plusminus_esb(soft voting).png')
+plt.savefig('3-plusminus_esb(soft voting).png')
 plt.show()
 
 
