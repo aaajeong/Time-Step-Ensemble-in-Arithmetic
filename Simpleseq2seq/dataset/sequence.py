@@ -57,8 +57,8 @@ def load_data(file_name, seed=1984):
     
     # 뒤섞기
     indices = numpy.arange(len(x))
-    if seed is not None:
-        numpy.random.seed(seed)
+    # if seed is not None:
+    #     numpy.random.seed(seed)
     numpy.random.shuffle(indices)
     x = x[indices]
     t = t[indices]
