@@ -14,7 +14,7 @@ from peeky_seq2seq import PeekySeq2seq
 from tqdm import tqdm
 from tensorflow.python.client import device_lib
 print(device_lib.list_local_devices())
-sys.stdout = open('2-randomness-plusminus_single_test.txt', 'w')
+sys.stdout = open('5-plusminus_single_test.txt', 'w')
 
 
 # GPU에서 실행하려면 아래 주석을 해제하세요(CuPy 필요).
@@ -25,8 +25,6 @@ sys.stdout = open('2-randomness-plusminus_single_test.txt', 'w')
 (x_train, t_train), (x_test, t_test) = sequence.load_data('plusminus.txt')
 char_to_id, id_to_char = sequence.get_vocab()
 
-# 데이터셋 random 확인
-print('random? x_train? : ', x_train[0])
 
 # 입력 반전 여부 설정 =============================================
 is_reverse = True  # True
@@ -71,7 +69,7 @@ for epoch in tqdm(range(max_epoch)):
     acc_list.append(acc)
     print('검증 정확도 %.3f%%' % (acc * 100))
 
-trainer.plot_loss('1','2', 'single')
+trainer.plot_loss('1','5', 'single')
 # model.save_params('plusminus_single_gpu.pkl')
 
 
@@ -83,7 +81,7 @@ plt.title('plusminus_single_test')
 plt.xlabel('Epoch')
 plt.ylabel('Accuracy')
 plt.ylim(0, 1.0)
-plt.savefig('2-randomness_plusminus_single_test.png')
+plt.savefig('5-plusminus_single_test.png')
 plt.show()
 
 
