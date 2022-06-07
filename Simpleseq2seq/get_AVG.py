@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 acc_list = []
 
-f = open("Simpleseq2seq/training_memo/PlusMinus/esb(real)_avg/1-plusminus_real_test(1).txt", 'r')
+f = open("./training_memo/PlusMinus/esb(real)_avg/1-plusminus_real_test(1).txt", 'r')
 while True:
     line = f.readline()
     if line[:6] == '검증 정확도':
@@ -15,7 +15,7 @@ f.close()
 
 acc_list = []
 
-f = open("Simpleseq2seq/training_memo/PlusMinus/esb(real)_avg/2-plusminus_real_test(1).txt", 'r')
+f = open("./training_memo/PlusMinus/esb(real)_avg/2-plusminus_real_test(1).txt", 'r')
 while True:
     line = f.readline()
     if line[:6] == '검증 정확도':
@@ -26,7 +26,7 @@ f.close()
 
 acc_list = []
 
-f = open("Simpleseq2seq/training_memo/PlusMinus/esb(real)_avg/3-plusminus_real_test(1).txt", 'r')
+f = open("./training_memo/PlusMinus/esb(real)_avg/3-plusminus_real_test(1).txt", 'r')
 while True:
     line = f.readline()
     if line[:6] == '검증 정확도':
@@ -37,7 +37,7 @@ f.close()
 
 acc_list = []
 
-f = open("Simpleseq2seq/training_memo/PlusMinus/esb(real)_avg/4-plusminus_real_test(1).txt", 'r')
+f = open("./training_memo/PlusMinus/esb(real)_avg/4-plusminus_real_test(1).txt", 'r')
 while True:
     line = f.readline()
     if line[:6] == '검증 정확도':
@@ -48,7 +48,7 @@ f.close()
 
 acc_list = []
 
-f = open("Simpleseq2seq/training_memo/PlusMinus/esb(real)_avg/5-plusminus_real_test(1).txt", 'r')
+f = open("./training_memo/PlusMinus/esb(real)_avg/5-plusminus_real_test(1).txt", 'r')
 while True:
     line = f.readline()
     if line[:6] == '검증 정확도':
