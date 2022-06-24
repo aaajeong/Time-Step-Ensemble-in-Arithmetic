@@ -1,4 +1,4 @@
-# 🎓 Arithmetic-with-Seq2Seq 🎓
+# 🎓 Time-Step Ensemble in Arithmetic 🎓
 - [Time-Step Ensemble](https://github.com/aaajeong/Time-Step-Ensemble) 및 연구 이어서
 
 앞 [연구](https://github.com/aaajeong/Time-Step-Ensemble)에서 RNN의 앙상블이 성능 향상을 이끌었다는 것을 살펴볼 수 있었다.
