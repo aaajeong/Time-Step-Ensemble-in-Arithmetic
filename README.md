@@ -22,7 +22,6 @@
 
 #### Seq2Seq 으로 덧셈 구현 (Keras Example)
 
----
 
 - 파일 : addition_rnn.ipynb
 
@@ -42,13 +41,10 @@
 
 - 100epoch accuracy : 0.9992
 
-  ![kears example - addition](./img/addition Accuracy(hidden_list).png)
-
 
 
 #### Seq2Seq 으로 사칙연산 구현 (Keras Example)
 
----
 
 - 파일 : arithmetic_rnn.ipynb
 
