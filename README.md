@@ -1,5 +1,7 @@
-# Arithmetic-with-Seq2Seq
-앞 연구(Survival_Ensemble) 에서 RNN의 앙상블이 성능 향상을 이끌었다는 것을 살펴볼 수 있었다.
+# 🎓 Arithmetic-with-Seq2Seq 🎓
+- [Time-Step Ensemble](https://github.com/aaajeong/Time-Step-Ensemble) 및 연구 이어서
+
+앞 [연구](https://github.com/aaajeong/Time-Step-Ensemble)에서 RNN의 앙상블이 성능 향상을 이끌었다는 것을 살펴볼 수 있었다.
 
 앞 예제에서는 기계 번역으로 time-step 마다 예측한 단어의 ensemble을 활용했다.
 
@@ -84,11 +86,5 @@
 
     ![val accuracy](./img/3digit_1arith(2)(val_accuracy).png)
 
+
 #### 👉 이 결과를 RNN Ensemble 을 사용하여 성능을 향상 시켜보자.
-
-
-
-##### 💥 수정사항 발견 💥
-
-predict 하는 부분
-
